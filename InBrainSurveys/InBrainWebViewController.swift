@@ -17,5 +17,25 @@ protocol InBrainSurveyDelegate {
 
 class InBrainWebViewController : UIViewController {
     var webView = WKWebView()
+    static let configurationURL = "https://surveyb.in/configuration"
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        webView.frame = .zero
+        view.addSubview(webView)
+        
+        let layoutGuide = view.safeAreaLayoutGuide
+        
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        webView.leadingAnchor.constraint(equalTo: layoutGuide.leadingAnchor).isActive = true
+        webView.trailingAnchor.constraint(equalTo: layoutGuide.trailingAnchor).isActive = true
+        webView.topAnchor.constraint(equalTo: layoutGuide.topAnchor).isActive = true
+        webView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor).isActive = true
+        
+        if let url = URL(string: InBrainWebViewController.configurationURL) {
+            webView.load(URLRequest(url: url))
+        }
+    }
     
 }
