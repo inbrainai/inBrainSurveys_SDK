@@ -27,15 +27,8 @@ public final class InBrain : NSObject, WKNavigationDelegate, WKScriptMessageHand
         naviController.viewControllers = [webVC]
     }
     
-    func constructWebView() {
-        
-        
-    }
-    
     public func presentInBrainWebView() {
-        UIApplication.shared.keyWindow?.rootViewController?.present(naviController, animated: true, completion: {
-            <#code#>
-        })
+        UIApplication.shared.keyWindow?.rootViewController?.present(naviController, animated: true, completion: nil)
     }
     
     public func setAPICredentials(withClientID: String, andClientSecret: String) {
@@ -49,7 +42,6 @@ public final class InBrain : NSObject, WKNavigationDelegate, WKScriptMessageHand
         config.userContentController = contentController
         //Serve up JavaScript method to webVC.webView
         webVC.webView.configuration.userContentController.addUserScript(script)
-        
     }
     
     public func setInBrainUser(withAppUID: String) {
