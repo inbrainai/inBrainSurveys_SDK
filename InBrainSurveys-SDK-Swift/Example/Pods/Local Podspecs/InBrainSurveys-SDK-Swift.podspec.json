@@ -1,0 +1,22 @@
+{
+  "name": "InBrainSurveys-SDK-Swift",
+  "version": "0.1.0",
+  "summary": "A short description of InBrainSurveys-SDK-Swift.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/joel-atp/InBrainSurveys-SDK-Swift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "joel-atp": "joel@appsthatpay.co"
+  },
+  "source": {
+    "git": "https://github.com/joel-atp/InBrainSurveys-SDK-Swift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "InBrainSurveys-SDK-Swift/Classes/**/*"
+}
