@@ -1,0 +1,6 @@
+framework module Pods_InBrainSurveys_SDK_Swift_Tests {
+  umbrella header "Pods-InBrainSurveys-SDK-Swift_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
