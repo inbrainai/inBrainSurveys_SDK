@@ -13,11 +13,11 @@
 		9FCBAFB9792F6C531321829335AA80E7 /* Pods-InBrainSurveys-SDK-Swift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C9471181A16BAC6C9013A20AC29D4DF2 /* Pods-InBrainSurveys-SDK-Swift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3F5DE12A52AB331AB774FAB08F2CABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		C80AF8ECA78BC5C4BBAF957FB015EAEA /* InBrainSurveys-SDK-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA15EB26E9E9549B1B3D26865189CFF /* InBrainSurveys-SDK-Swift-dummy.m */; };
-		D9E9DE92225CE3FA00196B05 /* InBrainPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9DE8D225CE3FA00196B05 /* InBrainPlacement.swift */; };
-		D9E9DE93225CE3FA00196B05 /* InBrainReward.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9DE8E225CE3FA00196B05 /* InBrainReward.swift */; };
-		D9E9DE94225CE3FA00196B05 /* InBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9DE8F225CE3FA00196B05 /* InBrain.swift */; };
-		D9E9DE95225CE3FA00196B05 /* InBrainWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9DE90225CE3FA00196B05 /* InBrainWebViewController.swift */; };
-		D9E9DE96225CE3FA00196B05 /* InBrainSurveys.h in Headers */ = {isa = PBXBuildFile; fileRef = D9E9DE91225CE3FA00196B05 /* InBrainSurveys.h */; };
+		D9E9DE9C225CE8BA00196B05 /* InBrainPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9DE97225CE8BA00196B05 /* InBrainPlacement.swift */; };
+		D9E9DE9D225CE8BA00196B05 /* InBrainReward.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9DE98225CE8BA00196B05 /* InBrainReward.swift */; };
+		D9E9DE9E225CE8BA00196B05 /* InBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9DE99225CE8BA00196B05 /* InBrain.swift */; };
+		D9E9DE9F225CE8BA00196B05 /* InBrainSurveys.h in Headers */ = {isa = PBXBuildFile; fileRef = D9E9DE9A225CE8BA00196B05 /* InBrainSurveys.h */; };
+		D9E9DEA0225CE8BA00196B05 /* InBrainWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E9DE9B225CE8BA00196B05 /* InBrainWebViewController.swift */; };
 		DDA7372EF8AD7FF3EA3CFD86A3F48117 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
 		DDDBD13A647D4BF416C58AF20C8D90B4 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9797906AAB3E80EDB2418FB729E8E1 /* ReplaceMe.swift */; };
 		EA3DD4E51E6E1FF01E811301F0224B18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
@@ -73,11 +73,11 @@
 		CEC4D571DD440E34FE95B12442C27510 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1C6ABFF369A33BACC9C4C59E9ECFD26 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D9E9DE8D225CE3FA00196B05 /* InBrainPlacement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InBrainPlacement.swift; sourceTree = "<group>"; };
-		D9E9DE8E225CE3FA00196B05 /* InBrainReward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InBrainReward.swift; sourceTree = "<group>"; };
-		D9E9DE8F225CE3FA00196B05 /* InBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InBrain.swift; sourceTree = "<group>"; };
-		D9E9DE90225CE3FA00196B05 /* InBrainWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InBrainWebViewController.swift; sourceTree = "<group>"; };
-		D9E9DE91225CE3FA00196B05 /* InBrainSurveys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InBrainSurveys.h; sourceTree = "<group>"; };
+		D9E9DE97225CE8BA00196B05 /* InBrainPlacement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InBrainPlacement.swift; path = "InBrainSurveys-SDK-Swift/Classes/InBrainPlacement.swift"; sourceTree = "<group>"; };
+		D9E9DE98225CE8BA00196B05 /* InBrainReward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InBrainReward.swift; path = "InBrainSurveys-SDK-Swift/Classes/InBrainReward.swift"; sourceTree = "<group>"; };
+		D9E9DE99225CE8BA00196B05 /* InBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InBrain.swift; path = "InBrainSurveys-SDK-Swift/Classes/InBrain.swift"; sourceTree = "<group>"; };
+		D9E9DE9A225CE8BA00196B05 /* InBrainSurveys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InBrainSurveys.h; path = "InBrainSurveys-SDK-Swift/Classes/InBrainSurveys.h"; sourceTree = "<group>"; };
+		D9E9DE9B225CE8BA00196B05 /* InBrainWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InBrainWebViewController.swift; path = "InBrainSurveys-SDK-Swift/Classes/InBrainWebViewController.swift"; sourceTree = "<group>"; };
 		DA9797906AAB3E80EDB2418FB729E8E1 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = "InBrainSurveys-SDK-Swift/Classes/ReplaceMe.swift"; sourceTree = "<group>"; };
 		EA6D0E46D89623D9FFE52953EA4F0912 /* InBrainSurveys-SDK-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InBrainSurveys-SDK-Swift-umbrella.h"; sourceTree = "<group>"; };
 		F9F2B63A2F0EE80D53D7782289CE8091 /* Pods-InBrainSurveys-SDK-Swift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InBrainSurveys-SDK-Swift_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -173,11 +173,11 @@
 			isa = PBXGroup;
 			children = (
 				DA9797906AAB3E80EDB2418FB729E8E1 /* ReplaceMe.swift */,
-				D9E9DE8F225CE3FA00196B05 /* InBrain.swift */,
-				D9E9DE8D225CE3FA00196B05 /* InBrainPlacement.swift */,
-				D9E9DE8E225CE3FA00196B05 /* InBrainReward.swift */,
-				D9E9DE91225CE3FA00196B05 /* InBrainSurveys.h */,
-				D9E9DE90225CE3FA00196B05 /* InBrainWebViewController.swift */,
+				D9E9DE99225CE8BA00196B05 /* InBrain.swift */,
+				D9E9DE97225CE8BA00196B05 /* InBrainPlacement.swift */,
+				D9E9DE98225CE8BA00196B05 /* InBrainReward.swift */,
+				D9E9DE9A225CE8BA00196B05 /* InBrainSurveys.h */,
+				D9E9DE9B225CE8BA00196B05 /* InBrainWebViewController.swift */,
 				3B774254D270A1F0A2627716569E0226 /* Pod */,
 				C107129E25E0DB09634A6C20763A003A /* Support Files */,
 			);
@@ -265,7 +265,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9E9DE96225CE3FA00196B05 /* InBrainSurveys.h in Headers */,
+				D9E9DE9F225CE8BA00196B05 /* InBrainSurveys.h in Headers */,
 				EA7DF11F43E3EBBA69A73A426D8D2425 /* InBrainSurveys-SDK-Swift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,12 +386,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9E9DE92225CE3FA00196B05 /* InBrainPlacement.swift in Sources */,
+				D9E9DE9C225CE8BA00196B05 /* InBrainPlacement.swift in Sources */,
 				C80AF8ECA78BC5C4BBAF957FB015EAEA /* InBrainSurveys-SDK-Swift-dummy.m in Sources */,
-				D9E9DE93225CE3FA00196B05 /* InBrainReward.swift in Sources */,
-				D9E9DE94225CE3FA00196B05 /* InBrain.swift in Sources */,
+				D9E9DE9D225CE8BA00196B05 /* InBrainReward.swift in Sources */,
+				D9E9DE9E225CE8BA00196B05 /* InBrain.swift in Sources */,
 				DDDBD13A647D4BF416C58AF20C8D90B4 /* ReplaceMe.swift in Sources */,
-				D9E9DE95225CE3FA00196B05 /* InBrainWebViewController.swift in Sources */,
+				D9E9DEA0225CE8BA00196B05 /* InBrainWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +478,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/InBrainSurveys-SDK-Swift/InBrainSurveys-SDK-Swift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/InBrainSurveys-SDK-Swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/InBrainSurveys-SDK-Swift/InBrainSurveys-SDK-Swift.modulemap";
 				PRODUCT_MODULE_NAME = InBrainSurveys_SDK_Swift;
@@ -546,7 +546,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -643,7 +643,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -737,7 +737,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/InBrainSurveys-SDK-Swift/InBrainSurveys-SDK-Swift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/InBrainSurveys-SDK-Swift/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/InBrainSurveys-SDK-Swift/InBrainSurveys-SDK-Swift.modulemap";
 				PRODUCT_MODULE_NAME = InBrainSurveys_SDK_Swift;
