@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "InBrainSurveys.h"
 
 FOUNDATION_EXPORT double InBrainSurveys_SDK_SwiftVersionNumber;
 FOUNDATION_EXPORT const unsigned char InBrainSurveys_SDK_SwiftVersionString[];

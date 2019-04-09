@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'InBrainSurveys-SDK-Swift'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of InBrainSurveys-SDK-Swift.'
+  s.summary          = 'Survey framework to monetize your app'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,19 +18,19 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Survey framework to monetize your app, served up by InBrain.
                        DESC
 
-  s.homepage         = 'https://github.com/joel-atp/InBrainSurveys-SDK-Swift'
+  s.homepage         = 'https://github.com/inBrainSurveys/inBrain-SDK-iOS-Swift'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'joel-atp' => 'joel@appsthatpay.co' }
-  s.source           = { :git => 'https://github.com/joel-atp/InBrainSurveys-SDK-Swift.git', :tag => s.version.to_s }
+  s.author           = { 'Joel Myers' => 'joel@appsthatpay.co' }
+  s.source           = { :git => 'https://github.com/inBrainSurveys/inBrain-SDK-iOS-Swift.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '8.0'
-
+  # s.platform   = ios, '12.0'
+  s.ios.deployment_target = '12.0'
   s.source_files = 'InBrainSurveys-SDK-Swift/Classes/**/*'
+  s.swift_version = '4.2'
   
   # s.resource_bundles = {
   #   'InBrainSurveys-SDK-Swift' => ['InBrainSurveys-SDK-Swift/Assets/*.png']

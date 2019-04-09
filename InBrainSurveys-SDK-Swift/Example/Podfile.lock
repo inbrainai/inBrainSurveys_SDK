@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  InBrainSurveys-SDK-Swift: 88f28204713b4d7e35f53ad5465ee8e974e2b958
+  InBrainSurveys-SDK-Swift: cc82d2b4c2be5ea932d102de0aff268be4c5d797
 
 PODFILE CHECKSUM: 1319bc7713021fc0e72c193fac608e585464fd0f
 

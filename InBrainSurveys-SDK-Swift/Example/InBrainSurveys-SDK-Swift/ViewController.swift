@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import InBrainSurveys_SDK_Swift
 
 class ViewController: UIViewController {
 
