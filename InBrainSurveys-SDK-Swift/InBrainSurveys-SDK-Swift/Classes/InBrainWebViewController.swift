@@ -33,9 +33,16 @@ class InBrainWebViewController : UIViewController {
         webView.topAnchor.constraint(equalTo: layoutGuide.topAnchor).isActive = true
         webView.bottomAnchor.constraint(equalTo: layoutGuide.bottomAnchor).isActive = true
         
+        let backButton = UIBarButtonItem(title:"Close", style: UIBarButtonItem.Style.plain, target: self, action: #selector(dismissNavi))
+        self.navigationItem.leftBarButtonItem = backButton
+        
         if let url = URL(string: InBrainWebViewController.configurationURL) {
             webView.load(URLRequest(url: url))
         }
+    }
+    
+    @objc func dismissNavi() {
+        self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
 }

@@ -19,55 +19,58 @@ fileprivate enum InBrainPayoutType : Int {
 
 public final class InBrain : NSObject, WKNavigationDelegate, WKScriptMessageHandler {
     var naviController = UINavigationController()
-    var webVC = InBrainWebViewController()
+    static var webVC = InBrainWebViewController()
     
     public override init() {
         super.init()
-        webVC.webView.navigationDelegate = self
-        naviController.viewControllers = [webVC]
+        InBrain.webVC.webView.navigationDelegate = self
     }
     
-    public func presentInBrainWebView() {
+    class func presentInBrainWebView() {
+        let naviController = UINavigationController()
+        let webVC = InBrainWebViewController()
+        naviController.viewControllers = [webVC]
+
         UIApplication.shared.keyWindow?.rootViewController?.present(naviController, animated: true, completion: nil)
     }
     
-    public func setAPICredentials(withClientID: String, andClientSecret: String) {
+    class func setAPICredentials(withClientID: String, andClientSecret: String) {
         //Form JavaScript method setAPIKeys({"client_ID": withClientID, "client_secret": andClientSecret})
-        let contentController = WKUserContentController()
-        let scriptSource = "setAPIKeys({\"client_ID\": \(withClientID), \"client_secret\": \(andClientSecret)});"
-        let script = WKUserScript(source: scriptSource, injectionTime: .atDocumentStart, forMainFrameOnly: true)
-        contentController.addUserScript(script)
+//        let contentController = WKUserContentController()
         
+//        let script = WKUserScript(source: scriptSource, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+//        contentController.addUserScript(script)
+        let scriptSource = "setAPIKeys({\"client_ID\": \(withClientID), \"client_secret\": \(andClientSecret)});"
         webVC.webView.evaluateJavaScript(scriptSource) { (result, error) in
             if let result = result {
                 print(result)
             }
         }
         
-        let config = WKWebViewConfiguration()
-        config.userContentController = contentController
-        //Serve up JavaScript method to webVC.webView
-        webVC.webView.configuration.userContentController.addUserScript(script)
+//        let config = WKWebViewConfiguration()
+//        config.userContentController = contentController
+//        //Serve up JavaScript method to webVC.webView
+//        webVC.webView.configuration.userContentController.addUserScript(script)
     }
     
-    public func setInBrainUser(withAppUID: String) {
+    class func setInBrainUser(withAppUID: String) {
         //Form JavaScript method setUser({"device_id": havingDeviceID, "app_uid": andAppUID})
-        let contentController = WKUserContentController()
+//        let contentController = WKUserContentController()
+        
+//        let script = WKUserScript(source: scriptSource, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+//        contentController.addUserScript(script)
         let deviceID = UIDevice.current.identifierForVendor?.uuidString
         let scriptSource = "setAPIKeys({\"device_id\": \(String(describing: deviceID)), \"app_uid\": \(withAppUID)});"
-        let script = WKUserScript(source: scriptSource, injectionTime: .atDocumentStart, forMainFrameOnly: true)
-        contentController.addUserScript(script)
-        
         webVC.webView.evaluateJavaScript(scriptSource) { (result, error) in
             if let result = result {
                 print(result)
             }
         }
         
-        let config = WKWebViewConfiguration()
-        config.userContentController = contentController
-        //Serve up JavaScript method to webVC.webView
-        webVC.webView.configuration.userContentController.addUserScript(script)
+//        let config = WKWebViewConfiguration()
+//        config.userContentController = contentController
+//        //Serve up JavaScript method to webVC.webView
+//        webVC.webView.configuration.userContentController.addUserScript(script)
     }
     
     //MARK: WKScriptDelegate method

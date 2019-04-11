@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'InBrainSurveys-SDK-Swift'
-  s.version          = '0.1.0'
+  s.version          = '1.0.2'
   s.summary          = 'Survey framework to monetize your app'
 
 # This description is used to generate tags and improve search results.
@@ -25,11 +25,11 @@ Survey framework to monetize your app, served up by InBrain.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Joel Myers' => 'joel@appsthatpay.co' }
-  s.source           = { :git => 'https://github.com/inBrainSurveys/inBrain-SDK-iOS-Swift.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/inBrainSurveys/inBrain-SDK-iOS-Swift.git', :tag => s.version }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   # s.platform   = ios, '12.0'
   s.ios.deployment_target = '12.0'
-  s.source_files = 'InBrainSurveys-SDK-Swift/Classes/**/*'
+  s.source_files = 'InBrainSurveys-SDK-Swift/InBrainSurveys-SDK-Swift/Classes/**.{h,m,swift}'
   s.swift_version = '4.2'
   
   # s.resource_bundles = {
