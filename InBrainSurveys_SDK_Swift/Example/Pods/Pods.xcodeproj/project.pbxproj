@@ -1,0 +1,794 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A2BE8EC90B4FC030038916483C7C8CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		81B721094D09A3DFA6BDA2824147FA1F /* InBrainSurveys_SDK_Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D43D4DA6BD7976343C7C971DB9E88C16 /* InBrainSurveys_SDK_Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81E888BE30281B38F9E293FE0F68406F /* Pods-InBrainSurveys_SDK_Swift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D45EFBB61C4FFFB5574E56B5AF953EA7 /* Pods-InBrainSurveys_SDK_Swift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8ADD4FFA7D25BA8C7466BCF934C99A2C /* Pods-InBrainSurveys_SDK_Swift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AEC00B0FF1999A57A7838E4B31C6B0E /* Pods-InBrainSurveys_SDK_Swift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E9359901E4463A2F0908FEADFAFDFF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		9FBFD859363DCBDD30C7806241A4874F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */; };
+		B39EA2B6EFCF1695DD326D9167A3EAB3 /* Pods-InBrainSurveys_SDK_Swift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 87FB66BC8D654E0A101CB3C54C874536 /* Pods-InBrainSurveys_SDK_Swift_Tests-dummy.m */; };
+		D9A8B66322612D3A00B714CE /* InBrainWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8B65E22612D3900B714CE /* InBrainWebViewController.swift */; };
+		D9A8B66422612D3A00B714CE /* InBrainReward.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8B65F22612D3900B714CE /* InBrainReward.swift */; };
+		D9A8B66522612D3A00B714CE /* InBrainSurveys.h in Headers */ = {isa = PBXBuildFile; fileRef = D9A8B66022612D3900B714CE /* InBrainSurveys.h */; };
+		D9A8B66622612D3A00B714CE /* InBrainPlacement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8B66122612D3A00B714CE /* InBrainPlacement.swift */; };
+		D9A8B66722612D3A00B714CE /* InBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8B66222612D3A00B714CE /* InBrain.swift */; };
+		E2352D4604DB9EB69C489C98C24F9A3B /* Pods-InBrainSurveys_SDK_Swift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1A394AA95D47266B843CA83C9B9562 /* Pods-InBrainSurveys_SDK_Swift_Example-dummy.m */; };
+		FD9A7E2C29DD3E487331A2119EB587C7 /* InBrainSurveys_SDK_Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16005F64ACC57C615147B412BAA2243C /* InBrainSurveys_SDK_Swift-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		06E7FB81295077DB27EDF0F770B5C2FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8D4E7E3B4B5830F057C74AF9B305EE7;
+			remoteInfo = InBrainSurveys_SDK_Swift;
+		};
+		AA7E5D353B9A0CD245DC44ED29F27F03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75384BA3353763D39F9027AD3E1F6964;
+			remoteInfo = "Pods-InBrainSurveys_SDK_Swift_Example";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02726817392EF8BFA2E16793FC4D0371 /* Pods-InBrainSurveys_SDK_Swift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InBrainSurveys_SDK_Swift_Example.release.xcconfig"; sourceTree = "<group>"; };
+		0A5988FEEA7C4E075CFD0D9BD22FFE1A /* Pods_InBrainSurveys_SDK_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InBrainSurveys_SDK_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C82A94E624912C58C05FB3B7F3E5E00 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16005F64ACC57C615147B412BAA2243C /* InBrainSurveys_SDK_Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "InBrainSurveys_SDK_Swift-dummy.m"; sourceTree = "<group>"; };
+		1A2A0996588A016CD79B94A3BDAFC843 /* InBrainSurveys_SDK_Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = InBrainSurveys_SDK_Swift.xcconfig; sourceTree = "<group>"; };
+		1D1A394AA95D47266B843CA83C9B9562 /* Pods-InBrainSurveys_SDK_Swift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-InBrainSurveys_SDK_Swift_Example-dummy.m"; sourceTree = "<group>"; };
+		32D2F58CB224070B2F27AAC6C83E062B /* Pods-InBrainSurveys_SDK_Swift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InBrainSurveys_SDK_Swift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		390EAFD12B20382E12DC4056E276D41B /* Pods-InBrainSurveys_SDK_Swift_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-InBrainSurveys_SDK_Swift_Example-resources.sh"; sourceTree = "<group>"; };
+		3AEC00B0FF1999A57A7838E4B31C6B0E /* Pods-InBrainSurveys_SDK_Swift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-InBrainSurveys_SDK_Swift_Tests-umbrella.h"; sourceTree = "<group>"; };
+		3AF88BF7766FA27318EF53C3015EF595 /* Pods-InBrainSurveys_SDK_Swift_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-InBrainSurveys_SDK_Swift_Tests-resources.sh"; sourceTree = "<group>"; };
+		462885A59CDC3B7A58FCD57F3DE2465C /* InBrainSurveys_SDK_Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = InBrainSurveys_SDK_Swift.modulemap; sourceTree = "<group>"; };
+		5B6713E2F5DD7595870B8768A565E0BE /* InBrainSurveys_SDK_Swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = InBrainSurveys_SDK_Swift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		65D9BA179434C103A0C525FC0E29339A /* Pods_InBrainSurveys_SDK_Swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InBrainSurveys_SDK_Swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82554D0380A30215B2BE7A05E77BA482 /* Pods-InBrainSurveys_SDK_Swift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-InBrainSurveys_SDK_Swift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		83E7D0D339BBF2CB818EC027DB5533A8 /* Pods-InBrainSurveys_SDK_Swift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-InBrainSurveys_SDK_Swift_Tests.modulemap"; sourceTree = "<group>"; };
+		87FB66BC8D654E0A101CB3C54C874536 /* Pods-InBrainSurveys_SDK_Swift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-InBrainSurveys_SDK_Swift_Tests-dummy.m"; sourceTree = "<group>"; };
+		8E3D9B099DF1F5CE528C07869AD52B84 /* Pods-InBrainSurveys_SDK_Swift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-InBrainSurveys_SDK_Swift_Example-frameworks.sh"; sourceTree = "<group>"; };
+		8F166C057445C3C3AEB34A63752911D4 /* Pods-InBrainSurveys_SDK_Swift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InBrainSurveys_SDK_Swift_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		92E2157E9027EBBDE3546009A4F515DB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9309A13A78C74041E7BA6CFBE9BFEC6E /* Pods-InBrainSurveys_SDK_Swift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InBrainSurveys_SDK_Swift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0993EA898B46FFF38884743AACE8E2C /* Pods-InBrainSurveys_SDK_Swift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-InBrainSurveys_SDK_Swift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A529A56B22ACB8EC1DB13235DE74424A /* Pods-InBrainSurveys_SDK_Swift_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-InBrainSurveys_SDK_Swift_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		AA1776F9D378270B294FCEB71993ADC7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B45810246C869640A92F0901247B690E /* InBrainSurveys_SDK_Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InBrainSurveys_SDK_Swift-prefix.pch"; sourceTree = "<group>"; };
+		B7175A4280567E5AB8B43DB24A6FF676 /* InBrainSurveys_SDK_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InBrainSurveys_SDK_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9FC01ABE50BB7D81FB39F8C05DE7D75 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2B1C0BA133D42789F07D3E98A1ECADD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D43D4DA6BD7976343C7C971DB9E88C16 /* InBrainSurveys_SDK_Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "InBrainSurveys_SDK_Swift-umbrella.h"; sourceTree = "<group>"; };
+		D45EFBB61C4FFFB5574E56B5AF953EA7 /* Pods-InBrainSurveys_SDK_Swift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-InBrainSurveys_SDK_Swift_Example-umbrella.h"; sourceTree = "<group>"; };
+		D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D9A8B65E22612D3900B714CE /* InBrainWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InBrainWebViewController.swift; path = InBrainSurveys_SDK_Swift/Classes/InBrainWebViewController.swift; sourceTree = "<group>"; };
+		D9A8B65F22612D3900B714CE /* InBrainReward.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InBrainReward.swift; path = InBrainSurveys_SDK_Swift/Classes/InBrainReward.swift; sourceTree = "<group>"; };
+		D9A8B66022612D3900B714CE /* InBrainSurveys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InBrainSurveys.h; path = InBrainSurveys_SDK_Swift/Classes/InBrainSurveys.h; sourceTree = "<group>"; };
+		D9A8B66122612D3A00B714CE /* InBrainPlacement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InBrainPlacement.swift; path = InBrainSurveys_SDK_Swift/Classes/InBrainPlacement.swift; sourceTree = "<group>"; };
+		D9A8B66222612D3A00B714CE /* InBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InBrain.swift; path = InBrainSurveys_SDK_Swift/Classes/InBrain.swift; sourceTree = "<group>"; };
+		E5A0DEB736E1D952B5EEBC5DA6ED8FFE /* Pods-InBrainSurveys_SDK_Swift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InBrainSurveys_SDK_Swift_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		EA43D157A3D7789A75B5E115DC3A4767 /* Pods-InBrainSurveys_SDK_Swift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-InBrainSurveys_SDK_Swift_Example.modulemap"; sourceTree = "<group>"; };
+		F409CF1681CAD73DF4208483538B1EA4 /* Pods-InBrainSurveys_SDK_Swift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InBrainSurveys_SDK_Swift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		751E22979A0FFFCAA25C158EAE412680 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FBFD859363DCBDD30C7806241A4874F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A938C70F8D54335DD98CB88995C8B158 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A2BE8EC90B4FC030038916483C7C8CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE8DB4ABF6A94111BFFED29F7A3BC96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E9359901E4463A2F0908FEADFAFDFF9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2553365DA47F963D401C9D92F5B4B873 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E16560947EC516FABFC82CBC8328C0DE /* Pods-InBrainSurveys_SDK_Swift_Example */,
+				5B5D867C4131744DB7DA7D03BEC9F0F9 /* Pods-InBrainSurveys_SDK_Swift_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		44D5347904CF754D6785B84253F2574A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D6DFF15000AFE2A371BF499E7AFDA808 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		505DBD509E369CD539E2AE8CC989ACB6 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDE3DA307DBA94C35383F17548AAE286 /* InBrainSurveys_SDK_Swift */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		5B5D867C4131744DB7DA7D03BEC9F0F9 /* Pods-InBrainSurveys_SDK_Swift_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B9FC01ABE50BB7D81FB39F8C05DE7D75 /* Info.plist */,
+				83E7D0D339BBF2CB818EC027DB5533A8 /* Pods-InBrainSurveys_SDK_Swift_Tests.modulemap */,
+				A0993EA898B46FFF38884743AACE8E2C /* Pods-InBrainSurveys_SDK_Swift_Tests-acknowledgements.markdown */,
+				32D2F58CB224070B2F27AAC6C83E062B /* Pods-InBrainSurveys_SDK_Swift_Tests-acknowledgements.plist */,
+				87FB66BC8D654E0A101CB3C54C874536 /* Pods-InBrainSurveys_SDK_Swift_Tests-dummy.m */,
+				A529A56B22ACB8EC1DB13235DE74424A /* Pods-InBrainSurveys_SDK_Swift_Tests-frameworks.sh */,
+				3AF88BF7766FA27318EF53C3015EF595 /* Pods-InBrainSurveys_SDK_Swift_Tests-resources.sh */,
+				3AEC00B0FF1999A57A7838E4B31C6B0E /* Pods-InBrainSurveys_SDK_Swift_Tests-umbrella.h */,
+				9309A13A78C74041E7BA6CFBE9BFEC6E /* Pods-InBrainSurveys_SDK_Swift_Tests.debug.xcconfig */,
+				8F166C057445C3C3AEB34A63752911D4 /* Pods-InBrainSurveys_SDK_Swift_Tests.release.xcconfig */,
+			);
+			name = "Pods-InBrainSurveys_SDK_Swift_Tests";
+			path = "Target Support Files/Pods-InBrainSurveys_SDK_Swift_Tests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				505DBD509E369CD539E2AE8CC989ACB6 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				B04F35584185FAAB96E511F32443CCC3 /* Products */,
+				2553365DA47F963D401C9D92F5B4B873 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B04F35584185FAAB96E511F32443CCC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7175A4280567E5AB8B43DB24A6FF676 /* InBrainSurveys_SDK_Swift.framework */,
+				0A5988FEEA7C4E075CFD0D9BD22FFE1A /* Pods_InBrainSurveys_SDK_Swift_Example.framework */,
+				65D9BA179434C103A0C525FC0E29339A /* Pods_InBrainSurveys_SDK_Swift_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44D5347904CF754D6785B84253F2574A /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD0E6E32CC104673B7973A6F4EFB7238 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				462885A59CDC3B7A58FCD57F3DE2465C /* InBrainSurveys_SDK_Swift.modulemap */,
+				1A2A0996588A016CD79B94A3BDAFC843 /* InBrainSurveys_SDK_Swift.xcconfig */,
+				16005F64ACC57C615147B412BAA2243C /* InBrainSurveys_SDK_Swift-dummy.m */,
+				B45810246C869640A92F0901247B690E /* InBrainSurveys_SDK_Swift-prefix.pch */,
+				D43D4DA6BD7976343C7C971DB9E88C16 /* InBrainSurveys_SDK_Swift-umbrella.h */,
+				0C82A94E624912C58C05FB3B7F3E5E00 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/InBrainSurveys_SDK_Swift";
+			sourceTree = "<group>";
+		};
+		E16560947EC516FABFC82CBC8328C0DE /* Pods-InBrainSurveys_SDK_Swift_Example */ = {
+			isa = PBXGroup;
+			children = (
+				C2B1C0BA133D42789F07D3E98A1ECADD /* Info.plist */,
+				EA43D157A3D7789A75B5E115DC3A4767 /* Pods-InBrainSurveys_SDK_Swift_Example.modulemap */,
+				82554D0380A30215B2BE7A05E77BA482 /* Pods-InBrainSurveys_SDK_Swift_Example-acknowledgements.markdown */,
+				F409CF1681CAD73DF4208483538B1EA4 /* Pods-InBrainSurveys_SDK_Swift_Example-acknowledgements.plist */,
+				1D1A394AA95D47266B843CA83C9B9562 /* Pods-InBrainSurveys_SDK_Swift_Example-dummy.m */,
+				8E3D9B099DF1F5CE528C07869AD52B84 /* Pods-InBrainSurveys_SDK_Swift_Example-frameworks.sh */,
+				390EAFD12B20382E12DC4056E276D41B /* Pods-InBrainSurveys_SDK_Swift_Example-resources.sh */,
+				D45EFBB61C4FFFB5574E56B5AF953EA7 /* Pods-InBrainSurveys_SDK_Swift_Example-umbrella.h */,
+				E5A0DEB736E1D952B5EEBC5DA6ED8FFE /* Pods-InBrainSurveys_SDK_Swift_Example.debug.xcconfig */,
+				02726817392EF8BFA2E16793FC4D0371 /* Pods-InBrainSurveys_SDK_Swift_Example.release.xcconfig */,
+			);
+			name = "Pods-InBrainSurveys_SDK_Swift_Example";
+			path = "Target Support Files/Pods-InBrainSurveys_SDK_Swift_Example";
+			sourceTree = "<group>";
+		};
+		EB570289070ED232C9FE5586FBE294C0 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				5B6713E2F5DD7595870B8768A565E0BE /* InBrainSurveys_SDK_Swift.podspec */,
+				AA1776F9D378270B294FCEB71993ADC7 /* LICENSE */,
+				92E2157E9027EBBDE3546009A4F515DB /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		EDE3DA307DBA94C35383F17548AAE286 /* InBrainSurveys_SDK_Swift */ = {
+			isa = PBXGroup;
+			children = (
+				D9A8B66222612D3A00B714CE /* InBrain.swift */,
+				D9A8B66122612D3A00B714CE /* InBrainPlacement.swift */,
+				D9A8B65F22612D3900B714CE /* InBrainReward.swift */,
+				D9A8B66022612D3900B714CE /* InBrainSurveys.h */,
+				D9A8B65E22612D3900B714CE /* InBrainWebViewController.swift */,
+				EB570289070ED232C9FE5586FBE294C0 /* Pod */,
+				CD0E6E32CC104673B7973A6F4EFB7238 /* Support Files */,
+			);
+			name = InBrainSurveys_SDK_Swift;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4142821B622F42FF04FBBD15A5BBC681 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ADD4FFA7D25BA8C7466BCF934C99A2C /* Pods-InBrainSurveys_SDK_Swift_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88467108C644EBA1A9121B2F3197A971 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E888BE30281B38F9E293FE0F68406F /* Pods-InBrainSurveys_SDK_Swift_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7C28AFF3F7F119209EFCA5D4F37098C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9A8B66522612D3A00B714CE /* InBrainSurveys.h in Headers */,
+				81B721094D09A3DFA6BDA2824147FA1F /* InBrainSurveys_SDK_Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		05D707608AF9C54B9DA8AA76707C8E47 /* Pods-InBrainSurveys_SDK_Swift_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0D864D9FCEFBBFF974F2EE976620C87 /* Build configuration list for PBXNativeTarget "Pods-InBrainSurveys_SDK_Swift_Tests" */;
+			buildPhases = (
+				4142821B622F42FF04FBBD15A5BBC681 /* Headers */,
+				3FEA54CA37BEA9126E7C232AC67F069D /* Sources */,
+				A938C70F8D54335DD98CB88995C8B158 /* Frameworks */,
+				409F747C08F947FBEC01ADB5B0EF3748 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2575EB4115C4DBE866D94E5AA94559D /* PBXTargetDependency */,
+			);
+			name = "Pods-InBrainSurveys_SDK_Swift_Tests";
+			productName = "Pods-InBrainSurveys_SDK_Swift_Tests";
+			productReference = 65D9BA179434C103A0C525FC0E29339A /* Pods_InBrainSurveys_SDK_Swift_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		75384BA3353763D39F9027AD3E1F6964 /* Pods-InBrainSurveys_SDK_Swift_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF170D97E81957B0869395F71939C3D0 /* Build configuration list for PBXNativeTarget "Pods-InBrainSurveys_SDK_Swift_Example" */;
+			buildPhases = (
+				88467108C644EBA1A9121B2F3197A971 /* Headers */,
+				5B1259CDA7B0BA93822B41477E8CE220 /* Sources */,
+				DBE8DB4ABF6A94111BFFED29F7A3BC96 /* Frameworks */,
+				4B8338308E2D778178DF6ED56F865E8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85C986F1B06BEAAD3FF9188B5583F349 /* PBXTargetDependency */,
+			);
+			name = "Pods-InBrainSurveys_SDK_Swift_Example";
+			productName = "Pods-InBrainSurveys_SDK_Swift_Example";
+			productReference = 0A5988FEEA7C4E075CFD0D9BD22FFE1A /* Pods_InBrainSurveys_SDK_Swift_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C8D4E7E3B4B5830F057C74AF9B305EE7 /* InBrainSurveys_SDK_Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41634F25FA96E305FD8029D0C8962AFE /* Build configuration list for PBXNativeTarget "InBrainSurveys_SDK_Swift" */;
+			buildPhases = (
+				A7C28AFF3F7F119209EFCA5D4F37098C /* Headers */,
+				A1F4D2778027BE536638C9DFFB5CAC8B /* Sources */,
+				751E22979A0FFFCAA25C158EAE412680 /* Frameworks */,
+				19C0BBBBD5CAF9C1028DD08E445C349B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InBrainSurveys_SDK_Swift;
+			productName = InBrainSurveys_SDK_Swift;
+			productReference = B7175A4280567E5AB8B43DB24A6FF676 /* InBrainSurveys_SDK_Swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = B04F35584185FAAB96E511F32443CCC3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8D4E7E3B4B5830F057C74AF9B305EE7 /* InBrainSurveys_SDK_Swift */,
+				75384BA3353763D39F9027AD3E1F6964 /* Pods-InBrainSurveys_SDK_Swift_Example */,
+				05D707608AF9C54B9DA8AA76707C8E47 /* Pods-InBrainSurveys_SDK_Swift_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19C0BBBBD5CAF9C1028DD08E445C349B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		409F747C08F947FBEC01ADB5B0EF3748 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B8338308E2D778178DF6ED56F865E8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FEA54CA37BEA9126E7C232AC67F069D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B39EA2B6EFCF1695DD326D9167A3EAB3 /* Pods-InBrainSurveys_SDK_Swift_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B1259CDA7B0BA93822B41477E8CE220 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2352D4604DB9EB69C489C98C24F9A3B /* Pods-InBrainSurveys_SDK_Swift_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1F4D2778027BE536638C9DFFB5CAC8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9A8B66622612D3A00B714CE /* InBrainPlacement.swift in Sources */,
+				FD9A7E2C29DD3E487331A2119EB587C7 /* InBrainSurveys_SDK_Swift-dummy.m in Sources */,
+				D9A8B66422612D3A00B714CE /* InBrainReward.swift in Sources */,
+				D9A8B66322612D3A00B714CE /* InBrainWebViewController.swift in Sources */,
+				D9A8B66722612D3A00B714CE /* InBrain.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		85C986F1B06BEAAD3FF9188B5583F349 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = InBrainSurveys_SDK_Swift;
+			target = C8D4E7E3B4B5830F057C74AF9B305EE7 /* InBrainSurveys_SDK_Swift */;
+			targetProxy = 06E7FB81295077DB27EDF0F770B5C2FB /* PBXContainerItemProxy */;
+		};
+		E2575EB4115C4DBE866D94E5AA94559D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-InBrainSurveys_SDK_Swift_Example";
+			target = 75384BA3353763D39F9027AD3E1F6964 /* Pods-InBrainSurveys_SDK_Swift_Example */;
+			targetProxy = AA7E5D353B9A0CD245DC44ED29F27F03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		001F50F324EEA67A771E6AC09F102FB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A2A0996588A016CD79B94A3BDAFC843 /* InBrainSurveys_SDK_Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/InBrainSurveys_SDK_Swift/InBrainSurveys_SDK_Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/InBrainSurveys_SDK_Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/InBrainSurveys_SDK_Swift/InBrainSurveys_SDK_Swift.modulemap";
+				PRODUCT_MODULE_NAME = InBrainSurveys_SDK_Swift;
+				PRODUCT_NAME = InBrainSurveys_SDK_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		00C303D6CC7D8C4EA5E47F92207FE11F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02726817392EF8BFA2E16793FC4D0371 /* Pods-InBrainSurveys_SDK_Swift_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-InBrainSurveys_SDK_Swift_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-InBrainSurveys_SDK_Swift_Example/Pods-InBrainSurveys_SDK_Swift_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4474191B3C9F5E1EAF01C4DAE7835241 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F166C057445C3C3AEB34A63752911D4 /* Pods-InBrainSurveys_SDK_Swift_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-InBrainSurveys_SDK_Swift_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-InBrainSurveys_SDK_Swift_Tests/Pods-InBrainSurveys_SDK_Swift_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		50646285DD9FD95AF390BDA3FB1948EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		58DCB2BA7C34E84C00C38CEF18A96D11 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		8C43A65069A13229C08F84F313310798 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A2A0996588A016CD79B94A3BDAFC843 /* InBrainSurveys_SDK_Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/InBrainSurveys_SDK_Swift/InBrainSurveys_SDK_Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/InBrainSurveys_SDK_Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/InBrainSurveys_SDK_Swift/InBrainSurveys_SDK_Swift.modulemap";
+				PRODUCT_MODULE_NAME = InBrainSurveys_SDK_Swift;
+				PRODUCT_NAME = InBrainSurveys_SDK_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8ED61D9E36FA064B974F9C3E8F3391A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5A0DEB736E1D952B5EEBC5DA6ED8FFE /* Pods-InBrainSurveys_SDK_Swift_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-InBrainSurveys_SDK_Swift_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-InBrainSurveys_SDK_Swift_Example/Pods-InBrainSurveys_SDK_Swift_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CC8BFFBE5D7AA67DE0616D3F68007574 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9309A13A78C74041E7BA6CFBE9BFEC6E /* Pods-InBrainSurveys_SDK_Swift_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-InBrainSurveys_SDK_Swift_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-InBrainSurveys_SDK_Swift_Tests/Pods-InBrainSurveys_SDK_Swift_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50646285DD9FD95AF390BDA3FB1948EA /* Debug */,
+				58DCB2BA7C34E84C00C38CEF18A96D11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41634F25FA96E305FD8029D0C8962AFE /* Build configuration list for PBXNativeTarget "InBrainSurveys_SDK_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C43A65069A13229C08F84F313310798 /* Debug */,
+				001F50F324EEA67A771E6AC09F102FB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF170D97E81957B0869395F71939C3D0 /* Build configuration list for PBXNativeTarget "Pods-InBrainSurveys_SDK_Swift_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ED61D9E36FA064B974F9C3E8F3391A4 /* Debug */,
+				00C303D6CC7D8C4EA5E47F92207FE11F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0D864D9FCEFBBFF974F2EE976620C87 /* Build configuration list for PBXNativeTarget "Pods-InBrainSurveys_SDK_Swift_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC8BFFBE5D7AA67DE0616D3F68007574 /* Debug */,
+				4474191B3C9F5E1EAF01C4DAE7835241 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

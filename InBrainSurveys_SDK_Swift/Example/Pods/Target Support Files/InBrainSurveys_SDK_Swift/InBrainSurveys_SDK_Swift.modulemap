@@ -1,0 +1,6 @@
+framework module InBrainSurveys_SDK_Swift {
+  umbrella header "InBrainSurveys_SDK_Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

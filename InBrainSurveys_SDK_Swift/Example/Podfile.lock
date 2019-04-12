@@ -1,0 +1,16 @@
+PODS:
+  - InBrainSurveys_SDK_Swift (0.1.0)
+
+DEPENDENCIES:
+  - InBrainSurveys_SDK_Swift (from `../`)
+
+EXTERNAL SOURCES:
+  InBrainSurveys_SDK_Swift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  InBrainSurveys_SDK_Swift: ebebbfc960d79b0f9be674b66647103ea86db790
+
+PODFILE CHECKSUM: 2a771c8c2493d5c65236a2227b31c64b191b698b
+
+COCOAPODS: 1.5.3
