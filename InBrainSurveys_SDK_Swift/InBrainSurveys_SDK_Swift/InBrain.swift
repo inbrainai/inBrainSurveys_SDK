@@ -53,7 +53,7 @@ public final class InBrain : NSObject, WKNavigationDelegate, WKScriptMessageHand
 //        webVC.webView.configuration.userContentController.addUserScript(script)
     }
     
-    class func setInBrainUser(withAppUID: String) {
+    public class func setInBrainUser(withAppUID: String) {
         //Form JavaScript method setUser({"device_id": havingDeviceID, "app_uid": andAppUID})
 //        let contentController = WKUserContentController()
         

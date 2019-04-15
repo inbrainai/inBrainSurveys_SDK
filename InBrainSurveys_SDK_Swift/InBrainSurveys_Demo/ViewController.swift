@@ -14,10 +14,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        InBrain.setAPICredentials(withClientID: <#T##String#>, andClientSecret: <#T##String#>)
+        InBrain.setAPICredentials(withClientID: "ID@MyBank", andClientSecret: "RSC")
+        InBrain.setInBrainUser(withAppUID: "ThankfulForHisBlessins")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func showInBrain(_ sender: Any) {
+        InBrain.presentInBrainWebView()
 
+    }
+    
 }
 
