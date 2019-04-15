@@ -29,6 +29,7 @@ public final class InBrain : NSObject, WKNavigationDelegate, WKScriptMessageHand
     public class func presentInBrainWebView() {
         let naviController = UINavigationController()
         let webVC = InBrainWebViewController()
+        webVC.title = "inBrain"
         naviController.viewControllers = [webVC]
 
         UIApplication.shared.keyWindow?.rootViewController?.present(naviController, animated: true, completion: nil)
