@@ -182,14 +182,11 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-@class WKUserContentController;
-@class WKScriptMessage;
 
 SWIFT_CLASS("_TtC24InBrainSurveys_SDK_Swift7InBrain")
-@interface InBrain : NSObject <WKNavigationDelegate, WKScriptMessageHandler>
+@interface InBrain : NSObject <WKNavigationDelegate>
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-- (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 @end
 
 

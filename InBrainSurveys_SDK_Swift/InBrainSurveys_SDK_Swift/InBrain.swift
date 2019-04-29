@@ -17,67 +17,67 @@ fileprivate enum InBrainPayoutType : Int {
     case CampaignComplete = 3
 }
 
-public final class InBrain : NSObject, WKNavigationDelegate, WKScriptMessageHandler {
-    var naviController = UINavigationController()
-    static var webVC = InBrainWebViewController()
+//protocol InBrainDelegate {
+//    func delegateAlerted()
+//}
+
+public final class InBrain : NSObject, WKNavigationDelegate {
+    static let naviController = UINavigationController()
+    static let viewController = InBrainWebViewController()
+    static var surveyWebView : WKWebView?
+    static let configurationURL = "https://www.surveyb.in/configuration"
+//    static let webVC = InBrainWebViewController()
+//    static var inBrainDelegate : InBrainDelegate?
     
     override init() {
         super.init()
-        InBrain.webVC.webView.navigationDelegate = self
+//        InBrain.webVC.webView.navigationDelegate = self
     }
     
-    public class func presentInBrainWebView() {
-        let naviController = UINavigationController()
-        let webVC = InBrainWebViewController()
-        webVC.title = "inBrain"
-        naviController.viewControllers = [webVC]
-
-        UIApplication.shared.keyWindow?.rootViewController?.present(naviController, animated: true, completion: nil)
-    }
-    
-    public class func setAPICredentials(withClientID: String, andClientSecret: String) {
-        //Form JavaScript method setAPIKeys({"client_ID": withClientID, "client_secret": andClientSecret})
-//        let contentController = WKUserContentController()
-        
-//        let script = WKUserScript(source: scriptSource, injectionTime: .atDocumentStart, forMainFrameOnly: true)
-//        contentController.addUserScript(script)
-        let scriptSource = "setAPIKeys({\"client_ID\": \(withClientID), \"client_secret\": \(andClientSecret)});"
-        webVC.webView.evaluateJavaScript(scriptSource) { (result, error) in
-            if let result = result {
-                print(result)
-            }
-        }
-        
-//        let config = WKWebViewConfiguration()
-//        config.userContentController = contentController
-//        //Serve up JavaScript method to webVC.webView
-//        webVC.webView.configuration.userContentController.addUserScript(script)
-    }
-    
-    public class func setInBrainUser(withAppUID: String) {
-        //Form JavaScript method setUser({"device_id": havingDeviceID, "app_uid": andAppUID})
-//        let contentController = WKUserContentController()
-        
-//        let script = WKUserScript(source: scriptSource, injectionTime: .atDocumentStart, forMainFrameOnly: true)
-//        contentController.addUserScript(script)
+    public class func presentInBrainWebView(withClientID: String, clientSecret: String, andAppUID: String) {
+//        let vc = UIViewController()
+//        let backButton = UIBarButtonItem(title:"Close", style: UIBarButtonItem.Style.plain, target: self, action: #selector(dismissNavi))
+//        viewController.navigationItem.leftBarButtonItem = backButton
+        let config = WKWebViewConfiguration()
+        //        let source = "document.addEventListener('click', function(){ window.webkit.messageHandlers.iosListener.postMessage('click clack!'); })"
         let deviceID = UIDevice.current.identifierForVendor?.uuidString
-        let scriptSource = "setAPIKeys({\"device_id\": \(String(describing: deviceID)), \"app_uid\": \(withAppUID)});"
-        webVC.webView.evaluateJavaScript(scriptSource) { (result, error) in
-            if let result = result {
-                print(result)
-            }
-        }
+        guard let devID = deviceID else { return }
+        let dict : [String : Any] = [
+            "client_id": withClientID,
+            "client_secret": "l3!9hrl*olsdfliw#4uJO*f^j4ow8",
+            "device_id": devID,
+            "app_uid": andAppUID
+        ]
         
-//        let config = WKWebViewConfiguration()
-//        config.userContentController = contentController
-//        //Serve up JavaScript method to webVC.webView
-//        webVC.webView.configuration.userContentController.addUserScript(script)
+        let json = try! JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+        let jsonString = String(data: json, encoding: String.Encoding.utf8)
+        guard let jsonStr = jsonString else { return }
+        let scriptSource = "setConfiguration(\(jsonStr));"
+//        print(scriptSource)
+        let script = WKUserScript(source: scriptSource, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
+        config.userContentController.addUserScript(script)
+//        config.userContentController.add(self, name: "iosListener")
+        
+        surveyWebView = WKWebView(frame: viewController.view.bounds, configuration: config)
+        //        surveyWebview = WKWebView(frame: vc.view.bounds)
+        if let survWebV = surveyWebView {
+//            survWebV.navigationDelegate = self
+            viewController.view.addSubview(survWebV)
+            viewController.title = "inBrain"
+            let naviController = UINavigationController()
+            naviController.viewControllers = [viewController]
+            UIApplication.shared.keyWindow?.rootViewController?.present(naviController, animated: true, completion: {
+                if let url = URL(string: configurationURL) {
+                    survWebV.load(URLRequest(url: url))
+                }
+            })
+        }
     }
     
-    //MARK: WKScriptDelegate method
-    public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        //
+    @objc func dismissNavi() {
+        UIApplication.shared.keyWindow?.rootViewController?.presentedViewController?.navigationController?.dismiss(animated: true, completion: nil)
     }
+    
 }
 
 
