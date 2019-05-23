@@ -25,7 +25,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     }
 
     @IBAction func showInBrain(_ sender: Any) {
-        InBrain.presentInBrainWebView(withClientID: "external-web-client", clientSecret: "l3!9hrl*olsdfliw#4uJO*f^j4ow8", andAppUID: "jo@atp.co-0000")
+        InBrain.presentInBrainWebView(withClientID: "external-web-client", clientSecret: "l3!9hrl*olsdfliw#4uJO*f^j4ow8", andAppUID: "jole@atp.co-0000")
         
     }
     
