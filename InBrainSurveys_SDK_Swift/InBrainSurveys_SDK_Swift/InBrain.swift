@@ -25,7 +25,9 @@ public final class InBrain : NSObject, WKNavigationDelegate {
     static let naviController = UINavigationController()
     static let viewController = InBrainWebViewController()
     static var surveyWebView : WKWebView?
-    static let configurationURL = "https://www.surveyb.in/configuration"
+    static let configurationURLProd = "https://www.surveyb.in"
+    static let configurationURLStaging = "https://inbrainwebview-staging.azureedge.net"
+
 //    static let webVC = InBrainWebViewController()
 //    static var inBrainDelegate : InBrainDelegate?
     
@@ -44,7 +46,7 @@ public final class InBrain : NSObject, WKNavigationDelegate {
         guard let devID = deviceID else { return }
         let dict : [String : Any] = [
             "client_id": withClientID,
-            "client_secret": "l3!9hrl*olsdfliw#4uJO*f^j4ow8",
+            "client_secret": clientSecret,
             "device_id": devID,
             "app_uid": andAppUID
         ]
@@ -67,7 +69,7 @@ public final class InBrain : NSObject, WKNavigationDelegate {
             let naviController = UINavigationController()
             naviController.viewControllers = [viewController]
             UIApplication.shared.keyWindow?.rootViewController?.present(naviController, animated: true, completion: {
-                if let url = URL(string: configurationURL) {
+                if let url = URL(string: configurationURLStaging) {
                     survWebV.load(URLRequest(url: url))
                 }
             })
@@ -107,7 +109,7 @@ public final class InBrain : NSObject, WKNavigationDelegate {
             let naviController = UINavigationController()
             naviController.viewControllers = [viewController]
             UIApplication.shared.keyWindow?.rootViewController?.present(naviController, animated: true, completion: {
-                if let url = URL(string: configurationURL) {
+                if let url = URL(string: configurationURLStaging) {
                     survWebV.load(URLRequest(url: url))
                 }
             })
