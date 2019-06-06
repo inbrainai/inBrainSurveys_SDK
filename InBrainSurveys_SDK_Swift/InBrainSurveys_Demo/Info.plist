@@ -41,5 +41,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>InBrain_clientID</key>
+	<string>external-web-client</string>
+	<key>InBrain_clientSecret</key>
+	<string>zTtQV9gX@P+Bs6vW72v%cz=8SZcXP#Mw</string>
 </dict>
 </plist>
