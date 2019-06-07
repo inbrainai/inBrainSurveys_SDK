@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import WebKit
-import InBrainSurveys_SDK_Swift
+//import InBrainSurveys_SDK_Swift
 
 class ViewController: UIViewController/*, InBrainWebViewDelegate*/ {
 //    static let configurationURL = "https://www.surveyb.in/configuration"
@@ -29,19 +29,19 @@ class ViewController: UIViewController/*, InBrainWebViewDelegate*/ {
 
     @IBAction func showInBrain(_ sender: Any) {
         //        InBrain.presentInBrainWebView(withClientID: "external-web-client", clientSecret: ViewController.stagingKey, andAppUID: "jie@atp.co")
-        InBrain.presentInBrainWebView(withAppUID: "testy@test.com")
+//        InBrain.presentInBrainWebView(withAppUID: "tes@test.com")
         //Refactor Testing of Framework Components
-//        let naviController = UINavigationController()
-//        viewController = InBrainWebViewController(appUserID: "test@test.com")
-//        if let vc = viewController {
-//            surveyWebview = viewController?.surveyWebview
-//            naviController.viewControllers = [vc]
-//            UIApplication.shared.keyWindow?.rootViewController?.present(naviController, animated: true, completion: nil)
+        let naviController = UINavigationController()
+        viewController = InBrainWebViewController(appUserID: "zraan@ap.com")
+        if let vc = viewController {
+            surveyWebview = viewController?.surveyWebview
+            naviController.viewControllers = [vc]
+            UIApplication.shared.keyWindow?.rootViewController?.present(naviController, animated: true, completion: nil)
 //            if let surWebView = surveyWebview {
 //                naviController.viewControllers = [vc]
 //                UIApplication.shared.keyWindow?.rootViewController?.present(naviController, animated: true, completion: nil)
 //            }
-//        }
+        }
         
 //        let config = WKWebViewConfiguration()
 //        //        let source = "document.addEventListener('click', function(){ window.webkit.messageHandlers.iosListener.postMessage('click clack!'); })"

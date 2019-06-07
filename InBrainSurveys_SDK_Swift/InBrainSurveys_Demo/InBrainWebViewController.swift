@@ -40,7 +40,7 @@ class InBrainWebViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureWebView()
+//        configureWebView()
         
         let backButton = UIBarButtonItem(title:"Close", style: UIBarButtonItem.Style.plain, target: self, action: #selector(dismissNavi))
         self.navigationItem.leftBarButtonItem = backButton
@@ -64,11 +64,14 @@ class InBrainWebViewController: UIViewController {
         let script = WKUserScript(source: scriptSource, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
         
         let contentController = WKUserContentController()
-        contentController.add(self, name: "JAVASCRIPTFUNCTION")
+        contentController.add(self, name: "surveyOpened")
+        contentController.add(self, name: "surveyClosed")
+        contentController.addUserScript(script)
+        print(contentController)
         config.userContentController = contentController
-        config.userContentController.addUserScript(script)
-
-//        print(dict)
+//        config.userContentController.addUserScript(script)
+//        print(config)
+        print(dict)
         
         surveyWebview = WKWebView(frame: view.bounds, configuration: config)
         
@@ -88,9 +91,20 @@ class InBrainWebViewController: UIViewController {
     }
 }
 
-extension InBrainWebViewController : WKScriptMessageHandler {
+extension InBrainWebViewController : WKScriptMessageHandler{
+    
+    
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        if message.name == "JAVASCRIPTFUNCTION" {
+        if message.name == "surveyClosed" {
+            //Change the Navigation Back button with a different URL loading to the WKWebView
+            self.navigationItem.leftBarButtonItem = nil
+            //Possibly set a instance variable to hold the next URL string value
+            let backButton = UIBarButtonItem(title:"Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(goBackTo))
+            self.navigationItem.leftBarButtonItem = backButton
+            //            let dict = message.body as? NSDictionary {
+            //                geocodeAddress(dict: dict)
+            //            }
+        } else if message.name == "surveyOpened" {
             //Change the Navigation Back button with a different URL loading to the WKWebView
             self.navigationItem.leftBarButtonItem = nil
             //Possibly set a instance variable to hold the next URL string value
@@ -101,8 +115,13 @@ extension InBrainWebViewController : WKScriptMessageHandler {
             //            }
         }
     }
-    
+
     @objc func goBackTo() {
-        
+        if let survWebV = surveyWebview, let url = URL(string: InBrainWebViewController.configurationURLStaging)  {
+            survWebV.load(URLRequest(url: url))
+            self.navigationItem.leftBarButtonItem = nil
+            let backButton = UIBarButtonItem(title:"Close", style: UIBarButtonItem.Style.plain, target: self, action: #selector(dismissNavi))
+            self.navigationItem.leftBarButtonItem = backButton
+        }
     }
 }
