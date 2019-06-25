@@ -25,6 +25,8 @@
 		D964EAA52264BF3100C683CE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D964EAA42264BF3100C683CE /* WebKit.framework */; };
 		D98BC01422A9B637001875A3 /* InBrainSurveys_SDK_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98BC01322A9B637001875A3 /* InBrainSurveys_SDK_Swift.framework */; };
 		D98BC01522A9B637001875A3 /* InBrainSurveys_SDK_Swift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D98BC01322A9B637001875A3 /* InBrainSurveys_SDK_Swift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D99221EE22BBFFB100BE3050 /* InBrainToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99221ED22BBFFB100BE3050 /* InBrainToken.swift */; };
+		D99221F022BBFFE300BE3050 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99221EF22BBFFE300BE3050 /* UIDeviceExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		D964EAA22264BF2800C683CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D964EAA42264BF3100C683CE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D98BC01322A9B637001875A3 /* InBrainSurveys_SDK_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InBrainSurveys_SDK_Swift.framework; sourceTree = "<group>"; };
+		D99221ED22BBFFB100BE3050 /* InBrainToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InBrainToken.swift; sourceTree = "<group>"; };
+		D99221EF22BBFFE300BE3050 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,9 +153,11 @@
 			isa = PBXGroup;
 			children = (
 				D964EA992264BF0100C683CE /* InBrain.swift */,
-				D964EA9B2264BF0100C683CE /* InBrainPlacement.swift */,
-				D964EA9A2264BF0100C683CE /* InBrainReward.swift */,
 				D964EA9C2264BF0100C683CE /* InBrainWebViewController.swift */,
+				D964EA9A2264BF0100C683CE /* InBrainReward.swift */,
+				D99221ED22BBFFB100BE3050 /* InBrainToken.swift */,
+				D99221EF22BBFFE300BE3050 /* UIDeviceExtension.swift */,
+				D964EA9B2264BF0100C683CE /* InBrainPlacement.swift */,
 				D964EA5E2264BD8600C683CE /* InBrainSurveys_SDK_Swift.h */,
 				D964EA5F2264BD8600C683CE /* Info.plist */,
 			);
@@ -372,7 +378,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D964EA9F2264BF0100C683CE /* InBrainPlacement.swift in Sources */,
+				D99221EE22BBFFB100BE3050 /* InBrainToken.swift in Sources */,
 				D964EAA02264BF0100C683CE /* InBrainWebViewController.swift in Sources */,
+				D99221F022BBFFE300BE3050 /* UIDeviceExtension.swift in Sources */,
 				D964EA9E2264BF0100C683CE /* InBrainReward.swift in Sources */,
 				D964EA9D2264BF0100C683CE /* InBrain.swift in Sources */,
 			);

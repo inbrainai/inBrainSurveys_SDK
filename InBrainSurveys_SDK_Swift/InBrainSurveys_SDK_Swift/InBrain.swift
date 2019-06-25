@@ -10,38 +10,222 @@ import Foundation
 import WebKit
 import UIKit
 
-fileprivate enum InBrainPayoutType : Int {
-    case PayoutComplete = 0
-    case UserDidntQualify = 1
-    case BonusPayout = 2
-    case CampaignComplete = 3
+public protocol InBrainDelegate {
+    /***
+     @method inBrainRewardsReceived
+     @abstract Delegate function that allows your app to receive InBrainRewards from InBrain service
+     @param rewardsArray -> function receives an array of InBrainReward structs to be processed in your app
+     ***/
+    func inBrainRewardsReceived(rewardsArray: [InBrainReward])
 }
 
-//protocol InBrainDelegate {
-//    func delegateAlerted()
-//}
-
-public final class InBrain : NSObject {
-    static let naviController = UINavigationController()
+/***
+Main interface for you to communicate with the InBrain service.
+ ***/
+public final class InBrain : NSObject, InBrainWebViewDelegate {
+    public static var shared = InBrain()
+    static var naviController = UINavigationController()
     static var viewController : InBrainWebViewController?
     static var survWebView : WKWebView?
-
-//    static let webVC = InBrainWebViewController()
-//    static var inBrainDelegate : InBrainDelegate?
+    static var jsonDecoder: JSONDecoder?
+    static var brainToken : InBrainToken?
+    static var rewardDelegate : InBrainDelegate?
+    let isServerToServer : Bool = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.clientIDKey) as! Bool
+    
+    static let brainTokenURL = "https://inbrain-auth-staging.azurewebsites.net/connect/token"
+    static let scopeValue = "inbrain-api:integration"
+    static let grantTypeValue = "client_credentials"
+    static let rewardsURL = "https://inbrain-api-staging.azurewebsites.net/api/v1/external-surveys/rewards/"
+    static let confirmRewardsURL = "https://inbrain-api-staging.azurewebsites.net/api/v1/external-surveys/confirm-transactions/"
     
     override init() {
         super.init()
-//        InBrain.webVC.webView.navigationDelegate = self
     }
     
-    public class func presentInBrainWebView(withAppUID: String) {
-    
-        viewController = InBrainWebViewController(appUserID: withAppUID)
-        if let vc = viewController {
-            survWebView = vc.surveyWebview
-            naviController.viewControllers = [vc]
-            UIApplication.shared.keyWindow?.rootViewController?.present(naviController, animated: true, completion: nil)
+    public func presentInBrainWebView(withAppUID: String) {
+        InBrain.viewController = InBrainWebViewController(appUserID: withAppUID)
+        InBrain.viewController?.webViewDelegate = self
+        if let vc = InBrain.viewController {
+            InBrain.survWebView = vc.surveyWebview
+            if UIDevice().type == .iPhoneX || UIDevice().type == .iPhoneXS || UIDevice().type == .iPhoneXR || UIDevice().type == .iPhoneXSMax {
+                InBrain.naviController.edgesForExtendedLayout = [.bottom, .left, .right]
+            }
+            InBrain.naviController.navigationBar.barTintColor = UIColor.white
+            if let font = UIFont(name: "AvenirNext-DemiBold", size: 17.0) {
+                InBrain.naviController.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: font]
+            }
+            if let font2 = UIFont(name: "AvenirNext-Regular", size: 13.0) {
+                InBrain.naviController.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: font2], for: UIControl.State.normal)
+            }
+            InBrain.naviController.viewControllers = [vc]
+            UIApplication.shared.keyWindow?.rootViewController?.present(InBrain.naviController, animated: true, completion: nil)
         }
+    }
+    
+    //This function makes an Authenticated GET request of InBrainRewards and returns an array of Reward structs for SDK Developers to process in their app then confirm the transactions
+    public class func getRewards() {
+        InBrain.jsonDecoder = JSONDecoder()
+        //MARK: GET TOKEN FIRST
+        guard let tokenUrl = URL(string: InBrain.brainTokenURL) else { return }
+        var tokRequest = URLRequest(url: tokenUrl)
+        tokRequest.httpMethod = HTTPMethod.post.rawValue
+        
+        let deviceID = UIDevice.current.identifierForVendor?.uuidString
+        guard let devID = deviceID else { return }
+        guard let email = InBrain.viewController?.appUID else { return }
+
+//        guard let email = Container.shared.get(State.self).currentUser.value?.email else { return }
+        
+        let tokenDict : [String : Any] = [
+            "scope": InBrain.scopeValue,
+            "grant_type": InBrain.grantTypeValue,
+            "client_id": Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.clientIDKey) as! String,
+            "client_secret": Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.clientSecretKey) as! String/*,
+             "device_id": devID,
+             "app_uid": email*/
+        ]
+        
+        let jString = tokenDict.queryParameters
+        //MARK: URLEncode the dictionary above and make sure to encode the @,+,! symbols appropriately
+//        let jString = "client_id=external-web-client&client_secret=zTtQV9gX%40P%2BBs6vW72v%25cz%3D8SZcXP%23Mw&grant_type=client_credentials&scope=inbrain-api:integration"
+        
+        //        let json = try! JSONSerialization.data(withJSONObject: tokenDict, options: .prettyPrinted)
+        //        let jsonString = String(data: json, encoding: String.Encoding.utf8)
+        //        guard let jsonStr = jsonString else { return }
+        tokRequest.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+//        guard let dictString = jString else { return }
+        tokRequest.httpBody = jString.data(using: .utf8)
+        print(tokRequest)
+        //        tokRequest.httpBody = json
+        //        tokRequest.addValue(jString, forHTTPHeaderField: "Authorization")
+        
+        let configure = URLSessionConfiguration.default
+        let session = URLSession(configuration: configure)
+        
+        let dataTask = session.dataTask(with: tokRequest, completionHandler: { (data, response, error) in
+            guard error == nil else {
+                print(error!)
+                return
+            }
+            guard let responseData = data else {
+                print("Error: did not receive data")
+                return
+            }
+            do {
+                guard let decoder = self.jsonDecoder else { return }
+                guard let inBToken = try? decoder.decode(InBrainToken.self, from: responseData) as InBrainToken else {
+                    print("error trying to convert data to JSON")
+                    return
+                }
+                print(inBToken)
+                self.brainToken = inBToken
+                
+                //MARK: GET REWARDS WORK
+                var urlString = InBrain.rewardsURL
+                urlString = urlString + email + "/" + devID
+                guard let rewardUrl = URL(string: urlString) else { return }
+                var request = URLRequest(url: rewardUrl)
+                request.httpMethod = HTTPMethod.get.rawValue
+                request.addValue("Bearer \(inBToken.access_token)", forHTTPHeaderField: "Authorization")
+                
+                let rewardDataTask = session.dataTask(with: request, completionHandler: { (data, response, error) in
+                    guard error == nil else {
+                        print(error!)
+                        return
+                    }
+                    guard let newResponseData = data else {
+                        print("Error: did not receive data")
+                        return
+                    }
+                    do {
+                        guard let rewards = try? decoder.decode([InBrainReward].self, from: newResponseData) as [InBrainReward] else {
+                            print("error trying to convert data to JSON")
+                            return
+                        }
+                        print("\(rewards) for the Rewards Delegate")
+                        //MARK: Developers' presenting view controller will receive the InBrain Rewards
+                        InBrain.rewardDelegate?.inBrainRewardsReceived(rewardsArray: rewards)
+                        //Call rewardDelegate.didReceiveInBrainReward(rewards)
+//                        var arr : [Int] = []
+//                        for reward in rewards {
+//                            if let txID = reward.transactionId {
+//                                arr.append(txID)
+//                            }
+//                        }
+//                        self.confirmRewards(txIdArray: arr)
+                    }
+                })
+                rewardDataTask.resume()
+            }
+        })
+        dataTask.resume()
+    }
+    //MARK: Confirm Rewards
+    public class func confirmRewards(txIdArray: [Int]) {
+        let deviceID = UIDevice.current.identifierForVendor?.uuidString
+        guard let devID = deviceID else { return }
+        guard let email = InBrain.viewController?.appUID else { return }
+        
+        var urlString = InBrain.confirmRewardsURL
+        urlString = urlString + email + "/" + devID
+        guard let tokenUrl = URL(string: urlString) else { return }
+        
+        var req = URLRequest(url: tokenUrl)
+        req.httpMethod = HTTPMethod.post.rawValue
+        guard let toke = InBrain.brainToken else { return }
+        req.addValue("Bearer \(toke.access_token)", forHTTPHeaderField: "Authorization")
+        req.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let jsonData = try? JSONSerialization.data(withJSONObject: txIdArray, options: .prettyPrinted)
+        guard let json = jsonData else { return }
+        req.httpBody = json
+        
+        let configure = URLSessionConfiguration.default
+        let session = URLSession(configuration: configure)
+        
+        let task = session.dataTask(with: req, completionHandler: { (data, response, error) in
+            guard error == nil else {
+                print(error!)
+                return
+            }
+//            guard let responseData = data else {
+//                print("Error: did not receive data")
+//                return
+//            }
+            if let theResponse = response as? HTTPURLResponse {
+                switch theResponse.statusCode {
+                case 200..<300:
+                    print("Confirmation Success")
+                default:
+                    print("Confirmation Error")
+                }
+            }
+        })
+        task.resume()
+    }
+    
+    @objc func dismissNavi() {
+        UIApplication.shared.keyWindow?.rootViewController?.presentedViewController?.navigationController?.dismiss(animated: true, completion: {
+            if !self.isServerToServer{
+                Timer.scheduledTimer(withTimeInterval: 6, repeats: false, block: { (timer) in
+                    DispatchQueue.global(qos: .background).async {
+                        InBrain.getRewards()
+                    }
+                })
+            }
+            if InBrain.survWebView != nil {
+                InBrain.survWebView = nil
+            }
+        })
+    }
+    
+    //MARK: InBrainWebViewDelegate function for calling getRewards
+    func callGetRewards() {
+        InBrain.getRewards()
+    }
+    
+    func webViewDismissed() {
+        dismissNavi()
     }
     
 //    public class func presentInBrainWebView(withClientID: String, clientSecret: String, andAppUID: String) {
@@ -124,11 +308,36 @@ public final class InBrain : NSObject {
 //            })
 //        }
 //    }
-    
-//    @objc func dismissNavi() {
-//        UIApplication.shared.keyWindow?.rootViewController?.presentedViewController?.navigationController?.dismiss(animated: true, completion: nil)
-//    }
-    
 }
 
+//extension String {
+//    func stringByAddingPercentEncodingForRFC3986() -> String? {
+//        let unreserved = "@+!-._~/?%"
+//        let allowed = NSMutableCharacterSet.alphanumeric()
+//        allowed.addCharacters(in: unreserved)
+//        return addingPercentEncoding(withAllowedCharacters: allowed as CharacterSet)
+//    }
+//}
 
+extension Dictionary {
+    var queryParameters: String {
+        var parts: [String] = []
+        var part = ""
+        let customAllowedSet =  NSCharacterSet(charactersIn:"!*'();:@&=+$,/?%#[]").inverted
+        for (key, value) in self {
+            let val = "\(value)"
+            if val == "inbrain-api:integration" {
+                part = String(format: "%@=%@",
+                              String(describing: key).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!,
+                              val)
+            } else {
+                part = String(format: "%@=%@",
+                              String(describing: key).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!,
+                              String(describing: value).addingPercentEncoding(withAllowedCharacters: customAllowedSet)!)
+            }
+            
+            parts.append(part as String)
+        }
+        return parts.joined(separator: "&")
+    }
+}

@@ -12,10 +12,9 @@ protocol InBrainRewardDelegate {
     func inBrainDidReceiveReward(withReward: InBrainReward)
 }
 
-public class InBrainReward : NSObject, Codable {
-    var transactionIdentifier : String?
-    var rewardAmount : Int?
-    var currencyName : Int?
-    var payoutEvent : Int?
-    var placementID : String?
+public struct InBrainReward : Codable {
+    public let transactionId : Int?
+    public let amount : Float?
+    public let currency : String?
+    public let transactionType : Int?
 }

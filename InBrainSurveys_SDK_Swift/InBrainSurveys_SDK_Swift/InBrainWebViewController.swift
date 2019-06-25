@@ -10,27 +10,31 @@ import Foundation
 import UIKit
 import WebKit
 
-protocol InBrainSurveyDelegate {
-    func inBrainWebViewOpened(withPlacement: InBrainPlacement)
-    func inBrainWebViewDismissed(withPlacement: InBrainPlacement)
+protocol InBrainWebViewDelegate {
+    func callGetRewards()
+    func webViewDismissed()
 }
 
 class InBrainWebViewController : UIViewController {
     
     static let configurationURLStaging = "https://inbrainwebview-staging.azureedge.net"
     static let configurationURLProd = "https://www.surveyb.in"
-    static let clientIDKey = "InBrain_clientID"
-    static let clientSecretKey = "InBrain_clientSecret"
+    static let clientIDKey = "InBrain_client"
+    static let clientSecretKey = "InBrain_secret"
+    static let server2ServerKey = "InBrain_server"
     
     let c_ID : String
     let c_secret : String
     let appUID : String
     var surveyWebview : WKWebView?
+    var webViewDelegate : InBrainWebViewDelegate?
+    let isServerToServer : Bool
     
     init(appUserID: String) {
         c_ID = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.clientIDKey) as! String
         c_secret = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.clientSecretKey) as! String
         appUID = appUserID
+        isServerToServer = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.clientIDKey) as! Bool
         super.init(nibName: nil, bundle: nil)
         configureWebView()
     }
@@ -50,6 +54,9 @@ class InBrainWebViewController : UIViewController {
     
     func configureWebView() {
         let config = WKWebViewConfiguration()
+        config.userContentController.add(self, name: "surveyOpened")
+        config.userContentController.add(self, name: "surveyClosed")
+        config.userContentController.add(self, name: "toggleNativeButtons")
         let deviceID = UIDevice.current.identifierForVendor?.uuidString
         guard let devID = deviceID else { return }
         let dict : [String : Any] = [
@@ -58,68 +65,86 @@ class InBrainWebViewController : UIViewController {
             "device_id": devID,
             "app_uid": appUID
         ]
+        
         let json = try! JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
         let jsonString = String(data: json, encoding: String.Encoding.utf8)
         guard let jsonStr = jsonString else { return }
         let scriptSource = "setConfiguration(\(jsonStr));"
-        //        print(scriptSource)
+
         let script = WKUserScript(source: scriptSource, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
-        
-        let contentController = WKUserContentController()
-        contentController.add(self, name: "surveyOpened")
-        contentController.add(self, name: "surveyClosed")
-        config.userContentController = contentController
         config.userContentController.addUserScript(script)
         
-//        print(dict)
-        surveyWebview = WKWebView(frame: view.bounds, configuration: config)
+        if (UIDevice().type == .iPhoneX || UIDevice().type == .iPhoneXS || UIDevice().type == .iPhoneXR || UIDevice().type == .iPhoneXSMax || UIDevice().type == .iPadPro12_9) {
+            var rectFrame : CGRect?
+            rectFrame = CGRect(x: view.bounds.origin.x, y: view.bounds.origin.y, width: view.bounds.width, height: view.bounds.height + 34.0)
+            if let rect = rectFrame {
+                surveyWebview = WKWebView(frame: rect, configuration: config)
+            }
+        } else {
+            surveyWebview = WKWebView(frame: view.bounds, configuration: config)
+        }
         
         if let survWebV = surveyWebview {
-            //            survWebV.navigationDelegate = self
             view.addSubview(survWebV)
             title = "inBrain"
+            
             if let url = URL(string: InBrainWebViewController.configurationURLStaging) {
-//                print(url)
                 survWebV.load(URLRequest(url: url))
             }
         }
     }
     
     @objc func dismissNavi() {
-        self.navigationController?.dismiss(animated: true, completion: nil)
+        webViewDelegate?.webViewDismissed()
     }
     
 }
 
 extension InBrainWebViewController : WKScriptMessageHandler {
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        if message.name == "surveyClosed" {
-            //Change the Navigation Back button with a different URL loading to the WKWebView
-            self.navigationItem.leftBarButtonItem = nil
-            //Possibly set a instance variable to hold the next URL string value
+        if message.name == "surveyOpened" {
+            navigationItem.leftBarButtonItem = nil
             let backButton = UIBarButtonItem(title:"Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(goBackTo))
-            self.navigationItem.leftBarButtonItem = backButton
-            //            let dict = message.body as? NSDictionary {
-            //                geocodeAddress(dict: dict)
-            //            }
-        } else if message.name == "surveyOpened" {
-            //Change the Navigation Back button with a different URL loading to the WKWebView
-            self.navigationItem.leftBarButtonItem = nil
-            //Possibly set a instance variable to hold the next URL string value
-            let backButton = UIBarButtonItem(title:"Back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(goBackTo))
-            self.navigationItem.leftBarButtonItem = backButton
-            //            let dict = message.body as? NSDictionary {
-            //                geocodeAddress(dict: dict)
-            //            }
+            navigationItem.leftBarButtonItem = backButton
+        } else if message.name == "surveyClosed" {
+            navigationItem.leftBarButtonItem = nil
+            let backButton = UIBarButtonItem(title:"Close", style: UIBarButtonItem.Style.plain, target: self, action: #selector(dismissNavi))
+            navigationItem.leftBarButtonItem = backButton
+            //MARK: S2S Bool flag conditionally enables this getRewards timed function
+            if !isServerToServer {
+                Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: { [weak self] (timer) in
+                    DispatchQueue.global(qos: .background).async {
+                        self?.webViewDelegate?.callGetRewards()
+                    }
+                })
+            }
+        } else if message.name == "toggleNativeButtons" {
+            guard let dict = message.body as? [String : Any] else { return }
+            guard let val = dict["message"] as? String else { return }
+            if val == "true" {
+                navigationItem.leftBarButtonItem = nil
+                let backButton = UIBarButtonItem(title:"Close", style: UIBarButtonItem.Style.plain, target: self, action: #selector(dismissNavi))
+                navigationItem.leftBarButtonItem = backButton
+                //MARK: S2S Bool flag conditionally enables this getRewards timed function
+                if !isServerToServer {
+                    Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: { [weak self] (timer) in
+                        DispatchQueue.global(qos: .background).async {
+                            self?.webViewDelegate?.callGetRewards()
+                        }
+                    })
+                }
+            } else if val == "false" {
+                navigationItem.leftBarButtonItem = nil
+            }
         }
     }
     
     @objc func goBackTo() {
         if let survWebV = surveyWebview, let url = URL(string: InBrainWebViewController.configurationURLStaging)  {
             survWebV.load(URLRequest(url: url))
-            self.navigationItem.leftBarButtonItem = nil
+            navigationItem.leftBarButtonItem = nil
             let backButton = UIBarButtonItem(title:"Close", style: UIBarButtonItem.Style.plain, target: self, action: #selector(dismissNavi))
-            self.navigationItem.leftBarButtonItem = backButton
+            navigationItem.leftBarButtonItem = backButton
         }
     }
 }
