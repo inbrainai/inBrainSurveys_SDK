@@ -34,7 +34,8 @@ class InBrainWebViewController : UIViewController {
         c_ID = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.clientIDKey) as! String
         c_secret = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.clientSecretKey) as! String
         appUID = appUserID
-        isServerToServer = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.clientIDKey) as! Bool
+        isServerToServer = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.server2ServerKey) as! Bool
+        print("Server2Server: \(isServerToServer)")
         super.init(nibName: nil, bundle: nil)
         configureWebView()
     }

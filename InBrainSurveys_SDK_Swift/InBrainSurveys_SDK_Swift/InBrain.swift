@@ -22,7 +22,7 @@ public protocol InBrainDelegate {
 /***
 Main interface for you to communicate with the InBrain service.
  ***/
-public final class InBrain : NSObject, InBrainWebViewDelegate {
+public class InBrain : NSObject, InBrainWebViewDelegate {
     public static var shared = InBrain()
     static var naviController = UINavigationController()
     static var viewController : InBrainWebViewController?
@@ -30,7 +30,7 @@ public final class InBrain : NSObject, InBrainWebViewDelegate {
     static var jsonDecoder: JSONDecoder?
     static var brainToken : InBrainToken?
     static var rewardDelegate : InBrainDelegate?
-    let isServerToServer : Bool = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.clientIDKey) as! Bool
+    let isServerToServer : Bool = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.server2ServerKey) as! Bool
     
     static let brainTokenURL = "https://inbrain-auth-staging.azurewebsites.net/connect/token"
     static let scopeValue = "inbrain-api:integration"
@@ -38,9 +38,7 @@ public final class InBrain : NSObject, InBrainWebViewDelegate {
     static let rewardsURL = "https://inbrain-api-staging.azurewebsites.net/api/v1/external-surveys/rewards/"
     static let confirmRewardsURL = "https://inbrain-api-staging.azurewebsites.net/api/v1/external-surveys/confirm-transactions/"
     
-    override init() {
-        super.init()
-    }
+    public override init() {}
     
     public func presentInBrainWebView(withAppUID: String) {
         InBrain.viewController = InBrainWebViewController(appUserID: withAppUID)
