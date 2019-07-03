@@ -10,7 +10,7 @@ import Foundation
 import WebKit
 import UIKit
 
-public protocol InBrainDelegate {
+public protocol InBrainDelegate : AnyObject {
     /***
      @method inBrainRewardsReceived
      @abstract Delegate function that allows your app to receive InBrainRewards from InBrain service
@@ -24,45 +24,54 @@ Main interface for you to communicate with the InBrain service.
  ***/
 public class InBrain : NSObject, InBrainWebViewDelegate {
     public static var shared = InBrain()
-    static var naviController = UINavigationController()
-    static var viewController : InBrainWebViewController?
-    static var survWebView : WKWebView?
-    static var jsonDecoder: JSONDecoder?
-    static var brainToken : InBrainToken?
-    static var rewardDelegate : InBrainDelegate?
+    var naviController = UINavigationController()
+    var viewController : InBrainWebViewController?
+    var survWebView : WKWebView?
+    var jsonDecoder: JSONDecoder?
+    var brainToken : InBrainToken?
+    public var rewardDelegate : InBrainDelegate?
     let isServerToServer : Bool = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.server2ServerKey) as! Bool
-    
+    //MARK: Environment URLs
     static let brainTokenURL = "https://inbrain-auth-staging.azurewebsites.net/connect/token"
     static let scopeValue = "inbrain-api:integration"
     static let grantTypeValue = "client_credentials"
     static let rewardsURL = "https://inbrain-api-staging.azurewebsites.net/api/v1/external-surveys/rewards/"
     static let confirmRewardsURL = "https://inbrain-api-staging.azurewebsites.net/api/v1/external-surveys/confirm-transactions/"
     
-    public override init() {}
+    static let prodRewardsURL = "https://api.surveyb.in/api/v1/external-surveys/rewards/"
+    static let prodConfirmRewardsURL = "https://api.surveyb.in/api/v1/external-surveys/confirm-transactions/"
+    static let prodBrainTokenURL = "https://auth.surveyb.in/connect/token"
+
+    
+    public override init() {
+        super.init()
+        
+    }
     
     public func presentInBrainWebView(withAppUID: String) {
-        InBrain.viewController = InBrainWebViewController(appUserID: withAppUID)
-        InBrain.viewController?.webViewDelegate = self
-        if let vc = InBrain.viewController {
-            InBrain.survWebView = vc.surveyWebview
+        viewController = InBrainWebViewController(appUserID: withAppUID)
+        if let vc = viewController {
+            vc.webViewDelegate = self
+            
+            survWebView = vc.surveyWebview
             if UIDevice().type == .iPhoneX || UIDevice().type == .iPhoneXS || UIDevice().type == .iPhoneXR || UIDevice().type == .iPhoneXSMax {
-                InBrain.naviController.edgesForExtendedLayout = [.bottom, .left, .right]
+                naviController.edgesForExtendedLayout = [.bottom, .left, .right]
             }
-            InBrain.naviController.navigationBar.barTintColor = UIColor.white
+            naviController.navigationBar.barTintColor = UIColor.white
             if let font = UIFont(name: "AvenirNext-DemiBold", size: 17.0) {
-                InBrain.naviController.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: font]
+                naviController.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: font]
             }
             if let font2 = UIFont(name: "AvenirNext-Regular", size: 13.0) {
-                InBrain.naviController.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: font2], for: UIControl.State.normal)
+                naviController.navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: font2], for: UIControl.State.normal)
             }
-            InBrain.naviController.viewControllers = [vc]
-            UIApplication.shared.keyWindow?.rootViewController?.present(InBrain.naviController, animated: true, completion: nil)
+            naviController.viewControllers = [vc]
+            UIApplication.shared.keyWindow?.rootViewController?.present(naviController, animated: true, completion: nil)
         }
     }
     
     //This function makes an Authenticated GET request of InBrainRewards and returns an array of Reward structs for SDK Developers to process in their app then confirm the transactions
-    public class func getRewards() {
-        InBrain.jsonDecoder = JSONDecoder()
+    public func getRewards() {
+        self.jsonDecoder = JSONDecoder()
         //MARK: GET TOKEN FIRST
         guard let tokenUrl = URL(string: InBrain.brainTokenURL) else { return }
         var tokRequest = URLRequest(url: tokenUrl)
@@ -70,7 +79,7 @@ public class InBrain : NSObject, InBrainWebViewDelegate {
         
         let deviceID = UIDevice.current.identifierForVendor?.uuidString
         guard let devID = deviceID else { return }
-        guard let email = InBrain.viewController?.appUID else { return }
+        guard let email = viewController?.appUID else { return }
 
 //        guard let email = Container.shared.get(State.self).currentUser.value?.email else { return }
         
@@ -142,7 +151,7 @@ public class InBrain : NSObject, InBrainWebViewDelegate {
                         }
                         print("\(rewards) for the Rewards Delegate")
                         //MARK: Developers' presenting view controller will receive the InBrain Rewards
-                        InBrain.rewardDelegate?.inBrainRewardsReceived(rewardsArray: rewards)
+                        self.rewardDelegate?.inBrainRewardsReceived(rewardsArray: rewards)
                         //Call rewardDelegate.didReceiveInBrainReward(rewards)
 //                        var arr : [Int] = []
 //                        for reward in rewards {
@@ -159,10 +168,10 @@ public class InBrain : NSObject, InBrainWebViewDelegate {
         dataTask.resume()
     }
     //MARK: Confirm Rewards
-    public class func confirmRewards(txIdArray: [Int]) {
+    public func confirmRewards(txIdArray: [Int]) {
         let deviceID = UIDevice.current.identifierForVendor?.uuidString
         guard let devID = deviceID else { return }
-        guard let email = InBrain.viewController?.appUID else { return }
+        guard let email = viewController?.appUID else { return }
         
         var urlString = InBrain.confirmRewardsURL
         urlString = urlString + email + "/" + devID
@@ -170,7 +179,7 @@ public class InBrain : NSObject, InBrainWebViewDelegate {
         
         var req = URLRequest(url: tokenUrl)
         req.httpMethod = HTTPMethod.post.rawValue
-        guard let toke = InBrain.brainToken else { return }
+        guard let toke = self.brainToken else { return }
         req.addValue("Bearer \(toke.access_token)", forHTTPHeaderField: "Authorization")
         req.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
@@ -203,26 +212,32 @@ public class InBrain : NSObject, InBrainWebViewDelegate {
     }
     
     @objc func dismissNavi() {
-        UIApplication.shared.keyWindow?.rootViewController?.presentedViewController?.navigationController?.dismiss(animated: true, completion: {
+        print("dismissal function Called")
+        naviController.dismiss(animated: true) {
             if !self.isServerToServer{
                 Timer.scheduledTimer(withTimeInterval: 6, repeats: false, block: { (timer) in
                     DispatchQueue.global(qos: .background).async {
-                        InBrain.getRewards()
+                        self.getRewards()
                     }
                 })
             }
-            if InBrain.survWebView != nil {
-                InBrain.survWebView = nil
+            if self.survWebView != nil {
+                self.survWebView = nil
             }
-        })
+        }
+//        } UIApplication.shared.keyWindow?.rootViewController?.presentedViewController?.navigationController?.dismiss(animated: true, completion: {
+//
+//        })
     }
     
     //MARK: InBrainWebViewDelegate function for calling getRewards
     func callGetRewards() {
-        InBrain.getRewards()
+        print("InBrain Begin Get Rewards call")
+        getRewards()
     }
     
     func webViewDismissed() {
+        print("InBrain Dismissal called")
         dismissNavi()
     }
     
@@ -321,7 +336,7 @@ extension Dictionary {
     var queryParameters: String {
         var parts: [String] = []
         var part = ""
-        let customAllowedSet =  NSCharacterSet(charactersIn:"!*'();:@&=+$,/?%#[]").inverted
+        let customAllowedSet =  NSCharacterSet(charactersIn:"!.~^*'();:@&=+$,/?%#[]{}").inverted
         for (key, value) in self {
             let val = "\(value)"
             if val == "inbrain-api:integration" {

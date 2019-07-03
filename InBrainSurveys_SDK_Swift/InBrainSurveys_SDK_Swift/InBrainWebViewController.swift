@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 import WebKit
 
-protocol InBrainWebViewDelegate {
+internal protocol InBrainWebViewDelegate : AnyObject {
     func callGetRewards()
     func webViewDismissed()
 }
 
-class InBrainWebViewController : UIViewController {
+internal class InBrainWebViewController : UIViewController {
     
     static let configurationURLStaging = "https://inbrainwebview-staging.azureedge.net"
     static let configurationURLProd = "https://www.surveyb.in"
@@ -23,11 +23,14 @@ class InBrainWebViewController : UIViewController {
     static let clientSecretKey = "InBrain_secret"
     static let server2ServerKey = "InBrain_server"
     
+    static let prodClientID = "zap-surveys-ios"
+    static let prodClientSecret = "V.)beXT}x^M5e)r4!42MK+fh5&TC8~"
+    
     let c_ID : String
     let c_secret : String
     let appUID : String
     var surveyWebview : WKWebView?
-    var webViewDelegate : InBrainWebViewDelegate?
+    weak var webViewDelegate : InBrainWebViewDelegate?
     let isServerToServer : Bool
     
     init(appUserID: String) {
@@ -96,6 +99,7 @@ class InBrainWebViewController : UIViewController {
     }
     
     @objc func dismissNavi() {
+        print("InBWebView Dismiss")
         webViewDelegate?.webViewDismissed()
     }
     
@@ -130,6 +134,7 @@ extension InBrainWebViewController : WKScriptMessageHandler {
                 if !isServerToServer {
                     Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: { [weak self] (timer) in
                         DispatchQueue.global(qos: .background).async {
+                            print("Web View Delegate Call Rewards")
                             self?.webViewDelegate?.callGetRewards()
                         }
                     })

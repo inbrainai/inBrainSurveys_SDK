@@ -13,14 +13,12 @@ import InBrainSurveys_SDK_Swift
 
 class ViewController: UIViewController, InBrainDelegate {
     
-    
-   
 //    static let configurationURL = "https://www.surveyb.in/configuration"
     var surveyWebview : WKWebView?
     static let stagingKey = "zTtQV9gX@P+Bs6vW72v%cz=8SZcXP#Mw"
     static let prodKey = "#wca=fXgVzgNwK&9tJ*$QLa%v*yQa^7%"
 //    var viewController : InBrainWebViewController?
-    var inBrain : InBrain = InBrain.shared
+    let inBrain : InBrain = InBrain.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +31,14 @@ class ViewController: UIViewController, InBrainDelegate {
     }
     
     func inBrainRewardsReceived(rewardsArray: [InBrainReward]) {
-        
+        print("Miracle")
+        var arr : [Int] = []
+        for reward in rewardsArray {
+            if let txID = reward.transactionId {
+                arr.append(txID)
+            }
+        }
+        inBrain.confirmRewards(txIdArray: arr)
     }
 
     @IBAction func showInBrain(_ sender: Any) {
