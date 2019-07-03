@@ -31,6 +31,10 @@ public class InBrain : NSObject, InBrainWebViewDelegate {
     var brainToken : InBrainToken?
     public var rewardDelegate : InBrainDelegate?
     let isServerToServer : Bool = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.server2ServerKey) as! Bool
+    var titleString : String?
+    var navBarColor : UIColor?
+    var navFontColor : UIColor?
+
     //MARK: Environment URLs
     static let brainTokenURL = "https://inbrain-auth-staging.azurewebsites.net/connect/token"
     static let scopeValue = "inbrain-api:integration"
@@ -47,17 +51,45 @@ public class InBrain : NSObject, InBrainWebViewDelegate {
         super.init()
         
     }
+    //Needs to be called prior to calling -presentInBrainWebView()
+    public func setInBrainWebViewTitle(toString: String) {
+        titleString = toString
+    }
+    
+    public func setInBrainWebViewNavBarColor(toColor: UIColor) {
+        navBarColor = toColor
+    }
+    
+    public func setInBrainWebViewNavButtonColor(toColor: UIColor) {
+        navFontColor = toColor
+    }
     
     public func presentInBrainWebView(withAppUID: String) {
         viewController = InBrainWebViewController(appUserID: withAppUID)
+
         if let vc = viewController {
+            if let str = titleString {
+                vc.title = str
+            } else {
+                vc.title = "inBrain"
+            }
+
             vc.webViewDelegate = self
-            
             survWebView = vc.surveyWebview
             if UIDevice().type == .iPhoneX || UIDevice().type == .iPhoneXS || UIDevice().type == .iPhoneXR || UIDevice().type == .iPhoneXSMax {
                 naviController.edgesForExtendedLayout = [.bottom, .left, .right]
             }
-            naviController.navigationBar.barTintColor = UIColor.white
+            
+            if let col = navBarColor {
+                naviController.navigationBar.barTintColor = col
+            } else {
+                naviController.navigationBar.barTintColor = UIColor.white
+            }
+            
+            if let color = navFontColor {
+                naviController.navigationBar.tintColor = color
+            }
+            
             if let font = UIFont(name: "AvenirNext-DemiBold", size: 17.0) {
                 naviController.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: font]
             }

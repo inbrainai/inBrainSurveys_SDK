@@ -23,8 +23,8 @@
 		D964EAA02264BF0100C683CE /* InBrainWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D964EA9C2264BF0100C683CE /* InBrainWebViewController.swift */; };
 		D964EAA32264BF2800C683CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D964EAA22264BF2800C683CE /* UIKit.framework */; };
 		D964EAA52264BF3100C683CE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D964EAA42264BF3100C683CE /* WebKit.framework */; };
-		D9677D9322CD03E200F641E7 /* InBrainSurveys_SDK_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D964EA5B2264BD8600C683CE /* InBrainSurveys_SDK_Swift.framework */; };
-		D9677D9422CD03E200F641E7 /* InBrainSurveys_SDK_Swift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D964EA5B2264BD8600C683CE /* InBrainSurveys_SDK_Swift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9677D9822CD30F600F641E7 /* InBrainSurveys_SDK_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D964EA5B2264BD8600C683CE /* InBrainSurveys_SDK_Swift.framework */; };
+		D9677D9922CD30F600F641E7 /* InBrainSurveys_SDK_Swift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D964EA5B2264BD8600C683CE /* InBrainSurveys_SDK_Swift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D99221EE22BBFFB100BE3050 /* InBrainToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99221ED22BBFFB100BE3050 /* InBrainToken.swift */; };
 		D99221F022BBFFE300BE3050 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99221EF22BBFFE300BE3050 /* UIDeviceExtension.swift */; };
 /* End PBXBuildFile section */
@@ -44,7 +44,7 @@
 			remoteGlobalIDString = D964EA782264BDB800C683CE;
 			remoteInfo = InBrainSurveys_Demo;
 		};
-		D9677D9522CD03E200F641E7 /* PBXContainerItemProxy */ = {
+		D9677D9A22CD30F600F641E7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D964EA522264BD8600C683CE /* Project object */;
 			proxyType = 1;
@@ -54,13 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D9677D9722CD03E200F641E7 /* Embed Frameworks */ = {
+		D9677D9C22CD30F600F641E7 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D9677D9422CD03E200F641E7 /* InBrainSurveys_SDK_Swift.framework in Embed Frameworks */,
+				D9677D9922CD30F600F641E7 /* InBrainSurveys_SDK_Swift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9677D9322CD03E200F641E7 /* InBrainSurveys_SDK_Swift.framework in Frameworks */,
+				D9677D9822CD30F600F641E7 /* InBrainSurveys_SDK_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,12 +267,12 @@
 				D964EA752264BDB800C683CE /* Sources */,
 				D964EA762264BDB800C683CE /* Frameworks */,
 				D964EA772264BDB800C683CE /* Resources */,
-				D9677D9722CD03E200F641E7 /* Embed Frameworks */,
+				D9677D9C22CD30F600F641E7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D9677D9622CD03E200F641E7 /* PBXTargetDependency */,
+				D9677D9B22CD30F600F641E7 /* PBXTargetDependency */,
 			);
 			name = InBrainSurveys_Demo;
 			productName = InBrainSurveys_Demo;
@@ -431,10 +431,10 @@
 			target = D964EA782264BDB800C683CE /* InBrainSurveys_Demo */;
 			targetProxy = D964EA8D2264BDB900C683CE /* PBXContainerItemProxy */;
 		};
-		D9677D9622CD03E200F641E7 /* PBXTargetDependency */ = {
+		D9677D9B22CD30F600F641E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D964EA5A2264BD8600C683CE /* InBrainSurveys_SDK_Swift */;
-			targetProxy = D9677D9522CD03E200F641E7 /* PBXContainerItemProxy */;
+			targetProxy = D9677D9A22CD30F600F641E7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

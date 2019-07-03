@@ -90,7 +90,7 @@ internal class InBrainWebViewController : UIViewController {
         
         if let survWebV = surveyWebview {
             view.addSubview(survWebV)
-            title = "inBrain"
+//            title = "inBrain"
             
             if let url = URL(string: InBrainWebViewController.configurationURLStaging) {
                 survWebV.load(URLRequest(url: url))
