@@ -14,7 +14,7 @@
 				D905DAC822D5198F002F4E09 /* ShellScript */,
 			);
 			dependencies = (
-				D905DACA22D51B37002F4E09 /* PBXTargetDependency */,
+				D9BA4DBE22D52DB500F6FE67 /* PBXTargetDependency */,
 			);
 			name = InBrainSurveysFramework;
 			productName = InBrainSurveysFramework;
@@ -40,18 +40,11 @@
 		D964EAA52264BF3100C683CE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D964EAA42264BF3100C683CE /* WebKit.framework */; };
 		D99221EE22BBFFB100BE3050 /* InBrainToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99221ED22BBFFB100BE3050 /* InBrainToken.swift */; };
 		D99221F022BBFFE300BE3050 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99221EF22BBFFE300BE3050 /* UIDeviceExtension.swift */; };
-		D9E6F00622D522720074690B /* InBrainSurveys_SDK_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E6F00522D522720074690B /* InBrainSurveys_SDK_Swift.framework */; };
-		D9E6F00722D522720074690B /* InBrainSurveys_SDK_Swift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9E6F00522D522720074690B /* InBrainSurveys_SDK_Swift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9BA4DC022D52E0200F6FE67 /* InBrainSurveys_SDK_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9BA4DBF22D52E0200F6FE67 /* InBrainSurveys_SDK_Swift.framework */; };
+		D9BA4DC122D52E0200F6FE67 /* InBrainSurveys_SDK_Swift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9BA4DBF22D52E0200F6FE67 /* InBrainSurveys_SDK_Swift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D905DAC922D51B37002F4E09 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D964EA522264BD8600C683CE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D964EA5A2264BD8600C683CE;
-			remoteInfo = InBrainSurveys_SDK_Swift;
-		};
 		D964EA662264BD8700C683CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D964EA522264BD8600C683CE /* Project object */;
@@ -66,16 +59,23 @@
 			remoteGlobalIDString = D964EA782264BDB800C683CE;
 			remoteInfo = InBrainSurveys_Demo;
 		};
+		D9BA4DBD22D52DB500F6FE67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D964EA522264BD8600C683CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D964EA5A2264BD8600C683CE;
+			remoteInfo = InBrainSurveys_SDK_Swift;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D9E6F00822D522720074690B /* Embed Frameworks */ = {
+		D9BA4DC222D52E0200F6FE67 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D9E6F00722D522720074690B /* InBrainSurveys_SDK_Swift.framework in Embed Frameworks */,
+				D9BA4DC122D52E0200F6FE67 /* InBrainSurveys_SDK_Swift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,7 +108,7 @@
 		D964EAA42264BF3100C683CE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D99221ED22BBFFB100BE3050 /* InBrainToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InBrainToken.swift; sourceTree = "<group>"; };
 		D99221EF22BBFFE300BE3050 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
-		D9E6F00522D522720074690B /* InBrainSurveys_SDK_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InBrainSurveys_SDK_Swift.framework; sourceTree = "<group>"; };
+		D9BA4DBF22D52E0200F6FE67 /* InBrainSurveys_SDK_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InBrainSurveys_SDK_Swift.framework; path = "InBrainSurveys_SDK_Swift-Aggregated/InBrainSurveys_SDK_Swift.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9E6F00622D522720074690B /* InBrainSurveys_SDK_Swift.framework in Frameworks */,
+				D9BA4DC022D52E0200F6FE67 /* InBrainSurveys_SDK_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +150,7 @@
 		D964EA512264BD8600C683CE = {
 			isa = PBXGroup;
 			children = (
-				D9E6F00522D522720074690B /* InBrainSurveys_SDK_Swift.framework */,
+				D9BA4DBF22D52E0200F6FE67 /* InBrainSurveys_SDK_Swift.framework */,
 				D964EA5D2264BD8600C683CE /* InBrainSurveys_SDK_Swift */,
 				D964EA682264BD8700C683CE /* InBrainSurveys_SDK_SwiftTests */,
 				D964EA7A2264BDB800C683CE /* InBrainSurveys_Demo */,
@@ -284,8 +284,8 @@
 				D964EA752264BDB800C683CE /* Sources */,
 				D964EA762264BDB800C683CE /* Frameworks */,
 				D964EA772264BDB800C683CE /* Resources */,
-				D9E6F00822D522720074690B /* Embed Frameworks */,
 				D9E6F00922D528390074690B /* ShellScript */,
+				D9BA4DC222D52E0200F6FE67 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -479,11 +479,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D905DACA22D51B37002F4E09 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D964EA5A2264BD8600C683CE /* InBrainSurveys_SDK_Swift */;
-			targetProxy = D905DAC922D51B37002F4E09 /* PBXContainerItemProxy */;
-		};
 		D964EA672264BD8700C683CE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D964EA5A2264BD8600C683CE /* InBrainSurveys_SDK_Swift */;
@@ -493,6 +488,11 @@
 			isa = PBXTargetDependency;
 			target = D964EA782264BDB800C683CE /* InBrainSurveys_Demo */;
 			targetProxy = D964EA8D2264BDB900C683CE /* PBXContainerItemProxy */;
+		};
+		D9BA4DBE22D52DB500F6FE67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D964EA5A2264BD8600C683CE /* InBrainSurveys_SDK_Swift */;
+			targetProxy = D9BA4DBD22D52DB500F6FE67 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -779,6 +779,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/InBrainSurveys_Demo",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/InBrainSurveys_SDK_Swift-Aggregated",
 				);
 				INFOPLIST_FILE = InBrainSurveys_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -803,6 +804,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/InBrainSurveys_Demo",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/InBrainSurveys_SDK_Swift-Aggregated",
 				);
 				INFOPLIST_FILE = InBrainSurveys_Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
