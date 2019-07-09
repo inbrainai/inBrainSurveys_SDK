@@ -46,6 +46,6 @@
 	<key>InBrain_secret</key>
 	<string>zTtQV9gX@P+Bs6vW72v%cz=8SZcXP#Mw</string>
 	<key>InBrain_server</key>
-	<false/>
+	<true/>
 </dict>
 </plist>
