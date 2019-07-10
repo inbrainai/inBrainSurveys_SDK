@@ -1,0 +1,10 @@
+framework module InBrainSurveys_SDK_Swift {
+  umbrella header "InBrainSurveys_SDK_Swift.h"
+
+  export *
+  module * { export * }
+}
+
+module InBrainSurveys_SDK_Swift.__Swift {
+    exclude header "InBrainSurveys_SDK_Swift-Swift.h"
+}

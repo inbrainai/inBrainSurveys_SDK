@@ -1,0 +1,2 @@
+dependencies: \
+  /Users/jovialjoel/Documents/InBrainSurveys_SDK_Swift/InBrainSurveys_SDK_Swift/build/InBrainSurveys_SDK_Swift.build/Release-iphonesimulator/InBrainSurveys_SDK_Swift.build/DerivedSources/InBrainSurveys_SDK_Swift_vers.c

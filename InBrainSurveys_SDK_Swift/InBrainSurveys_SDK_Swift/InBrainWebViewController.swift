@@ -38,7 +38,6 @@ internal class InBrainWebViewController : UIViewController {
         c_secret = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.clientSecretKey) as! String
         appUID = appUserID
         isServerToServer = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.server2ServerKey) as! Bool
-        print("Server2Server: \(isServerToServer)")
         super.init(nibName: nil, bundle: nil)
         configureWebView()
     }
@@ -63,12 +62,22 @@ internal class InBrainWebViewController : UIViewController {
         config.userContentController.add(self, name: "toggleNativeButtons")
         let deviceID = UIDevice.current.identifierForVendor?.uuidString
         guard let devID = deviceID else { return }
-        let dict : [String : Any] = [
-            "client_id":c_ID,
-            "client_secret": c_secret,
-            "device_id": devID,
-            "app_uid": appUID
-        ]
+        var dict : [String : Any]
+        if appUID.isEmpty {
+            dict = [
+                "client_id":c_ID,
+                "client_secret": c_secret,
+                "device_id": devID,
+                "app_uid": devID
+            ]
+        } else {
+            dict = [
+                "client_id":c_ID,
+                "client_secret": c_secret,
+                "device_id": devID,
+                "app_uid": appUID
+            ]
+        }
         
         let json = try! JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
         let jsonString = String(data: json, encoding: String.Encoding.utf8)
@@ -99,7 +108,6 @@ internal class InBrainWebViewController : UIViewController {
     }
     
     @objc func dismissNavi() {
-        print("InBWebView Dismiss")
         webViewDelegate?.webViewDismissed()
     }
     
@@ -134,7 +142,6 @@ extension InBrainWebViewController : WKScriptMessageHandler {
                 if !isServerToServer {
                     Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: { [weak self] (timer) in
                         DispatchQueue.global(qos: .background).async {
-                            print("Web View Delegate Call Rewards")
                             self?.webViewDelegate?.callGetRewards()
                         }
                     })

@@ -181,7 +181,6 @@ public class InBrain : NSObject, InBrainWebViewDelegate {
                             print("error trying to convert data to JSON")
                             return
                         }
-                        print("\(rewards) for the Rewards Delegate")
                         //MARK: Developers' presenting view controller will receive the InBrain Rewards
                         self.rewardDelegate?.inBrainRewardsReceived(rewardsArray: rewards)
                         //Call rewardDelegate.didReceiveInBrainReward(rewards)
@@ -244,7 +243,6 @@ public class InBrain : NSObject, InBrainWebViewDelegate {
     }
     
     @objc func dismissNavi() {
-        print("dismissal function Called")
         naviController.dismiss(animated: true) {
             if !self.isServerToServer{
                 Timer.scheduledTimer(withTimeInterval: 6, repeats: false, block: { (timer) in
@@ -264,12 +262,10 @@ public class InBrain : NSObject, InBrainWebViewDelegate {
     
     //MARK: InBrainWebViewDelegate function for calling getRewards
     func callGetRewards() {
-        print("InBrain Begin Get Rewards call")
         getRewards()
     }
     
     func webViewDismissed() {
-        print("InBrain Dismissal called")
         dismissNavi()
     }
     

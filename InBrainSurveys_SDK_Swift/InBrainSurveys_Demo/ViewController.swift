@@ -45,7 +45,7 @@ class ViewController: UIViewController, InBrainDelegate {
         inBrain.setInBrainWebViewNavBarColor(toColor: UIColor.green)
         inBrain.setInBrainWebViewTitle(toString: "Little Surveys")
         inBrain.setInBrainWebViewNavButtonColor(toColor: UIColor.yellow)
-        inBrain.presentInBrainWebView(withAppUID: "GlenDavis")
+        inBrain.presentInBrainWebView(withAppUID: "")
        
         //        InBrain.presentInBrainWebView(withClientID: "external-web-client", clientSecret: ViewController.stagingKey, andAppUID: "jie@atp.co")
 //        InBrain.presentInBrainWebView(withAppUID: "tes@test.com")

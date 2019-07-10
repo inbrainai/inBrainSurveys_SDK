@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/jovialjoel/Library/Developer/Xcode/DerivedData/InBrainSurveys_SDK_Swift-fvpivwdofhorokewaajfbvzqwshc/Build/Products/Release-iphonesimulator/InBrainSurveys_SDK_Swift.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/jovialjoel/Documents/InBrainSurveys_SDK_Swift/InBrainSurveys_SDK_Swift/build/InBrainSurveys_SDK_Swift.build/Release-iphonesimulator/InBrainSurveys_SDK_Swift.build/unextended-module.modulemap",
+    }]
+  }]
+}
