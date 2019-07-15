@@ -19,13 +19,14 @@ internal class InBrainWebViewController : UIViewController {
     
     static let configurationURLStaging = "https://inbrainwebview-staging.azureedge.net"
     static let configurationURLProd = "https://www.surveyb.in"
-    static let clientIDKey = "InBrain_client"
-    static let clientSecretKey = "InBrain_secret"
-    static let server2ServerKey = "InBrain_server"
+    static let infoDictKey = "InBrain"
+    static let clientIDKey = "client"
+    static let clientSecretKey = "secret"
+    static let server2ServerKey = "server"
     
     static let prodClientID = "zap-surveys-ios"
     static let prodClientSecret = "V.)beXT}x^M5e)r4!42MK+fh5&TC8~"
-    
+    var dict : [String : Any] = [:]
     let c_ID : String
     let c_secret : String
     let appUID : String
@@ -34,10 +35,11 @@ internal class InBrainWebViewController : UIViewController {
     let isServerToServer : Bool
     
     init(appUserID: String) {
-        c_ID = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.clientIDKey) as! String
-        c_secret = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.clientSecretKey) as! String
+        dict = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.infoDictKey) as! [String : AnyObject]
+        c_ID = dict[InBrainWebViewController.clientIDKey] as! String
+        c_secret = dict[InBrainWebViewController.clientSecretKey] as! String
         appUID = appUserID
-        isServerToServer = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.server2ServerKey) as! Bool
+        isServerToServer = dict[InBrainWebViewController.server2ServerKey] as! Bool
         super.init(nibName: nil, bundle: nil)
         configureWebView()
     }

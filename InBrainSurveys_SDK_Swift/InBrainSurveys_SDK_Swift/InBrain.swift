@@ -30,7 +30,7 @@ public class InBrain : NSObject, InBrainWebViewDelegate {
     var jsonDecoder: JSONDecoder?
     var brainToken : InBrainToken?
     public var rewardDelegate : InBrainDelegate?
-    let isServerToServer : Bool = Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.server2ServerKey) as! Bool
+    var isServerToServer : Bool?
     var titleString : String?
     var navBarColor : UIColor?
     var navFontColor : UIColor?
@@ -66,7 +66,8 @@ public class InBrain : NSObject, InBrainWebViewDelegate {
     
     public func presentInBrainWebView(withAppUID: String) {
         viewController = InBrainWebViewController(appUserID: withAppUID)
-
+        isServerToServer = viewController?.isServerToServer
+        
         if let vc = viewController {
             if let str = titleString {
                 vc.title = str
@@ -114,15 +115,17 @@ public class InBrain : NSObject, InBrainWebViewDelegate {
         guard let email = viewController?.appUID else { return }
 
 //        guard let email = Container.shared.get(State.self).currentUser.value?.email else { return }
-        
-        let tokenDict : [String : Any] = [
+        var tokenDict : [String : Any] = [:]
+        if let vc = viewController {
+            tokenDict  = [
             "scope": InBrain.scopeValue,
             "grant_type": InBrain.grantTypeValue,
-            "client_id": Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.clientIDKey) as! String,
-            "client_secret": Bundle.main.object(forInfoDictionaryKey: InBrainWebViewController.clientSecretKey) as! String/*,
+            "client_id": vc.c_ID,
+            "client_secret": vc.c_secret/*,
              "device_id": devID,
              "app_uid": email*/
-        ]
+            ]
+        }
         
         let jString = tokenDict.queryParameters
         //MARK: URLEncode the dictionary above and make sure to encode the @,+,! symbols appropriately
@@ -244,13 +247,16 @@ public class InBrain : NSObject, InBrainWebViewDelegate {
     
     @objc func dismissNavi() {
         naviController.dismiss(animated: true) {
-            if !self.isServerToServer{
-                Timer.scheduledTimer(withTimeInterval: 6, repeats: false, block: { (timer) in
-                    DispatchQueue.global(qos: .background).async {
-                        self.getRewards()
-                    }
-                })
+            if let serverBool = self.isServerToServer {
+                if !serverBool {
+                    Timer.scheduledTimer(withTimeInterval: 6, repeats: false, block: { (timer) in
+                        DispatchQueue.global(qos: .background).async {
+                            self.getRewards()
+                        }
+                    })
+                }
             }
+        
             if self.survWebView != nil {
                 self.survWebView = nil
             }

@@ -41,11 +41,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>InBrain_client</key>
-	<string>external-web-client</string>
-	<key>InBrain_secret</key>
-	<string>zTtQV9gX@P+Bs6vW72v%cz=8SZcXP#Mw</string>
-	<key>InBrain_server</key>
-	<true/>
+	<key>InBrain</key>
+	<dict>
+		<key>client</key>
+		<string>external-web-client</string>
+		<key>secret</key>
+		<string>zTtQV9gX@P+Bs6vW72v%cz=8SZcXP#Mw</string>
+		<key>server</key>
+		<false/>
+	</dict>
 </dict>
 </plist>

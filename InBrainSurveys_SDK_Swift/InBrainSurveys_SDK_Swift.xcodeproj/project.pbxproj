@@ -40,8 +40,8 @@
 		D964EAA52264BF3100C683CE /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D964EAA42264BF3100C683CE /* WebKit.framework */; };
 		D99221EE22BBFFB100BE3050 /* InBrainToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99221ED22BBFFB100BE3050 /* InBrainToken.swift */; };
 		D99221F022BBFFE300BE3050 /* UIDeviceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99221EF22BBFFE300BE3050 /* UIDeviceExtension.swift */; };
-		D996F56B22D68F3300D0569E /* InBrainSurveys_SDK_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D996F56A22D68F3300D0569E /* InBrainSurveys_SDK_Swift.framework */; };
-		D996F56C22D68F3300D0569E /* InBrainSurveys_SDK_Swift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D996F56A22D68F3300D0569E /* InBrainSurveys_SDK_Swift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D996F57722D7AC2F00D0569E /* InBrainSurveys_SDK_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D996F57622D7AC2F00D0569E /* InBrainSurveys_SDK_Swift.framework */; };
+		D996F57822D7AC2F00D0569E /* InBrainSurveys_SDK_Swift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D996F57622D7AC2F00D0569E /* InBrainSurveys_SDK_Swift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,13 +69,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D996F56D22D68F3300D0569E /* Embed Frameworks */ = {
+		D996F57922D7AC2F00D0569E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D996F56C22D68F3300D0569E /* InBrainSurveys_SDK_Swift.framework in Embed Frameworks */,
+				D996F57822D7AC2F00D0569E /* InBrainSurveys_SDK_Swift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,7 +108,7 @@
 		D964EAA42264BF3100C683CE /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D99221ED22BBFFB100BE3050 /* InBrainToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InBrainToken.swift; sourceTree = "<group>"; };
 		D99221EF22BBFFE300BE3050 /* UIDeviceExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDeviceExtension.swift; sourceTree = "<group>"; };
-		D996F56A22D68F3300D0569E /* InBrainSurveys_SDK_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InBrainSurveys_SDK_Swift.framework; sourceTree = "<group>"; };
+		D996F57622D7AC2F00D0569E /* InBrainSurveys_SDK_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = InBrainSurveys_SDK_Swift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D996F56B22D68F3300D0569E /* InBrainSurveys_SDK_Swift.framework in Frameworks */,
+				D996F57722D7AC2F00D0569E /* InBrainSurveys_SDK_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +150,7 @@
 		D964EA512264BD8600C683CE = {
 			isa = PBXGroup;
 			children = (
-				D996F56A22D68F3300D0569E /* InBrainSurveys_SDK_Swift.framework */,
+				D996F57622D7AC2F00D0569E /* InBrainSurveys_SDK_Swift.framework */,
 				D964EA5D2264BD8600C683CE /* InBrainSurveys_SDK_Swift */,
 				D964EA682264BD8700C683CE /* InBrainSurveys_SDK_SwiftTests */,
 				D964EA7A2264BDB800C683CE /* InBrainSurveys_Demo */,
@@ -286,7 +286,7 @@
 				D964EA762264BDB800C683CE /* Frameworks */,
 				D964EA772264BDB800C683CE /* Resources */,
 				D9E6F00922D528390074690B /* ShellScript */,
-				D996F56D22D68F3300D0569E /* Embed Frameworks */,
+				D996F57922D7AC2F00D0569E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
