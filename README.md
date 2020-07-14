@@ -8,13 +8,20 @@ Survey library to monetize your mobile app, provided by inBrain.ai
 
 # Installation
 ### CocoaPods
-Add to your project's Podfile, and run *pod install*
+Add to your project's Podfile
   
 Podfile Example:
+```
 target 'inBrainPodTest' do
      use_frameworks!
      **pod 'InBrainSurveys'**
 end
+```
+
+Then, from Terminal within the project folder, run
+```
+pod install
+```
 
 # Usage
 Once *pod install* command is complete, from now on open .xcworkspace file for your project.
