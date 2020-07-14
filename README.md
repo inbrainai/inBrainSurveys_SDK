@@ -1,7 +1,5 @@
 # inBrainSurveys_SDK
-Provides in-app monetization through inBrain.ai surveys
 
-# InBrainSurveys_SDK_Swift
 Survey library to monetize your mobile app, provided by inBrain.ai
 
 # Requirements
@@ -10,13 +8,18 @@ Survey library to monetize your mobile app, provided by inBrain.ai
 
 # Installation
 ### CocoaPods
-Add to your project's Podfile, and run pod install
+Add to your project's Podfile, and run *pod install*
   
 Podfile Example:
 target 'inBrainPodTest' do
      use_frameworks!
      **pod 'InBrainSurveys'**
 end
+
+# Usage
+Once *pod install* command is complete, from now on open .xcworkspace file for your project.
+
+Add **import InBrainSurveys_SDK_Swift** to begin using SDK in your code
 
 # Configuration
 You’ll need to have 4 items:
