@@ -14,7 +14,7 @@ Podfile Example:
 ```
 target 'inBrainPodTest' do
      use_frameworks!
-     **pod 'InBrainSurveys'**
+     pod 'InBrainSurveys'
 end
 ```
 
