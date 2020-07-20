@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		sdetjeDpFPaLSTbc6y0M5akmt20=
+		sW4X+/QVBiKKuYJLVUpvQuxkeiQ=
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/arm.swiftmodule</key>
 		<data>
-		25XTgy6BzarcL1I8jlT2xWDP4mg=
+		Orj15sSGlTgDru+1kX3BZXvFly8=
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		y6l94GKhS9cnEV+O/4hw1x/WDBs=
+		CTRm+sdDByTN1XcIfeloxu7Nsc0=
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		y6l94GKhS9cnEV+O/4hw1x/WDBs=
+		CTRm+sdDByTN1XcIfeloxu7Nsc0=
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		25XTgy6BzarcL1I8jlT2xWDP4mg=
+		Orj15sSGlTgDru+1kX3BZXvFly8=
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/armv7.swiftdoc</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/armv7.swiftmodule</key>
 		<data>
-		25XTgy6BzarcL1I8jlT2xWDP4mg=
+		Orj15sSGlTgDru+1kX3BZXvFly8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -131,11 +131,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			25XTgy6BzarcL1I8jlT2xWDP4mg=
+			Orj15sSGlTgDru+1kX3BZXvFly8=
 			</data>
 			<key>hash2</key>
 			<data>
-			oGhcsxuCBA+QV9aYZWAOevWYCz2/phb8hQ/FvihCMmI=
+			PYP5x29B2bvayVCZwvhqSvBO1Ne/fnC9weN9ReDoZOk=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -164,11 +164,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			y6l94GKhS9cnEV+O/4hw1x/WDBs=
+			CTRm+sdDByTN1XcIfeloxu7Nsc0=
 			</data>
 			<key>hash2</key>
 			<data>
-			mI618InQbvfjPMSDuLMXc6+IJrA29kruHV6u/dZ8jMs=
+			a6yahXJ91pgZm1VKH+SLTGklO9Y1CO/z2idNh3QBr3w=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/arm64.swiftdoc</key>
@@ -197,11 +197,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			y6l94GKhS9cnEV+O/4hw1x/WDBs=
+			CTRm+sdDByTN1XcIfeloxu7Nsc0=
 			</data>
 			<key>hash2</key>
 			<data>
-			mI618InQbvfjPMSDuLMXc6+IJrA29kruHV6u/dZ8jMs=
+			a6yahXJ91pgZm1VKH+SLTGklO9Y1CO/z2idNh3QBr3w=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/armv7-apple-ios.swiftdoc</key>
@@ -230,11 +230,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			25XTgy6BzarcL1I8jlT2xWDP4mg=
+			Orj15sSGlTgDru+1kX3BZXvFly8=
 			</data>
 			<key>hash2</key>
 			<data>
-			oGhcsxuCBA+QV9aYZWAOevWYCz2/phb8hQ/FvihCMmI=
+			PYP5x29B2bvayVCZwvhqSvBO1Ne/fnC9weN9ReDoZOk=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/armv7.swiftdoc</key>
@@ -263,11 +263,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			25XTgy6BzarcL1I8jlT2xWDP4mg=
+			Orj15sSGlTgDru+1kX3BZXvFly8=
 			</data>
 			<key>hash2</key>
 			<data>
-			oGhcsxuCBA+QV9aYZWAOevWYCz2/phb8hQ/FvihCMmI=
+			PYP5x29B2bvayVCZwvhqSvBO1Ne/fnC9weN9ReDoZOk=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
