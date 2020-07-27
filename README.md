@@ -183,6 +183,9 @@ Accepted languages: `"en-us"`, `"fr-fr"`, `"en-gb"`, `"en-ca"`, `"en-au"`, `"en-
 ***didReceiveInBrainRewards(rewardsArray: [InBrainReward])***
 * This delegate function provides an array of InBrainReward objects
 
+***surveysClosedFromPage()***
+* This delegate function calls back whenever the InBrainWebView is dismissed from special web page placement
+
 ## Customize inBrain
 
 Call these functions in code prior to calling *showSurveys()*
