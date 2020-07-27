@@ -23,6 +23,11 @@ Then, from Terminal within the project folder, run
 pod install
 ```
 
+# Usage
+Once *pod install* command is complete, from now on open .xcworkspace file for your project.
+
+Add **import InBrainSurveys_SDK_Swift** to begin using SDK in your code
+
 ### Manual
 Drag and drop the **InBrainSurveys_SDK_Swift.xcframework** file into the same folder level as your *[AppName].xcodeproj* or *[AppName].xworkspace* file. 
 
@@ -32,10 +37,6 @@ Scroll down until you hit the ***Embedded Binaries*** section…
 1) Press ‘+’ to Locate the **InBrainSurveys_SDK_Swift.framework** file in your file hierarchy.
 2) Once selected, add to your Embedded Binaries.
 
-# Usage
-Once *pod install* command is complete, from now on open .xcworkspace file for your project.
-
-Add **import InBrainSurveys_SDK_Swift** to begin using SDK in your code
 
 # Configuration
 You’ll need to have 4 items:
