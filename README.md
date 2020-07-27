@@ -22,8 +22,6 @@ Then, from Terminal within the project folder, run
 ```
 pod install
 ```
-
-# Usage
 Once *pod install* command is complete, from now on open .xcworkspace file for your project.
 
 Add **import InBrainSurveys_SDK_Swift** to begin using SDK in your code
