@@ -23,6 +23,15 @@ Then, from Terminal within the project folder, run
 pod install
 ```
 
+### Manual
+Drag and drop the **InBrainSurveys_SDK_Swift.xcframework** file into the same folder level as your *[AppName].xcodeproj* or *[AppName].xworkspace* file. 
+
+**Next...**
+Visit your app’s ***Target*** in the Project Settings and Choose the ***General*** tab.
+Scroll down until you hit the ***Embedded Binaries*** section… 
+1) Press ‘+’ to Locate the **InBrainSurveys_SDK_Swift.framework** file in your file hierarchy.
+2) Once selected, add to your Embedded Binaries.
+
 # Usage
 Once *pod install* command is complete, from now on open .xcworkspace file for your project.
 
@@ -157,6 +166,16 @@ This call should **always** be made following reward data processing.
 **confirmRewards(txIDArray: [Int]) (Useful for server less app)**
 * Necessary call to confirm processed reward data
 * Pass array of reward transactionIDs as function parameter 
+
+## Language
+By default, device's locale's language will be used. If you want to change it, you need to call
+```
+inBrain.setLanguage("en-us")
+inBrain.setInBrain(apiClientID: ViewController.exampleClient, apiSecret: ViewController.exampleSecret, isS2S: false, userID: "test333@me.com")
+
+inBrain.showSurveys()
+```
+Accepted languages: `"en-us"`, `"fr-fr"`, `"en-gb"`, `"en-ca"`, `"en-au"`, `"en-in"`
 
 ### InBrainDelegate functions
 ***surveysClosed()***
