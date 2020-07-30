@@ -57,6 +57,15 @@ public enum HTTPMethod : Swift.String {
   @objc public func confirmRewards(txIdArray: [Swift.Int])
   @objc deinit
 }
+@objc public class InBrainNativeSurvey : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public let rank: Swift.Int
+  @objc final public let time: Swift.Int
+  @objc final public let value: Swift.Int
+  @objc final public let buttonID: Swift.Int
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
 public struct InBrainToken : Swift.Codable {
   public let access_token: Swift.String
   public let expires_in: Swift.Int

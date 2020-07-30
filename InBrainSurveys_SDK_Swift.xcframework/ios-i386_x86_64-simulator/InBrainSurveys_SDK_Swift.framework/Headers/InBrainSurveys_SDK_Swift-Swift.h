@@ -276,6 +276,15 @@ SWIFT_PROTOCOL("_TtP24InBrainSurveys_SDK_Swift15InBrainDelegate_")
 @end
 
 
+SWIFT_CLASS("_TtC24InBrainSurveys_SDK_Swift19InBrainNativeSurvey")
+@interface InBrainNativeSurvey : NSObject
+@property (nonatomic, readonly) NSInteger rank;
+@property (nonatomic, readonly) NSInteger time;
+@property (nonatomic, readonly) NSInteger value;
+@property (nonatomic, readonly) NSInteger buttonID;
+@end
+
+
 SWIFT_CLASS("_TtC24InBrainSurveys_SDK_Swift13InBrainReward")
 @interface InBrainReward : NSObject
 @property (nonatomic, readonly) NSInteger transactionId;
@@ -565,6 +574,15 @@ SWIFT_PROTOCOL("_TtP24InBrainSurveys_SDK_Swift15InBrainDelegate_")
 ///   </li>
 /// </ul>
 - (void)surveysClosedFromPage;
+@end
+
+
+SWIFT_CLASS("_TtC24InBrainSurveys_SDK_Swift19InBrainNativeSurvey")
+@interface InBrainNativeSurvey : NSObject
+@property (nonatomic, readonly) NSInteger rank;
+@property (nonatomic, readonly) NSInteger time;
+@property (nonatomic, readonly) NSInteger value;
+@property (nonatomic, readonly) NSInteger buttonID;
 @end
 
 
