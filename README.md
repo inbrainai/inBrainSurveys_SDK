@@ -4,6 +4,7 @@ Survey library to monetize your mobile app, provided by inBrain.ai
 
 # Requirements
 * iOS 10.0
+* Swift 4.2
 * Xcode 11+
 
 # Installation
