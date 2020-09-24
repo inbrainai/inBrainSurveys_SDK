@@ -13,7 +13,7 @@ Add to your project's Podfile
   
 Podfile Example:
 ```
-target 'inBrainPodTest' do
+target "AppName" do
      use_frameworks!
      pod 'InBrainSurveys'
 end
@@ -36,81 +36,73 @@ Scroll down until you hit the ***Embedded Binaries*** section…
 1) Press ‘+’ to Locate the **InBrainSurveys_SDK_Swift.framework** file in your file hierarchy.
 2) Once selected, add to your Embedded Binaries.
 
+# Objective-C Installation
+Sometimes Xcode buildings of Objective-C projects for simulator fails with error:
+```
+  dyld: library not loaded: @rpath/libswiftCore.dylid
+  Library not loaded: @rpath/libswiftCore.dylib
+    Referenced from: .../Debug-iphonesimulator/InBrainSurveys_SDK_Swift.framework/InBrainSurveys_SDK_Swift
+    Reason: no suitable image found.  Did find:
+      /usr/lib/swift/libswiftCore.dylib: mach-o, but not built for iOS simulator
+```
+To resolve this issue open to Project -> Target -> Build Settings -> set **Always Embed Swift Standard Libraries** to **YES**.
 
 # Configuration
-You’ll need to have 4 items:
 
-**1)** A unique User ID, (per user)
+InBrain SDK configuration pretty simple and can be completed att app launch or before SDK using. Bellow the proposed way how to setup InBrain SDK properly:
+- Set API keys and rewards callback target **setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool)** just after app launch;
+- Set **inBrainDelegate** if you would like to receive an events;
+- Set **userID** using **inBrain.set(userID: "userID")** function just you get it. If no **userID** provided - **UIDevice.current.identifierForVendor** will be used instead.
 
-**2)** Your API Client ID, (as provided by inBrain)
+**API Client** and **API Secret** provided by InBrain;
+**isS2S** -  Is your app enabled with Server-to-Server(S2S) callbacks? Set to true if so, false if no server architecture.
 
-**3)** Your API Secret, (as provided by inBrain)
-
-**4)** Based on your app's architecture, whether the rewards will be delivered via in-app callback or Server-to-Server (S2S)callback 
+Main setup completed and InBrain WebView can be shown. The additional config oprions may be found bellow.
 
 # Usage
 
-An InBrain object should be added as an instance variable of the presenting UIViewController, then instantiated using the singleton call. 
+There 2 options to present InBrain WebView:
+1) Using  **showSurveys()** function. In this case InBrain WebView will be presented from *inBrainDelegate*, if it's an UIViewController subclass, or from *UIApplication.shared.keyWindow?.rootViewController* if not. If the SDK unable to get UIViewController using both this options - message at the console will be shown;
+2) Using  **showSurveys(from viewController: UIViewController)**.
 
-Also, add your apiClient & apiSecret as a static constant to be used when presenting the web view. (Sample code below)
-
+Sample code:
 ```
-Import InBrainSurveys_SDK_Swift
+import InBrainSurveys_SDK_Swift
 
-class ViewController : UIViewController {
+class ViewController: UIViewController {
     
-    var inBrain : InBrain = InBrain.shared
-    static let exampleClient = "client"
-    static let exampleSecret = "secret"
+    let inBrain: InBrain = InBrain.shared
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        inBrain.setInBrain(apiClientID: "apiClientID",
+                           apiSecret: "apiSecret",
+                           isS2S: false)
+        
+        inBrain.inBrainDelegate = self
+        inBrain.set(userID: "userID")
+
+    }
+    
+    @IBAction func showInBrain(_ sender: UIButton) {
+        inBrain.showSurveys() 
+    }
+
 }
-```
 
-To present the InBrain WebView from a UIViewController, set the UIViewController as the inBrain singleton’s inBrainDelegate, then set values using the **setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool, userID: String)** function call. 
+``` 
+**Please, note:** SDK should be configured before showing the surveys, or it will have no effect.
 
-# Parameters
-
-**apiClientID:** Your API Client ID, (as provided by inBrain)
-
-**apiSecret:** Your API Secret, (as provided by inBrain)
-
-**isS2S:** Is your app enabled with Server-to-Server(S2S) callbacks? set to true if so, false if no server architecture
-
-**userID:** A unique User ID, (per user)
-
-Values must be set prior to calling **showSurveys()**. Once values are set then execute the **showSurveys()** function.  (Sample code below)
-
-```
-override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    inBrain.inBrainDelegate = self
-    
-    inBrain.setInBrain(apiClientID: ViewController.exampleClient, apiSecret: ViewController.exampleSecret, isS2S: false, userID: "test333@me.com")
-    
-    inBrain.showSurveys()
-}
-```
 # Advanced Usage
 To add session tracking and/or to provide demographic data to your inBrainSurveys session utilize the **setInBrainValuesFor(sessionID: String, dataOptions: [[String : Any]]?)**
 
 ```
-override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-    inBrain.inBrainDelegate = self
-    
-    inBrain.setInBrain(apiClientID: ViewController.exampleClient, apiSecret: ViewController.exampleSecret, isS2S: false, userID: "test333@me.com")
-    
-    //Create dataOptions Dictionary
-    var data : [[String : Any]] = []
-    let data1 : [String: Any] = ["gender" : "male"]
-    data.append(data1)
-    let data2 : [String : Any] = ["age" : 34]
-    data.append(data2)
-    
-    inBrain.setInBrainValuesFor(sessionID: "testing33_Session", dataOptions: data)
-    
-    inBrain.showSurveys()
-}
+let data: [[String : Any]] = [["gender": "male"], ["age" : 34]]
+inBrain.setInBrainValuesFor(sessionID: "testing33_Session", dataOptions: data)
 ```
+**Please, note:** All the configs should be done before showing the surveys, or it will have no effect.
+
 ## Reward Hooks For Server2Server Apps
 You can add your callback in your dashboard and test the response!
 
@@ -119,25 +111,24 @@ If you need any assistance in getting your callback working properly, please ema
 ## Reward Hooks For Serverless Apps
 Even without a unique user ID, we’ll pass along the reward value for you to add. 
 
-In order to receive rewards earned from inBrain, the presenting UIViewController should conform to the *InBrainDelegate* and set itself to the inBrainDelegate of the inBrain instance variable declared earlier.
+In order to receive rewards earned from inBrain - needs to set *InBrainDelegate*  and implement method **didReceiveInBrainRewards(rewardsArray: [InBrainReward])**.
 
-### Handling Rewards Received & Confirming Received Rewards (sample code below)
+
+### Handling Rewards Received & Confirming Received Rewards:
 
 ```
 class ViewController: UIViewController, InBrainDelegate {
     func didReceiveInBrainRewards(rewardsArray: [InBrainReward]) {
-        var arr : [Int] = []
-	for reward in rewardsArray {
-            //User's balance is increased by reward amount
-	    points +=  reward.amount
-	    pointsLabel.text = "Total Points: \(points)"
-	    let txID = reward.transactionId
-            
-            //Append each transactionId value to 'arr' array
-	    arr.append(txID)
-	}
-	//Pass array of transactionID's as parameter of confirmRewards()
-	inBrain.confirmRewards(txIdArray: arr)
+        var idsToConfirm : [Int] = []
+        var points: Float = 0
+        
+        for reward in rewardsArray {
+            points +=  reward.amount
+            idsToConfirm.append(reward.transactionId)
+        }
+        pointsLabel.text = "Total Points: \(points)"
+
+        inBrain.confirmRewards(txIdArray: idsToConfirm)
     }
 }
 ```
@@ -149,18 +140,24 @@ This call should **always** be made following reward data processing.
 
 ## Ad Hoc inBrain Functions
 
+**setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool)**
 **setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool, userID: String)**
-* Ensure this is being called from the InBrain.shared singleton reference 
+* Initial config of InBrain SDK
+
+**set(userID: String?)**
+* Provides and app userID to InBrain SDK;
+* If no **userID** provided - **UIDevice.current.identifierForVendor** will be used instead.
 
 **setInBrainValuesFor(sessionID: String, dataOptions: [[String : Any]]?)**
-* Available dataOptions keys "age" & "gender"
+* Supported dataOptions keys "age" & "gender"
 
 **showSurveys()**
-* Presents the InBrain WebView with your set values as authentication credentials 
-* Ensure this is being called from the InBrain.shared singleton reference 
+**showSurveys(from viewController: UIViewController)**
+* Presents the InBrain WebView with configuration, provided before.
+* Please, note:  SDK should be configured before showing the surveys, or it will have no effect.
 
 **getRewards() (Useful for server less app)**
-* InBrainDelegate must be set and implementation of inBrainRewardsReceived(rewardsArray: [InBrainReward]) function must be available to receive reward data
+* InBrainDelegate must be set and implementation of inBrainRewardsReceived(rewardsArray: [InBrainReward]) function must be available to receive reward data.
 * Stand alone function to explicitly call for rewards within the app code 
 
 **confirmRewards(txIDArray: [Int]) (Useful for server less app)**
@@ -171,43 +168,37 @@ This call should **always** be made following reward data processing.
 By default, device's locale's language will be used. If you want to change it, you need to call
 ```
 inBrain.setLanguage("en-us")
-inBrain.setInBrain(apiClientID: ViewController.exampleClient, apiSecret: ViewController.exampleSecret, isS2S: false, userID: "test333@me.com")
-
-inBrain.showSurveys()
 ```
-Accepted languages: `"en-us"`, `"fr-fr"`, `"en-gb"`, `"en-ca"`, `"en-au"`, `"en-in"`
+Accepted languages: `"de-de"`, `"en-au"`, `"en-ca"`, `"en-gb"`, `"en-in"`, `"en-us"`, `"es-es"`, `"es-mx"`, `"es-us"`, `"fr-ca"`, `fr-fr"`, `"fr-br"`
 
 ### InBrainDelegate functions
-***surveysClosed()***
-* This delegate function calls back whenever the InBrainWebView is dismissed
-
 ***didReceiveInBrainRewards(rewardsArray: [InBrainReward])***
 * This delegate function provides an array of InBrainReward objects
+
+***didFailToReceiveRewards(error: Error)***
+* This delegate function provides an error if *getRewards()* failed
+
+***surveysClosed()***
+* This delegate function calls back whenever the InBrainWebView is dismissed
 
 ***surveysClosedFromPage()***
 * This delegate function calls back whenever the InBrainWebView is dismissed from special web page placement
 
 ## Customize inBrain
 
-Call these functions in code prior to calling *showSurveys()*
+In order to customize InBrain WebView call these functions in code prior to calling *showSurveys()*
 
 **setInBrainWebViewTitle(toString: String)**
-
 * Presents the InBrain WebView with the title string which is provided by the toString parameter
 
 **setInBrainWebViewNavBarColor(toColor: UIColor)**
-
 * Presents the InBrain WebView with the navigationBar displaying the toColor parameter as its background color
 
 **setInBrainWebViewNavButtonColor(toColor: UIColor)**
-
 * Presents the InBrain WebView with the navigationButtons displaying the toColor parameter as its text color
 
 # Side note - Things to double check:
-* Be sure your setInBrain values have the proper values 
-
-* The UIViewController that presents the InBrainWebView should properly conform to the InBrainDelegate.
-
-* Ensure that you are implementing the didReceiveInBrainRewards() function to receive reward data from the getRewards() call.
+* Be sure your configured InBrain SDK with proper values; 
+* Ensure that you are set *InBrainDelegate* and implemented *didReceiveInBrainRewards()* in case of Serverless app.
 
 
