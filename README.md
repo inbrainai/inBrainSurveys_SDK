@@ -54,8 +54,8 @@ InBrain SDK configuration pretty simple and can be completed att app launch or b
 - Set **inBrainDelegate** if you would like to receive an events;
 - Set **userID** using **inBrain.set(userID: "userID")** function just you get it. If no **userID** provided - **UIDevice.current.identifierForVendor** will be used instead.
 
-**API Client** and **API Secret** provided by InBrain;\
-* **isS2S** -  Is your app enabled with Server-to-Server(S2S) callbacks? Set to true if so, false if no server architecture.
+**API Client** and **API Secret** provided by InBrain; \
+**isS2S** -  Is your app enabled with Server-to-Server(S2S) callbacks? Set to true if so, false if no server architecture.
 
 Main setup completed and InBrain WebView can be shown. The additional config oprions may be found bellow.
 
