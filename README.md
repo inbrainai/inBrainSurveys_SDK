@@ -1,4 +1,4 @@
-# inBrainSurveys_SDK
+# InBrainSurveys SDK
 
 Survey library to monetize your mobile app, provided by inBrain.ai
 
@@ -45,17 +45,17 @@ Sometimes Xcode buildings of Objective-C projects for simulator fails with error
     Reason: no suitable image found.  Did find:
       /usr/lib/swift/libswiftCore.dylib: mach-o, but not built for iOS simulator
 ```
-To resolve this issue open to Project -> Target -> Build Settings -> set **Always Embed Swift Standard Libraries** to **YES**.
+To resolve this issue open Project -> Target -> Build Settings -> set **Always Embed Swift Standard Libraries** to **YES**.
 
 # Configuration
 
 InBrain SDK configuration pretty simple and can be completed att app launch or before SDK using. Bellow the proposed way how to setup InBrain SDK properly:
-- Set API keys and rewards callback target **setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool)** just after app launch;
+- Set API keys and reward callback target **setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool)** just after app launch;
 - Set **inBrainDelegate** if you would like to receive an events;
 - Set **userID** using **inBrain.set(userID: "userID")** function just you get it. If no **userID** provided - **UIDevice.current.identifierForVendor** will be used instead.
 
 **API Client** and **API Secret** provided by InBrain;
-**isS2S** -  Is your app enabled with Server-to-Server(S2S) callbacks? Set to true if so, false if no server architecture.
+* **isS2S** -  Is your app enabled with Server-to-Server(S2S) callbacks? Set to true if so, false if no server architecture.
 
 Main setup completed and InBrain WebView can be shown. The additional config oprions may be found bellow.
 
@@ -109,15 +109,13 @@ You can add your callback in your dashboard and test the response!
 If you need any assistance in getting your callback working properly, please email us at [dev@inbrain.ai](dev@inbrain.ai)
 
 ## Reward Hooks For Serverless Apps
-Even without a unique user ID, we’ll pass along the reward value for you to add. 
-
 In order to receive rewards earned from inBrain - needs to set *InBrainDelegate*  and implement method **didReceiveInBrainRewards(rewardsArray: [InBrainReward])**.
 
 
 ### Handling Rewards Received & Confirming Received Rewards:
 
 ```
-class ViewController: UIViewController, InBrainDelegate {
+extension ViewController: InBrainDelegate {
     func didReceiveInBrainRewards(rewardsArray: [InBrainReward]) {
         var idsToConfirm : [Int] = []
         var points: Float = 0
@@ -141,7 +139,7 @@ This call should **always** be made following reward data processing.
 ## Ad Hoc inBrain Functions
 
 **setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool)**
-**setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool, userID: String)**
+* **setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool, userID: String)**
 * Initial config of InBrain SDK
 
 **set(userID: String?)**
