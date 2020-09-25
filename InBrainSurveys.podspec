@@ -1,29 +1,20 @@
-Pod::Spec.new do |spec|
 
-  # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  These will help people to find your library, and whilst it
-  #  can feel like a chore to fill in it's definitely to your advantage. The
-  #  summary should be tweet-length, and the description more in depth.
-  #
+Pod::Spec.new do |s|
 
-  spec.name         = "InBrainSurveys"
-  spec.version      = "1.3.0"
-  spec.summary      = "Monetization surveys for apps, powered by inBrain.ai."
+  s.name         = "InBrainSurveys"
+  s.version      = "1.3.5"
+  s.summary      = "Monetization surveys for apps, powered by inBrain.ai."
+  s.description  = "In-App monetization via surveys, powered by inBrain.ai."
 
-  spec.description  = "In-App monetization via surveys, powered by inBrain.ai."
+  s.homepage     = "https://github.com/inbrainai/inBrainSurveys_SDK"
+  s.license      = { :type => "MIT", :file => "License" }
+  s.author       = { "Sergey Blazhko" => "sergey@inbrain.ai" }
 
-  spec.homepage     = "https://github.com/inbrainai/inBrainSurveys_SDK"
-
-  spec.license      = { :type => "MIT", :file => "LICENSE"}
-
-  spec.author       = { "Joel Myers" => "joel@inbrain.ai" }
-
-  spec.platform     = :ios, "10.0"
-  spec.source       = { :git => "https://github.com/inbrainai/inBrainSurveys_SDK.git", :tag => "1.3.0" }
-  spec.source_files = "InBrainSurveys_SDK_Swift.xcframework/ios-armv7_arm64/InBrainSurveys_SDK_Swift.framework/Headers/*.h", "InBrainSurveys_SDK_Swift.xcframework/ios-i386_x86_64-simulator/InBrainSurveys_SDK_Swift.framework/Headers/*.h"
-  spec.vendored_frameworks = "InBrainSurveys_SDK_Swift.xcframework"
-  
+  s.platform     = :ios, "10.0"
+  s.source       = { :git => "https://github.com/inbrainai/inBrainSurveys_SDK.git", :tag => s.version }
+  s.source_files = "InBrainSurveys_SDK_Swift.xcframework/*/*.framework/Headers/*.h"
+  s.vendored_frameworks = "InBrainSurveys_SDK_Swift.xcframework"
+  s.ios.frameworks = 'UIKit', 'Foundation', 'SystemConfiguration', 'WebKit'
 
 end
 
