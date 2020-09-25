@@ -149,7 +149,7 @@ This call should **always** be made following reward data processing.
 **setInBrainValuesFor(sessionID: String, dataOptions: [[String : Any]]?)**
 * Supported dataOptions keys "age" & "gender"
 
-**showSurveys()**
+**showSurveys()** \
 **showSurveys(from viewController: UIViewController)**
 * Presents the InBrain WebView with configuration, provided before.
 * Please, note:  SDK should be configured before showing the surveys, or it will have no effect.
