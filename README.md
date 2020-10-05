@@ -32,9 +32,13 @@ Drag and drop the **InBrainSurveys_SDK_Swift.xcframework** file into the same fo
 
 **Next...**
 Visit your app’s ***Target*** in the Project Settings and Choose the ***General*** tab.
-Scroll down until you hit the ***Embedded Binaries*** section… 
+Scroll down until you hit the ***Frameworks, Libraries and Embedded Content*** section… 
 1) Press ‘+’ to Locate the **InBrainSurveys_SDK_Swift.framework** file in your file hierarchy.
-2) Once selected, add to your Embedded Binaries.
+2) Once selected, press "Add";
+3) Check that "Embed" option is "Embed & Sing". In case of "Don Not Embed" chosen - the app will crash with error 
+```
+dyld: Library not loaded: @rpath/libswiftCore.dylib ...
+```
 
 # Objective-C Installation
 Sometimes Xcode buildings of Objective-C projects for simulator fails with error:
