@@ -1,31 +1,29 @@
 # InBrainSurveys SDK
 
-Survey library to monetize your mobile app, provided by inBrain.ai
+Survey library to monetize your mobile app, provided by inBrain.ai.\
+Please, check the **InBrainSurveys_Demo** app for getting integration example.
 
 # Requirements
-* iOS 10.0
-* Swift 4.2
+* iOS 10.0+
+* Swift 4.2+
 * Xcode 11+
 
 # Installation
 ### CocoaPods
-Add to your project's Podfile
-  
-Podfile Example:
+[CocoaPods](https://cocoapods.org) is a dependency manager for Cocoa projects. To integrate InBrainSurveys into your Xcode project using CocoaPods, specify it in your `Podfile`:  
 ```
-target "AppName" do
-     use_frameworks!
-     pod 'InBrainSurveys'
-end
+pod 'InBrainSurveys'
 ```
 
 Then, from Terminal within the project folder, run
 ```
 pod install
 ```
-Once *pod install* command is complete, from now on open .xcworkspace file for your project.
 
-Add **import InBrainSurveys_SDK_Swift** to begin using SDK in your code
+Once *pod install* command is complete, from now on open .xcworkspace file for your project.\
+Add **import InBrainSurveys_SDK_Swift** to begin using SDK in your code.
+
+Please, visit [CocoaPods](https://cocoapods.org) website for additional information.
 
 ### Manual
 Drag and drop the **InBrainSurveys_SDK_Swift.xcframework** file into the same folder level as your *[AppName].xcodeproj* or *[AppName].xworkspace* file. 
@@ -65,9 +63,13 @@ Main setup completed and InBrain WebView can be shown. The additional config opr
 
 # Usage
 
-There 2 options to present InBrain WebView:
-1) Using  **showSurveys()** function. In this case InBrain WebView will be presented from *inBrainDelegate*, if it's an UIViewController subclass, or from *UIApplication.shared.keyWindow?.rootViewController* if not. If the SDK unable to get UIViewController using both this options - message at the console will be shown;
-2) Using  **showSurveys(from viewController: UIViewController)**.
+## Regular surveys 
+For best user experience InBrain recommend to check is any surveys available before showing WebView. It can be done using 
+**checkForAvailableSurveys(completion: @escaping ((_ hasSurveys: Bool, _ error: Error?) -> (Void)** method.
+
+InBrain provides 2 options for present InBrain WebView:
+1) Using  **showSurveys()** function. In this case InBrain will try to get top UIViewController from the hierarchyю If the SDK unable to get top UIViewController - message at the console will be shown;
+2) Using  **showSurveys(from viewController: UIViewController)**
 
 Sample code:
 ```
@@ -90,13 +92,67 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showInBrain(_ sender: UIButton) {
-        inBrain.showSurveys() 
+        inBrain.checkForAvailableSurveys { [weak self] hasSurveys, _  in
+            guard hasSurveys else { return }
+            self?.inBrain.showSurveys()
+        }
+    }
+}
+
+``` 
+## Native surveys
+
+There a few steps to use InBrain Native Surveys:
+1) Set **InBrain.shared.nativeSurveysDelegate**;
+2) Fetch Native Surveys using **InBrain.shared.getNativeSurveys()** function;
+3) Receive Native Surveys using **nativeSurveysReceived(_ surveys: [InBrainNativeSurvey])** function of nativeSurveysDelegate and show them to the user;
+4) Once user choosed some survey - present InBrain WebView using **showNativeSurveyWith(nativeId: String)** or **showNativeSurveyWith(nativeId: String, from viewController: UIViewController)** function.
+
+**Please, note:** SDK provides new portion of Native Surveys in a next cases:
+- If **InBrain.shared.getNativeSurveys()** called;
+- After user completed some of Native Surveys, received before.
+
+Sample code:
+```
+import InBrainSurveys_SDK_Swift
+
+class NativeSurveysViewController: UIViewController {
+    
+    let inBrain: InBrain = InBrain.shared
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        inBrain.setInBrain(apiClientID: "apiClientID",
+                           apiSecret: "apiSecret",
+                           isS2S: false)
+        
+        inBrain.set(userID: "userID")
+
+        inBrain.nativeSurveysDelegate = self
+        inBrain.getNativeSurveys()
+    }
+}
+
+//MARK: - NativeSurveyDelegate
+extension NativeSurveysViewController: NativeSurveyDelegate {
+    func nativeSurveysLoadingStarted() {
+        //Show some activity to the user while surveys loading is in process
+    }
+
+    func nativeSurveysReceived(_ surveys: [InBrainNativeSurvey]) {
+        //Cache surveys and show them to the user
+    }
+    
+    func failedToReceiveNativeSurveys(error: Error) {
+        //Handle error depends on app logic
     }
 
 }
 
 ``` 
-**Please, note:** SDK should be configured before showing the surveys, or it will have no effect.
+
+**Please, note:** SDK should be configured *before* using Regular or Native Surveys.
 
 # Advanced Usage
 To add session tracking and/or to provide demographic data to your inBrainSurveys session utilize the **setInBrainValuesFor(sessionID: String, dataOptions: [[String : Any]]?)**
@@ -139,7 +195,7 @@ Rewards that have been processed **must** be confirmed with InBrain. To do this,
 
 This call should **always** be made following reward data processing.
 
-## Ad Hoc inBrain Functions
+## inBrain Functions
 
 **setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool)**\
 **setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool, userID: String)** \
@@ -157,6 +213,11 @@ This call should **always** be made following reward data processing.
 **showSurveys(from viewController: UIViewController)**
 * Presents the InBrain WebView with configuration, provided before.
 * Please, note:  SDK should be configured before showing the surveys, or it will have no effect.
+
+**showNativeSurveyWith(id: String)** \
+**showNativeSurveyWith(id: String, from viewController: UIViewController)**
+* Presents the InBrain Native Survey with configuration, provided before.
+* Please, note:  SDK should be configured before showing the survey, or it will have no effect.
 
 **getRewards() (Useful for server less app)**
 * InBrainDelegate must be set and implementation of inBrainRewardsReceived(rewardsArray: [InBrainReward]) function must be available to receive reward data.
@@ -186,18 +247,31 @@ Accepted languages: `"de-de"`, `"en-au"`, `"en-ca"`, `"en-gb"`, `"en-in"`, `"en-
 ***surveysClosedFromPage()***
 * This delegate function calls back whenever the InBrainWebView is dismissed from special web page placement
 
+### nativeSurveysDelegate functions
+***func nativeSurveysLoadingStarted()***
+* Сalled just after loading of NativeSurveys started.
+
+***nativeSurveysReceived(_ surveys: [InBrainNativeSurvey])***
+* Provides fresh portion of Native surveys.
+
+***failedToReceiveNativeSurveys(error: Error)***
+* Called if loading of Native Surveys failed
+
 ## Customize inBrain
 
-In order to customize InBrain WebView call these functions in code prior to calling *showSurveys()*
+In order to customize InBrain WebView call these functions in code prior to showing InBrain WebView
 
-**setInBrainWebViewTitle(toString: String)**
-* Presents the InBrain WebView with the title string which is provided by the toString parameter
+**setNavigationBarTitle(_ title: String)**
+* Title to be used as title for InBrain WebView controller
 
-**setInBrainWebViewNavBarColor(toColor: UIColor)**
-* Presents the InBrain WebView with the navigationBar displaying the toColor parameter as its background color
+**setNavigationBarTitleColor(_ color: UIColor)**
+* Color to be used for InBrain's UINavigationBar title
 
-**setInBrainWebViewNavButtonColor(toColor: UIColor)**
-* Presents the InBrain WebView with the navigationButtons displaying the toColor parameter as its text color
+**setNavigationBarButtonColor(_ color: UIColor)**
+* Color to be used for back/close buttons at InBrain's UINavigationBar
+
+**setNavigationBarBackgroundColor(_ color: UIColor)**
+* Background color of InBrain's UINavigationBar 
 
 # Side note - Things to double check:
 * Be sure your configured InBrain SDK with proper values; 

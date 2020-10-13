@@ -1,12 +1,62 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1 effective-4.2 (swiftlang-1100.0.270.13 clang-1100.0.33.7)
-// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name InBrainSurveys_SDK_Swift
+// swift-compiler-version: Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InBrainSurveys_SDK_Swift
 import Foundation
 @_exported import InBrainSurveys_SDK_Swift
 import Swift
 import SystemConfiguration
 import UIKit
 import WebKit
+@objc public protocol InBrainDelegate : AnyObject {
+  @objc optional func didReceiveInBrainRewards(rewardsArray: [InBrainSurveys_SDK_Swift.InBrainReward])
+  @objc optional func didFailToReceiveRewards(error: Swift.Error)
+  @objc optional func surveysClosedFromPage()
+  @objc optional func surveysClosed()
+}
+@objc public protocol NativeSurveyDelegate : AnyObject {
+  @objc func nativeSurveysLoadingStarted()
+  @objc func nativeSurveysReceived(_ surveys: [InBrainSurveys_SDK_Swift.InBrainNativeSurvey])
+  @objc func failedToReceiveNativeSurveys(error: Swift.Error)
+}
+@objc final public class InBrain : ObjectiveC.NSObject {
+  @objc public static let shared: InBrainSurveys_SDK_Swift.InBrain
+  @objc weak final public var inBrainDelegate: InBrainSurveys_SDK_Swift.InBrainDelegate?
+  @objc weak final public var nativeSurveysDelegate: InBrainSurveys_SDK_Swift.NativeSurveyDelegate?
+  @objc final public func setInBrain(apiClientID: Swift.String, apiSecret: Swift.String, isS2S: Swift.Bool)
+  @objc final public func setInBrain(apiClientID: Swift.String, apiSecret: Swift.String, isS2S: Swift.Bool, userID: Swift.String?)
+  @objc final public func setInBrain(apiClientID: Swift.String, apiSecret: Swift.String, isS2S: Swift.Bool, userID: Swift.String?, language: Swift.String)
+  @objc final public func set(userID: Swift.String?)
+  @available(*, deprecated, renamed: "setNavigationBarTitle")
+  @objc final public func setInBrainWebViewTitle(toString: Swift.String)
+  @available(*, deprecated, renamed: "setNavigationBarBackgroundColor")
+  @objc final public func setInBrainWebViewNavBarColor(toColor: UIKit.UIColor)
+  @available(*, deprecated, renamed: "setNavigationBarTextColor")
+  @objc final public func setInBrainWebViewNavButtonColor(toColor: UIKit.UIColor)
+  @objc final public func setNavigationBarTitle(_ title: Swift.String)
+  @objc final public func setNavigationBarBackgroundColor(_ color: UIKit.UIColor)
+  @objc final public func setNavigationBarTitleColor(_ color: UIKit.UIColor)
+  @objc final public func setNavigationBarButtonColor(_ color: UIKit.UIColor)
+  @objc final public func setInBrainValuesFor(sessionID: Swift.String?, dataOptions: [[Swift.String : Any]]?)
+  @objc final public func setLanguage(value: Swift.String)
+  @objc final public func checkForAvailableSurveys(completion: @escaping ((Swift.Bool, Swift.Error?) -> (Swift.Void)))
+  @objc final public func showSurveys()
+  @objc final public func showSurveys(from viewController: UIKit.UIViewController)
+  @objc final public func showNativeSurveyWith(id: Swift.String)
+  @objc final public func showNativeSurveyWith(id: Swift.String, from viewController: UIKit.UIViewController)
+  @objc final public func getRewards(rewardsReceived: @escaping ([InBrainSurveys_SDK_Swift.InBrainReward]) -> (), failedToGetRewards: @escaping () -> ())
+  @objc final public func getRewards()
+  @objc final public func confirmRewards(txIdArray: [Swift.Int])
+  @objc final public func getNativeSurveys()
+  @objc deinit
+}
+@objc public class InBrainNativeSurvey : ObjectiveC.NSObject, Swift.Decodable {
+  @objc final public let id: Swift.String
+  @objc final public let rank: Swift.Int
+  @objc final public let time: Swift.Int
+  @objc final public let value: Swift.Double
+  @objc deinit
+  required public init(from decoder: Swift.Decoder) throws
+}
 @objc final public class InBrainReward : ObjectiveC.NSObject, Swift.Decodable {
   @objc final public let transactionId: Swift.Int
   @objc final public let amount: Swift.Float
@@ -14,30 +64,5 @@ import WebKit
   @objc final public let transactionType: Swift.Int
   public init(from decoder: Swift.Decoder) throws
   @objc override dynamic public init()
-  @objc deinit
-}
-@objc public protocol InBrainDelegate : AnyObject {
-  @objc optional func didReceiveInBrainRewards(rewardsArray: [InBrainSurveys_SDK_Swift.InBrainReward])
-  @objc optional func didFailToReceiveRewards(error: Swift.Error)
-  @objc optional func surveysClosed()
-  @objc optional func surveysClosedFromPage()
-}
-@objc final public class InBrain : ObjectiveC.NSObject {
-  @objc public static let shared: InBrainSurveys_SDK_Swift.InBrain
-  @objc weak final public var inBrainDelegate: InBrainSurveys_SDK_Swift.InBrainDelegate?
-  @objc final public func setInBrain(apiClientID: Swift.String, apiSecret: Swift.String, isS2S: Swift.Bool)
-  @objc final public func setInBrain(apiClientID: Swift.String, apiSecret: Swift.String, isS2S: Swift.Bool, userID: Swift.String?)
-  @objc final public func setInBrain(apiClientID: Swift.String, apiSecret: Swift.String, isS2S: Swift.Bool, userID: Swift.String?, language: Swift.String)
-  @objc final public func set(userID: Swift.String?)
-  @objc final public func setInBrainWebViewTitle(toString: Swift.String)
-  @objc final public func setInBrainWebViewNavBarColor(toColor: UIKit.UIColor)
-  @objc final public func setInBrainWebViewNavButtonColor(toColor: UIKit.UIColor)
-  @objc final public func setInBrainValuesFor(sessionID: Swift.String?, dataOptions: [[Swift.String : Any]]?)
-  @objc final public func setLanguage(value: Swift.String)
-  @objc final public func showSurveys()
-  @objc final public func showSurveys(from viewController: UIKit.UIViewController)
-  @objc final public func getRewards(rewardsReceived: @escaping ([InBrainSurveys_SDK_Swift.InBrainReward]) -> (), failedToGetRewards: @escaping () -> ())
-  @objc final public func getRewards()
-  @objc final public func confirmRewards(txIdArray: [Swift.Int])
   @objc deinit
 }
