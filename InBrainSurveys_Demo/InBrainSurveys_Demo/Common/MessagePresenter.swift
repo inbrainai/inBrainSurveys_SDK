@@ -45,7 +45,9 @@ class MessagePresenter {
     }
     
     func hideAlert() {
-        guard let alert = alert else { return }
-        DispatchQueue.main.async { alert.hide(alert) }
+        DispatchQueue.main.async {
+            guard let alert = self.alert else { return }
+            alert.hide(alert)
+        }
     }
 }

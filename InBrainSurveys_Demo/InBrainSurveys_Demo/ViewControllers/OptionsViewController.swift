@@ -34,14 +34,15 @@ class OptionsViewController: UIViewController, LoadableView {
         MessagePresenter.shared.show(message: "Loading Surveys", type: .loading)
         
         inBrain.checkForAvailableSurveys { [weak self] hasSurveys, _  in
-            self?.stopActivity()
+            MessagePresenter.shared.hideAlert()
             self?.view.isUserInteractionEnabled = true
-            
+            self?.stopActivity()
+                        
             guard hasSurveys else {
                 MessagePresenter.shared.show(message: "Ooops.. No surveys available right now!", type: .error)
                 return
             }
-            MessagePresenter.shared.hideAlert()
+            
             self?.inBrain.showSurveys()
         }
     }
