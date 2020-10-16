@@ -315,6 +315,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 
 
 
+
+
 /// Allows your app to handle events from InBrain service
 /// *
 SWIFT_PROTOCOL("_TtP24InBrainSurveys_SDK_Swift15InBrainDelegate_")
@@ -702,6 +704,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 /// In order to keep you with up-to-date surveys - SDK will
 - (void)getNativeSurveys;
 @end
+
+
 
 
 
