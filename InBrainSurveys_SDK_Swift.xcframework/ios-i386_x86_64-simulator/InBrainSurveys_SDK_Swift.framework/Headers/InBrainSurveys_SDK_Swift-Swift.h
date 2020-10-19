@@ -214,6 +214,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 + (InBrain * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, weak) id <InBrainDelegate> _Nullable inBrainDelegate;
 @property (nonatomic, weak) id <NativeSurveyDelegate> _Nullable nativeSurveysDelegate;
+@property (nonatomic, readonly) BOOL isOnScreen;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 /// Config inBrain at app launch using this method.
@@ -609,6 +610,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 + (InBrain * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, weak) id <InBrainDelegate> _Nullable inBrainDelegate;
 @property (nonatomic, weak) id <NativeSurveyDelegate> _Nullable nativeSurveysDelegate;
+@property (nonatomic, readonly) BOOL isOnScreen;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 /// Config inBrain at app launch using this method.

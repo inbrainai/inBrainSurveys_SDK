@@ -22,6 +22,9 @@ import WebKit
   @objc public static let shared: InBrainSurveys_SDK_Swift.InBrain
   @objc weak final public var inBrainDelegate: InBrainSurveys_SDK_Swift.InBrainDelegate?
   @objc weak final public var nativeSurveysDelegate: InBrainSurveys_SDK_Swift.NativeSurveyDelegate?
+  @objc final public var isOnScreen: Swift.Bool {
+    @objc get
+  }
   @objc final public func setInBrain(apiClientID: Swift.String, apiSecret: Swift.String, isS2S: Swift.Bool)
   @objc final public func setInBrain(apiClientID: Swift.String, apiSecret: Swift.String, isS2S: Swift.Bool, userID: Swift.String?)
   @objc final public func setInBrain(apiClientID: Swift.String, apiSecret: Swift.String, isS2S: Swift.Bool, userID: Swift.String?, language: Swift.String)
