@@ -151,8 +151,32 @@ extension NativeSurveysViewController: NativeSurveyDelegate {
 }
 
 ``` 
-
 **Please, note:** SDK should be configured *before* using Regular or Native Surveys.
+
+## Interface orientation
+
+InBrain WebView supports *portrait* orientation only. If your application supports only landscape orientations - there a few steps to make InBrain WebView work:
+1) Add **application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask** method to your AppDelegate;
+2) Return UIInterfaceOrientationMask with *.portrait* orientation while InBrain WebView is on the screen. Please, check the sample code for details.
+
+Sample code:
+```
+import InBrainSurveys_SDK_Swift
+
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+
+        var orientation: UIInterfaceOrientationMask = [.landscapeLeft, .landscapeRight]
+        
+        if InBrain.shared.isOnScreen {
+            return orientation.insert(.portrait).memberAfterInsert
+        }
+        
+        return orientation
+    }
+}
+```
+
 
 # Advanced Usage
 To add session tracking and/or to provide demographic data to your inBrainSurveys session utilize the **setInBrainValuesFor(sessionID: String, dataOptions: [[String : Any]]?)**
