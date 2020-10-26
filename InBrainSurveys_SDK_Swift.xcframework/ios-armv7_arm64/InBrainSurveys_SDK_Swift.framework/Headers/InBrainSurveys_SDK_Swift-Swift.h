@@ -249,7 +249,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 /// Set color before calling <code>showSurveys()</code>
 - (void)setInBrainWebViewNavBarColorToColor:(UIColor * _Nonnull)toColor SWIFT_DEPRECATED_MSG("", "setNavigationBarBackgroundColor:");
 /// Set color before calling <code>showSurveys()</code>
-- (void)setInBrainWebViewNavButtonColorToColor:(UIColor * _Nonnull)toColor SWIFT_DEPRECATED_MSG("", "setNavigationBarTextColor");
+- (void)setInBrainWebViewNavButtonColorToColor:(UIColor * _Nonnull)toColor SWIFT_DEPRECATED_MSG("", "setNavigationBarTitleColor:");
 /// Set title before calling <code>showSurveys()</code>
 - (void)setNavigationBarTitle:(NSString * _Nonnull)title;
 /// Set color before calling <code>showSurveys()</code>
@@ -295,10 +295,18 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 /// \param failedToGetRewards Callback to be triggered in case of error
 /// while fetching rewards
 ///
-- (void)getRewardsWithRewardsReceived:(void (^ _Nonnull)(NSArray<InBrainReward *> * _Nonnull))rewardsReceived failedToGetRewards:(void (^ _Nonnull)(void))failedToGetRewards;
+- (void)getRewardsWithRewardsReceived:(void (^ _Nonnull)(NSArray<InBrainReward *> * _Nonnull))rewardsReceived failedToGetRewards:(void (^ _Nonnull)(void))failedToGetRewards SWIFT_DEPRECATED_MSG("", "getRewardsWithSuccess:failed:");
 /// Request InBrainRewards from the server. Process the rewards within your app
 /// and confirm it using <code>confirmRewards(txIdArray:)</code> function.
-/// Reult will be passed to <code>InBrainDelegate's</code>
+/// \param success Callback to be triggered just rewards fetched
+///
+/// \param failed Callback to be triggered in case of error
+/// while fetching rewards
+///
+- (void)getRewardsWithSuccess:(void (^ _Nonnull)(NSArray<InBrainReward *> * _Nonnull))success failed:(void (^ _Nonnull)(NSError * _Nonnull))failed;
+/// Request InBrainRewards from the server. Process the rewards within your app
+/// and confirm it using <code>confirmRewards(txIdArray:)</code> function.
+/// Result will be passed to <code>InBrainDelegate's</code>
 - (void)getRewards;
 /// Confirm rewards after processed by the app.
 /// After rewards confirmed - they weren’t be returned by <code>getRewards()</code> method
@@ -645,7 +653,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 /// Set color before calling <code>showSurveys()</code>
 - (void)setInBrainWebViewNavBarColorToColor:(UIColor * _Nonnull)toColor SWIFT_DEPRECATED_MSG("", "setNavigationBarBackgroundColor:");
 /// Set color before calling <code>showSurveys()</code>
-- (void)setInBrainWebViewNavButtonColorToColor:(UIColor * _Nonnull)toColor SWIFT_DEPRECATED_MSG("", "setNavigationBarTextColor");
+- (void)setInBrainWebViewNavButtonColorToColor:(UIColor * _Nonnull)toColor SWIFT_DEPRECATED_MSG("", "setNavigationBarTitleColor:");
 /// Set title before calling <code>showSurveys()</code>
 - (void)setNavigationBarTitle:(NSString * _Nonnull)title;
 /// Set color before calling <code>showSurveys()</code>
@@ -691,10 +699,18 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 /// \param failedToGetRewards Callback to be triggered in case of error
 /// while fetching rewards
 ///
-- (void)getRewardsWithRewardsReceived:(void (^ _Nonnull)(NSArray<InBrainReward *> * _Nonnull))rewardsReceived failedToGetRewards:(void (^ _Nonnull)(void))failedToGetRewards;
+- (void)getRewardsWithRewardsReceived:(void (^ _Nonnull)(NSArray<InBrainReward *> * _Nonnull))rewardsReceived failedToGetRewards:(void (^ _Nonnull)(void))failedToGetRewards SWIFT_DEPRECATED_MSG("", "getRewardsWithSuccess:failed:");
 /// Request InBrainRewards from the server. Process the rewards within your app
 /// and confirm it using <code>confirmRewards(txIdArray:)</code> function.
-/// Reult will be passed to <code>InBrainDelegate's</code>
+/// \param success Callback to be triggered just rewards fetched
+///
+/// \param failed Callback to be triggered in case of error
+/// while fetching rewards
+///
+- (void)getRewardsWithSuccess:(void (^ _Nonnull)(NSArray<InBrainReward *> * _Nonnull))success failed:(void (^ _Nonnull)(NSError * _Nonnull))failed;
+/// Request InBrainRewards from the server. Process the rewards within your app
+/// and confirm it using <code>confirmRewards(txIdArray:)</code> function.
+/// Result will be passed to <code>InBrainDelegate's</code>
 - (void)getRewards;
 /// Confirm rewards after processed by the app.
 /// After rewards confirmed - they weren’t be returned by <code>getRewards()</code> method
