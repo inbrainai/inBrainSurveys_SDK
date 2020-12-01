@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.author       = { "Sergey Blazhko" => "sergey@inbrain.ai" }
 
   s.platform     = :ios, "10.0"
-  s.source       = { :git => "https://github.com/inbrainai/inBrainSurveys_SDK.git", :branch => develop }
+  s.source       = { :git => "https://github.com/inbrainai/inBrainSurveys_SDK.git", :branch => "develop" }
   s.source_files = "InBrainSurveys_SDK_Swift.xcframework/*/*.framework/Headers/*.h"
   s.vendored_frameworks = "InBrainSurveys_SDK_Swift.xcframework"
   s.ios.frameworks = 'UIKit', 'Foundation', 'SystemConfiguration', 'WebKit'
