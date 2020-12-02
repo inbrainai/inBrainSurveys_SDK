@@ -110,7 +110,12 @@ private extension OptionsViewController {
         inBrain.setInBrainValuesFor(sessionID: "testing33_Session", dataOptions: data)
                 
         //Customize Navigation Bar
-        inBrain.setNavigationBarButtonColor(.systemRed)
+        //Example to match InBrain V2 theme (Native Surveys)
+        //Please, note: color values should be in sRGB (Device RGB) profile
+        let config = InBrainNavBarConfig(backgroundColor: UIColor(hex: "00a5ed"), buttonsColor: .white,
+                                         titleColor: .white, isTranslucent: false, hasShadow: false)
+
+        inBrain.setNavigationBarConfig(config)
     }
     
     func updatePoints() {

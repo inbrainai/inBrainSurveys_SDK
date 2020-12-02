@@ -286,17 +286,16 @@ Accepted languages: `"de-de"`, `"en-au"`, `"en-ca"`, `"en-gb"`, `"en-in"`, `"en-
 In order to customize InBrain WebView call these functions in code prior to showing InBrain WebView
 
 **setNavigationBarTitle(_ title: String)**
-* Title to be used as title for InBrain WebView controller
+* Set title for InBrain WebView controller
 
-**setNavigationBarTitleColor(_ color: UIColor)**
-* Color to be used for InBrain's UINavigationBar title
-
-**setNavigationBarButtonColor(_ color: UIColor)**
-* Color to be used for back/close buttons at InBrain's UINavigationBar
-
-**setNavigationBarBackgroundColor(_ color: UIColor)**
-* Background color of InBrain's UINavigationBar 
-
+**setNavigationBarConfig(_ config: InBrainNavBarConfig)**
+* Customize InBrain's UINavigationBar 
+* Please, note: color values should be in sRGB (Device RGB) profile
+```
+let config = InBrainNavBarConfig(backgroundColor: UIColor(hex: "00a5ed"), buttonsColor: .white,
+                                       titleColor: .white, isTranslucent: false, hasShadow: false)
+inBrain.setNavigationBarConfig(config)
+```
 # Side note - Things to double check:
 * Be sure your configured InBrain SDK with proper values; 
 * Ensure that you are set *InBrainDelegate* and implemented *didReceiveInBrainRewards()* in case of Serverless app.

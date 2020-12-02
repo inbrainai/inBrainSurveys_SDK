@@ -29,16 +29,20 @@ import WebKit
   @objc final public func setInBrain(apiClientID: Swift.String, apiSecret: Swift.String, isS2S: Swift.Bool, userID: Swift.String?)
   @objc final public func setInBrain(apiClientID: Swift.String, apiSecret: Swift.String, isS2S: Swift.Bool, userID: Swift.String?, language: Swift.String)
   @objc final public func set(userID: Swift.String?)
-  @available(*, deprecated, renamed: "setNavigationBarTitle")
+  @available(*, deprecated, message: "Please, use setNavigationBarConfig instead")
   @objc final public func setInBrainWebViewTitle(toString: Swift.String)
-  @available(*, deprecated, renamed: "setNavigationBarBackgroundColor")
+  @available(*, deprecated, message: "Please, use setNavigationBarConfig instead")
   @objc final public func setInBrainWebViewNavBarColor(toColor: UIKit.UIColor)
-  @available(*, deprecated, renamed: "setNavigationBarTitleColor")
+  @available(*, deprecated, message: "Please, use setNavigationBarConfig instead")
   @objc final public func setInBrainWebViewNavButtonColor(toColor: UIKit.UIColor)
-  @objc final public func setNavigationBarTitle(_ title: Swift.String)
+  @available(*, deprecated, message: "Please, use setNavigationBarConfig instead")
   @objc final public func setNavigationBarBackgroundColor(_ color: UIKit.UIColor)
-  @objc final public func setNavigationBarTitleColor(_ color: UIKit.UIColor)
+  @available(*, deprecated, message: "Please, use setNavigationBarConfig instead")
   @objc final public func setNavigationBarButtonColor(_ color: UIKit.UIColor)
+  @available(*, deprecated, message: "Please, use setNavigationBarConfig instead")
+  @objc final public func setNavigationBarTitleColor(_ color: UIKit.UIColor)
+  @objc final public func setNavigationBarTitle(_ title: Swift.String)
+  @objc final public func setNavigationBarConfig(_ config: InBrainSurveys_SDK_Swift.InBrainNavBarConfig)
   @objc final public func setInBrainValuesFor(sessionID: Swift.String?, dataOptions: [[Swift.String : Any]]?)
   @objc final public func setLanguage(value: Swift.String)
   @objc final public func checkForAvailableSurveys(completion: @escaping ((Swift.Bool, Swift.Error?) -> (Swift.Void)))
@@ -53,6 +57,11 @@ import WebKit
   @objc final public func confirmRewards(txIdArray: [Swift.Int])
   @objc final public func getNativeSurveys()
   @objc final public func getNativeSurveys(success: @escaping ([InBrainSurveys_SDK_Swift.InBrainNativeSurvey]) -> (), failed: @escaping (Swift.Error) -> ())
+  @objc deinit
+}
+@objc public class InBrainNavBarConfig : ObjectiveC.NSObject {
+  @objc public init(backgroundColor: UIKit.UIColor? = nil, buttonsColor: UIKit.UIColor? = nil, titleColor: UIKit.UIColor? = nil, isTranslucent: Swift.Bool = true, hasShadow: Swift.Bool = true)
+  @objc override dynamic public init()
   @objc deinit
 }
 @objc public class InBrainNativeSurvey : ObjectiveC.NSObject, Swift.Decodable {
