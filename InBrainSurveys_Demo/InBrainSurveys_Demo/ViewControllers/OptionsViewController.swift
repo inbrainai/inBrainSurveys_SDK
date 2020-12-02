@@ -116,6 +116,12 @@ private extension OptionsViewController {
                                          titleColor: .white, isTranslucent: false, hasShadow: false)
 
         inBrain.setNavigationBarConfig(config)
+        
+        //Customize Status Bar
+        //Please, note: In order to customize status bar - needs to set View controller-based status bar appearance to YES
+
+        let statusBarConfig = InBrainStatusBarConfig(statusBarStyle: .lightContent, hideStatusBar: false)
+        inBrain.setStatusBarConfig(statusBarConfig)
     }
     
     func updatePoints() {

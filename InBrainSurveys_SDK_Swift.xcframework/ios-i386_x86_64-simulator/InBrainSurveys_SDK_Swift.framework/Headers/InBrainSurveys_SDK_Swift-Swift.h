@@ -206,6 +206,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @protocol NativeSurveyDelegate;
 @class UIColor;
 @class InBrainNavBarConfig;
+@class InBrainStatusBarConfig;
 @class UIViewController;
 @class InBrainReward;
 @class InBrainNativeSurvey;
@@ -263,6 +264,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 - (void)setNavigationBarTitle:(NSString * _Nonnull)title;
 /// Customize Navigation Bar before calling <code>showSurveys()</code>
 - (void)setNavigationBarConfig:(InBrainNavBarConfig * _Nonnull)config;
+/// Customize Status Bar before calling <code>showSurveys()</code>
+/// In order to customize status bar - needs to set <code>View controller-based status bar appearance</code> to <code>YES</code>
+- (void)setStatusBarConfig:(InBrainStatusBarConfig * _Nonnull)config;
 /// Set values before calling <code>showSurveys()</code>
 - (void)setInBrainValuesForSessionID:(NSString * _Nullable)sessionID dataOptions:(NSArray<NSDictionary<NSString *, id> *> * _Nullable)dataOptions;
 /// Set language to be used. If not set - device language will be used.
@@ -396,6 +400,19 @@ SWIFT_CLASS("_TtC24InBrainSurveys_SDK_Swift13InBrainReward")
 @property (nonatomic, readonly) float amount;
 @property (nonatomic, readonly, copy) NSString * _Nonnull currency;
 @property (nonatomic, readonly) NSInteger transactionType;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC24InBrainSurveys_SDK_Swift22InBrainStatusBarConfig")
+@interface InBrainStatusBarConfig : NSObject
+/// Config to customize Status Bar.
+/// \param statusBarStyle UIStatusBarStyle to be used
+///
+/// \param hideStatusBar Hide status bar if true
+///
+- (nonnull instancetype)initWithStatusBarStyle:(UIStatusBarStyle)statusBarStyle hideStatusBar:(BOOL)hideStatusBar OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -649,6 +666,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @protocol NativeSurveyDelegate;
 @class UIColor;
 @class InBrainNavBarConfig;
+@class InBrainStatusBarConfig;
 @class UIViewController;
 @class InBrainReward;
 @class InBrainNativeSurvey;
@@ -706,6 +724,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 - (void)setNavigationBarTitle:(NSString * _Nonnull)title;
 /// Customize Navigation Bar before calling <code>showSurveys()</code>
 - (void)setNavigationBarConfig:(InBrainNavBarConfig * _Nonnull)config;
+/// Customize Status Bar before calling <code>showSurveys()</code>
+/// In order to customize status bar - needs to set <code>View controller-based status bar appearance</code> to <code>YES</code>
+- (void)setStatusBarConfig:(InBrainStatusBarConfig * _Nonnull)config;
 /// Set values before calling <code>showSurveys()</code>
 - (void)setInBrainValuesForSessionID:(NSString * _Nullable)sessionID dataOptions:(NSArray<NSDictionary<NSString *, id> *> * _Nullable)dataOptions;
 /// Set language to be used. If not set - device language will be used.
@@ -839,6 +860,19 @@ SWIFT_CLASS("_TtC24InBrainSurveys_SDK_Swift13InBrainReward")
 @property (nonatomic, readonly) float amount;
 @property (nonatomic, readonly, copy) NSString * _Nonnull currency;
 @property (nonatomic, readonly) NSInteger transactionType;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC24InBrainSurveys_SDK_Swift22InBrainStatusBarConfig")
+@interface InBrainStatusBarConfig : NSObject
+/// Config to customize Status Bar.
+/// \param statusBarStyle UIStatusBarStyle to be used
+///
+/// \param hideStatusBar Hide status bar if true
+///
+- (nonnull instancetype)initWithStatusBarStyle:(UIStatusBarStyle)statusBarStyle hideStatusBar:(BOOL)hideStatusBar OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

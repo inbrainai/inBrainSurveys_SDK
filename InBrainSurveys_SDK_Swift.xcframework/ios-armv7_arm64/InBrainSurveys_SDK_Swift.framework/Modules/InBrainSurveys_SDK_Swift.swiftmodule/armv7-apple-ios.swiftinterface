@@ -43,6 +43,7 @@ import WebKit
   @objc final public func setNavigationBarTitleColor(_ color: UIKit.UIColor)
   @objc final public func setNavigationBarTitle(_ title: Swift.String)
   @objc final public func setNavigationBarConfig(_ config: InBrainSurveys_SDK_Swift.InBrainNavBarConfig)
+  @objc final public func setStatusBarConfig(_ config: InBrainSurveys_SDK_Swift.InBrainStatusBarConfig)
   @objc final public func setInBrainValuesFor(sessionID: Swift.String?, dataOptions: [[Swift.String : Any]]?)
   @objc final public func setLanguage(value: Swift.String)
   @objc final public func checkForAvailableSurveys(completion: @escaping ((Swift.Bool, Swift.Error?) -> (Swift.Void)))
@@ -71,6 +72,11 @@ import WebKit
   @objc final public let value: Swift.Double
   @objc deinit
   required public init(from decoder: Swift.Decoder) throws
+}
+@objc public class InBrainStatusBarConfig : ObjectiveC.NSObject {
+  @objc public init(statusBarStyle: UIKit.UIStatusBarStyle, hideStatusBar: Swift.Bool)
+  @objc override dynamic public init()
+  @objc deinit
 }
 @objc final public class InBrainReward : ObjectiveC.NSObject, Swift.Decodable {
   @objc final public let transactionId: Swift.Int

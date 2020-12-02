@@ -296,6 +296,16 @@ let config = InBrainNavBarConfig(backgroundColor: UIColor(hex: "00a5ed"), button
                                        titleColor: .white, isTranslucent: false, hasShadow: false)
 inBrain.setNavigationBarConfig(config)
 ```
+
+**setStatusBarConfig(_ config: InBrainStatusBarConfig)**
+* Customize Status Bar 
+* Please, note: In order to customize status bar - needs to set View controller-based status bar appearance to YES
+
+```
+let statusBarConfig = InBrainStatusBarConfig(statusBarStyle: .lightContent, hideStatusBar: false)
+inBrain.setStatusBarConfig(statusBarConfig)
+```
+
 # Side note - Things to double check:
 * Be sure your configured InBrain SDK with proper values; 
 * Ensure that you are set *InBrainDelegate* and implemented *didReceiveInBrainRewards()* in case of Serverless app.
