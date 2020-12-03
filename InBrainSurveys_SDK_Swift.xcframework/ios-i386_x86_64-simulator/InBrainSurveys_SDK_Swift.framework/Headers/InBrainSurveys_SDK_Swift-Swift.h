@@ -384,9 +384,9 @@ SWIFT_CLASS("_TtC24InBrainSurveys_SDK_Swift19InBrainNavBarConfig")
 ///
 /// \param titleColor Navigation bar title color
 ///
-/// \param isTranslucent Translucent navigation bar. Default value is true
+/// \param isTranslucent Translucent navigation bar. Default value is false
 ///
-/// \param hasShadow Show/hide defualt navigation bar shadow. Default value is true
+/// \param hasShadow Show/hide defualt navigation bar shadow. Default value is false
 ///
 - (nonnull instancetype)initWithBackgroundColor:(UIColor * _Nullable)backgroundColor buttonsColor:(UIColor * _Nullable)buttonsColor titleColor:(UIColor * _Nullable)titleColor isTranslucent:(BOOL)isTranslucent hasShadow:(BOOL)hasShadow OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -844,9 +844,9 @@ SWIFT_CLASS("_TtC24InBrainSurveys_SDK_Swift19InBrainNavBarConfig")
 ///
 /// \param titleColor Navigation bar title color
 ///
-/// \param isTranslucent Translucent navigation bar. Default value is true
+/// \param isTranslucent Translucent navigation bar. Default value is false
 ///
-/// \param hasShadow Show/hide defualt navigation bar shadow. Default value is true
+/// \param hasShadow Show/hide defualt navigation bar shadow. Default value is false
 ///
 - (nonnull instancetype)initWithBackgroundColor:(UIColor * _Nullable)backgroundColor buttonsColor:(UIColor * _Nullable)buttonsColor titleColor:(UIColor * _Nullable)titleColor isTranslucent:(BOOL)isTranslucent hasShadow:(BOOL)hasShadow OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;

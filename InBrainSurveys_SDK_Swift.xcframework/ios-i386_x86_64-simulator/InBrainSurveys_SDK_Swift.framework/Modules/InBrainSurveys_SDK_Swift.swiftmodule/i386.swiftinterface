@@ -61,7 +61,7 @@ import WebKit
   @objc deinit
 }
 @objc public class InBrainNavBarConfig : ObjectiveC.NSObject {
-  @objc public init(backgroundColor: UIKit.UIColor? = nil, buttonsColor: UIKit.UIColor? = nil, titleColor: UIKit.UIColor? = nil, isTranslucent: Swift.Bool = true, hasShadow: Swift.Bool = true)
+  @objc public init(backgroundColor: UIKit.UIColor? = nil, buttonsColor: UIKit.UIColor? = nil, titleColor: UIKit.UIColor? = nil, isTranslucent: Swift.Bool = false, hasShadow: Swift.Bool = false)
   @objc override dynamic public init()
   @objc deinit
 }

@@ -25,7 +25,10 @@ class NativeSurveysViewController: UIViewController, LoadableView {
 
         navigationItem.title = "Native Surveys"
         navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.barTintColor = UIColor(hex: "92D050")
+        
+        let image = UIColor(hex: "92D050").image()
+        navigationController?.navigationBar.setBackgroundImage(image,for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
 
         headerView?.setShadow(color: .black, opacity: 0.1, radius: 8,
                               offset: .init(width: -2, height: 6))
@@ -120,5 +123,14 @@ extension NativeSurveysViewController: NativeSurveyCellDelegate {
         
         let survey = surveys[ip.row]
         inBrain.showNativeSurveyWith(id: survey.id, from: self)
+    }
+}
+
+private extension UIColor {
+    func image(_ size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
+        return UIGraphicsImageRenderer(size: size).image { context in
+            setFill()
+            context.fill(CGRect(origin: .zero, size: size))
+        }
     }
 }
