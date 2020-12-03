@@ -112,14 +112,17 @@ private extension OptionsViewController {
         //Customize Navigation Bar
         //Example to match InBrain V2 theme (Native Surveys)
         //Please, note: color values should be in sRGB (Device RGB) profile
+        
+        //Default parameters are used for this example. If you would like to use default appearance - you can skip this step.
+
         let config = InBrainNavBarConfig(backgroundColor: UIColor(hex: "00a5ed"), buttonsColor: .white,
                                          titleColor: .white, isTranslucent: false, hasShadow: false)
-
         inBrain.setNavigationBarConfig(config)
         
         //Customize Status Bar
-        //Please, note: In order to customize status bar - needs to set View controller-based status bar appearance to YES
-
+        //Please, note: In order to customize status bar - needs to set View controller-based status bar appearance to YES.
+        
+        //Default parameters are used for this example. If you would like to use default appearance - you can skip this step.
         let statusBarConfig = InBrainStatusBarConfig(statusBarStyle: .lightContent, hideStatusBar: false)
         inBrain.setStatusBarConfig(statusBarConfig)
     }
