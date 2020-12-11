@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		mj1LUq/3TGBZwdoE8v3Jo80P7w8=
+		MG17BjNYnU1eTvuahElf0IO6D30=
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ZGZyTojUhvEb9q7+BDJAinko1aM=
+		6xl/P5UyywQFml7o8YoOiCpgf0g=
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/i386.swiftdoc</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/i386.swiftmodule</key>
 		<data>
-		ZGZyTojUhvEb9q7+BDJAinko1aM=
+		6xl/P5UyywQFml7o8YoOiCpgf0g=
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		eKGj83y2CPyxzlHP8NJtj2TFqNU=
+		SxiCcURA1aMmrzqfFgAoPx9xFVU=
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		eKGj83y2CPyxzlHP8NJtj2TFqNU=
+		SxiCcURA1aMmrzqfFgAoPx9xFVU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -119,11 +119,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZGZyTojUhvEb9q7+BDJAinko1aM=
+			6xl/P5UyywQFml7o8YoOiCpgf0g=
 			</data>
 			<key>hash2</key>
 			<data>
-			+nf8Cz3Y2GYuLc05LqhRNY47JK8IMiHYcQOB2ANDb04=
+			KxKoT+W72PzEb48juk/xOPuBmYg86X/pPSk88OlIp+U=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/i386.swiftdoc</key>
@@ -152,11 +152,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZGZyTojUhvEb9q7+BDJAinko1aM=
+			6xl/P5UyywQFml7o8YoOiCpgf0g=
 			</data>
 			<key>hash2</key>
 			<data>
-			+nf8Cz3Y2GYuLc05LqhRNY47JK8IMiHYcQOB2ANDb04=
+			KxKoT+W72PzEb48juk/xOPuBmYg86X/pPSk88OlIp+U=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -185,11 +185,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eKGj83y2CPyxzlHP8NJtj2TFqNU=
+			SxiCcURA1aMmrzqfFgAoPx9xFVU=
 			</data>
 			<key>hash2</key>
 			<data>
-			82rJlB3jG9kXBZyIG9yr+gAp9tixFQ2u62eN/IRunRU=
+			sTZfCKg7Jcw7RGuoTgC7A/7vfIMkD9I75UMk3DwdTpc=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64.swiftdoc</key>
@@ -218,11 +218,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			eKGj83y2CPyxzlHP8NJtj2TFqNU=
+			SxiCcURA1aMmrzqfFgAoPx9xFVU=
 			</data>
 			<key>hash2</key>
 			<data>
-			82rJlB3jG9kXBZyIG9yr+gAp9tixFQ2u62eN/IRunRU=
+			sTZfCKg7Jcw7RGuoTgC7A/7vfIMkD9I75UMk3DwdTpc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
