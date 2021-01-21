@@ -38,17 +38,6 @@ Scroll down until you hit the ***Frameworks, Libraries and Embedded Content*** s
 dyld: Library not loaded: @rpath/libswiftCore.dylib ...
 ```
 
-# Objective-C Installation
-Sometimes Xcode buildings of Objective-C projects for simulator fails with error:
-```
-  dyld: library not loaded: @rpath/libswiftCore.dylid
-  Library not loaded: @rpath/libswiftCore.dylib
-    Referenced from: .../Debug-iphonesimulator/InBrainSurveys_SDK_Swift.framework/InBrainSurveys_SDK_Swift
-    Reason: no suitable image found.  Did find:
-      /usr/lib/swift/libswiftCore.dylib: mach-o, but not built for iOS simulator
-```
-To resolve this issue open Project -> Target -> Build Settings -> set **Always Embed Swift Standard Libraries** to **YES**.
-
 # Configuration
 
 InBrain SDK configuration pretty simple and can be completed att app launch or before SDK using. Bellow the proposed way how to setup InBrain SDK properly:
@@ -309,3 +298,31 @@ inBrain.setStatusBarConfig(statusBarConfig)
 # Side note - Things to double check:
 * Be sure your configured InBrain SDK with proper values; 
 * Ensure that you are set *InBrainDelegate* and implemented *didReceiveInBrainRewards()* in case of Serverless app.
+
+# Troubleshooting
+## Library not loaded
+In case of Objective-C projects building for simulator may be failed with error:
+```
+  dyld: library not loaded: @rpath/libswiftCore.dylid
+  Library not loaded: @rpath/libswiftCore.dylib
+    Referenced from: .../Debug-iphonesimulator/InBrainSurveys_SDK_Swift.framework/InBrainSurveys_SDK_Swift
+    Reason: no suitable image found.  Did find:
+      /usr/lib/swift/libswiftCore.dylib: mach-o, but not built for iOS simulator
+```
+To resolve this issue open Project -> Target -> Build Settings -> set **Always Embed Swift Standard Libraries** to **YES**.
+
+## No such module 
+Xcode 12 introduced architecture-related updates, which caused to `No such module `InBrainSurveys_SDK_Swift`` error alongside with `[CP] Unable to find matching .xcframework slice in 'path_to_InBrainSurveys_SDK InBrainSurveys_SDK_Swift framework ios-i386_x86_64-simulator ios-armv7_arm64' for the current build architectures (arm64 x86_64)` warning.
+
+In order to fix the issue for Xcode 12 - please, add following lines to the .podfile:
+```
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      #config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+     end
+  end
+end
+```
+
+This issue not fixed at our side in order to keep Xcode 11 compatible.
