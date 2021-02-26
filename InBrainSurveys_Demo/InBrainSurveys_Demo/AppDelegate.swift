@@ -16,22 +16,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         return true
     }
-    
-    //InBrain SDK works in portrait mode only.
-    //If the app doesn't support portrait mode -
-    //needs to enable it for InBrain SDK.
-    
-    /*
-    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-    
-        var orientation: UIInterfaceOrientationMask = [.landscapeLeft, .landscapeRight]
-        
-        if InBrain.shared.isOnScreen {
-            return orientation.insert(.portrait).memberAfterInsert
-        }
-        
-        return orientation
-    }
-   */
 }
 
