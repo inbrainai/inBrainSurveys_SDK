@@ -111,7 +111,7 @@ extension NativeSurveysViewController: NativeSurveyDelegate {
     
     func failedToReceiveNativeSurveys(error: Error) {
         MessagePresenter.shared.show(message: "Ooops.. Something went wrog", type: .error)
-        print("Failded to receive rewards: \(error.localizedDescription)")
+        print("Failded to receive native surveys: \(error.localizedDescription)")
         
         stopActivity()
     }

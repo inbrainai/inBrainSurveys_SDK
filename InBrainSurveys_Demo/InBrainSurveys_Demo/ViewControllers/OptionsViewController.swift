@@ -37,7 +37,7 @@ class OptionsViewController: UIViewController, LoadableView {
             MessagePresenter.shared.hideAlert()
             self?.view.isUserInteractionEnabled = true
             self?.stopActivity()
-                        
+            
             guard hasSurveys else {
                 MessagePresenter.shared.show(message: "Ooops.. No surveys available right now!", type: .error)
                 return
@@ -56,7 +56,7 @@ class OptionsViewController: UIViewController, LoadableView {
 //All the methods are optional
 extension OptionsViewController: InBrainDelegate {
     func didFailToReceiveRewards(error: Error) {
-        MessagePresenter.shared.show(message: "Ooops.. Something went wrog", type: .error)
+        MessagePresenter.shared.show(message: "Ooops.. Something went wrong", type: .error)
     }
     
     //Required if isS2S: false
@@ -81,7 +81,6 @@ extension OptionsViewController: InBrainDelegate {
     func surveysClosedFromPage() {
         print("Surveys closed From Page")
     }
-
 }
 
 //MARK: - Private

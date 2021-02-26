@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
+
+## [1.6.0](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.6.0) - 2021-02-26
+
+### Added
+- Landscape mode for SDK and demo app.
+---
+
 ## [1.5.2](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.5.2) - 2021-01-20
 
 ### Fixed
