@@ -279,7 +279,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 - (void)checkForAvailableSurveysWithCompletion:(void (^ _Nonnull)(BOOL, NSError * _Nullable))completion;
 /// All the configs should be done <code>BEFORE</code> calling <code>showSurveys()</code>.
 /// Surveys will be presented from inBrainDelegate (if subclass of UIViewController)
-/// Or from UIApplication.shared.keyWindow?.rootViewController
+/// Or from UIApplication’s keyWindow
 - (void)showSurveys;
 /// All the configs should be done <code>BEFORE</code> calling <code>showSurveys()</code>.
 /// \param from ViewController to present InBrainSurveys from
@@ -287,7 +287,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 - (void)showSurveysFrom:(UIViewController * _Nonnull)viewController;
 /// All the configs should be done <code>BEFORE</code> calling <code>showSurveys()</code>.
 /// Surveys will be presented from inBrainDelegate (if subclass of UIViewController)
-/// Or from UIApplication.shared.keyWindow?.rootViewController.
+/// Or from UIApplication’s keyWindow.
 /// \param id id of Native Survey to be shown;
 ///
 - (void)showNativeSurveyWithId:(NSString * _Nonnull)id;
@@ -741,7 +741,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 - (void)checkForAvailableSurveysWithCompletion:(void (^ _Nonnull)(BOOL, NSError * _Nullable))completion;
 /// All the configs should be done <code>BEFORE</code> calling <code>showSurveys()</code>.
 /// Surveys will be presented from inBrainDelegate (if subclass of UIViewController)
-/// Or from UIApplication.shared.keyWindow?.rootViewController
+/// Or from UIApplication’s keyWindow
 - (void)showSurveys;
 /// All the configs should be done <code>BEFORE</code> calling <code>showSurveys()</code>.
 /// \param from ViewController to present InBrainSurveys from
@@ -749,7 +749,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 - (void)showSurveysFrom:(UIViewController * _Nonnull)viewController;
 /// All the configs should be done <code>BEFORE</code> calling <code>showSurveys()</code>.
 /// Surveys will be presented from inBrainDelegate (if subclass of UIViewController)
-/// Or from UIApplication.shared.keyWindow?.rootViewController.
+/// Or from UIApplication’s keyWindow.
 /// \param id id of Native Survey to be shown;
 ///
 - (void)showNativeSurveyWithId:(NSString * _Nonnull)id;

@@ -104,7 +104,7 @@ private extension OptionsViewController {
         //Supported languages may be found at SDK docs
         inBrain.setLanguage(value: "en-us")
 
-        //Additional data to show the most suitable surveys
+        //Additional data to skip apropriate questions during profiler
         let data: [[String : Any]] = [["gender": "male"], ["age" : 34]]
         inBrain.setInBrainValuesFor(sessionID: "testing33_Session", dataOptions: data)
                 
