@@ -6,11 +6,11 @@
 	<dict>
 		<key>Resources/Assets.car</key>
 		<data>
-		ewJPCRh35KMaePOgqciyed3Wnlo=
+		njmE0FejHLtKzIU2vPJGjxRbaFk=
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		F6rGwDyycOLHHEHJSyPYrmEyKm4=
+		U1u1XwkDC51bHPXktn4IL0nHt3o=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -19,7 +19,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZyerYke8DGAODYG3Jyh0YjbHfoVEFm0E+nzFF62WBFg=
+			YwwV9kjqeGgqUOm4AT7PoGTHRgQFrZrTm/cXEBSLA2E=
 			</data>
 		</dict>
 		<key>Headers/InBrainSurveys_SDK_Swift.h</key>
@@ -33,42 +33,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			shtlBouHxWncycXnjMFucCKA35ABakpBwcUl83K32Dk=
+			A2JazgQYdzkn8sT2nXWCKeLiIoudy3uUfZ/voSZPhuo=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			soAcMW8uFYfWR1wppMaZsDr4hESjxv6VuD0dKyNcWAs=
+			cZ3/hmqxMIFrW+WzQz4zPCQl2UweykrPMCD0ULrMF5Y=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tsQNtXA5VygTcj9gDwL1Z0kNw1zyMcSSgoBXZ01iRW4=
+			yWnJ8z9iloee0nWMmA2QA1SJaNTu9ksNCkZucLJ8kgg=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			shtlBouHxWncycXnjMFucCKA35ABakpBwcUl83K32Dk=
+			A2JazgQYdzkn8sT2nXWCKeLiIoudy3uUfZ/voSZPhuo=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			soAcMW8uFYfWR1wppMaZsDr4hESjxv6VuD0dKyNcWAs=
+			cZ3/hmqxMIFrW+WzQz4zPCQl2UweykrPMCD0ULrMF5Y=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tsQNtXA5VygTcj9gDwL1Z0kNw1zyMcSSgoBXZ01iRW4=
+			yWnJ8z9iloee0nWMmA2QA1SJaNTu9ksNCkZucLJ8kgg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DOeftsO1odwFnUrQAM4I4EfNE3PXvOYDIgBBa+DQ1Jo=
+			sOJqdu7RBhEXM72UBHlCocQketx1cb9SMmnTX2x3Cv0=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mdeSSGKqJzQwshx68Hh8/SCtRv0rLiIDY+2Wdnbl234=
+			SD4/5fFrhXH1A1QwqevFGaZiJ9lHeiPqRvYjBBF8MmI=
 			</data>
 		</dict>
 	</dict>
