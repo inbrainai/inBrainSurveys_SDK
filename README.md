@@ -6,7 +6,7 @@ Please, check the **InBrainSurveys_Demo** app for getting integration example.
 # Requirements
 * iOS 10.0+ / Catalyst (macOS 10.15.1+)
 * Swift 4.2+
-* Xcode 11+
+* Xcode 11.3.1+
 
 # Installation
 ### CocoaPods
