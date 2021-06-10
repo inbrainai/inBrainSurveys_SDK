@@ -24,8 +24,10 @@ class NativeSurveysViewController: UIViewController, LoadableView {
         super.viewDidLoad()
 
         navigationItem.title = "Native Surveys"
-        navigationController?.navigationBar.tintColor = .white
         
+        let color = UIColor.white
+        navigationController?.navigationBar.tintColor = color
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: color]
         let image = UIColor(hex: "92D050").image()
         navigationController?.navigationBar.setBackgroundImage(image,for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -33,8 +35,8 @@ class NativeSurveysViewController: UIViewController, LoadableView {
         headerView?.setShadow(color: .black, opacity: 0.1, radius: 8,
                               offset: .init(width: -2, height: 6))
 
-        //No reason to make some extension to simplify
-        //Cell usage. Just 1 place with cells...
+        //No reason to make some extension to simplify cell usage.
+        //Just 1 place with cells...
         let id = "NativeSurveyCollectionViewCell"
         let nib = UINib(nibName: id, bundle: nil)
         collectionView?.register(nib, forCellWithReuseIdentifier: id)

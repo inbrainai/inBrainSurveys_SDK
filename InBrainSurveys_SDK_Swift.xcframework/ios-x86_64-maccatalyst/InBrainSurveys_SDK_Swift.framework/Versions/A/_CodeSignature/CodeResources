@@ -6,11 +6,11 @@
 	<dict>
 		<key>Resources/Assets.car</key>
 		<data>
-		48PhqyPedkayV9x1aut/i+SkgFo=
+		spT1BcPe+9+KEdrfBC5eEcH8egs=
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		CzpRdBwnjJR43xyZQgAOLH56EV8=
+		PiLfPX6PhChBmPfPES1RUuaCjLA=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+M8I4v40dpzqyYNlDqIlhd1pPmXtuSSB+VhT45qHOls=
+			3cyU+LysXGdz2b1MDh6kT8EJ28jAZUbdXMEFbeBgSdc=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64.swiftdoc</key>
@@ -68,7 +68,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			+M8I4v40dpzqyYNlDqIlhd1pPmXtuSSB+VhT45qHOls=
+			3cyU+LysXGdz2b1MDh6kT8EJ28jAZUbdXMEFbeBgSdc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			D/5C8fWxNBvUe9IhUGBHBxxBWjqS6qWVGjD1Iyf3Fv4=
+			SjRr+I9pIG/sNS5E7eKFwY7xDJ+nx8ShPAOwqrcWYLM=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CAG5qdabvpefgtTRqp1raZguuEEO5XdEkvoW0knFEqw=
+			8VIMywXyE9Cv6s5QXLQPCNyrHxyS+QJPDTNpjhmouVU=
 			</data>
 		</dict>
 	</dict>
