@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P6G-6k-2JJ">
-    <device id="retina6_7" orientation="landscape" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19115.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="P6G-6k-2JJ">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,17 +13,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="OptionsViewController" customModule="InBrainSurveys_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="926" height="384"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="inBrain Surveys" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="RPO-Uh-Xw3">
-                                <rect key="frame" x="347.66666666666669" y="8" width="231.00000000000006" height="38.666666666666664"/>
+                                <rect key="frame" x="98.666666666666686" y="31.999999999999996" width="231" height="38.666666666666657"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="floating_women" translatesAutoresizingMaskIntoConstraints="NO" id="5SP-ZD-hGq">
-                                <rect key="frame" x="56" y="97.000000000000014" width="391" height="207.33333333333337"/>
+                                <rect key="frame" x="20" y="129" width="388" height="258"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5SP-ZD-hGq" secondAttribute="height" multiplier="236/157" id="P7Y-pC-oUi"/>
                                 </constraints>
@@ -39,16 +39,16 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Example App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eqd-qb-fc6">
-                                <rect key="frame" x="400.66666666666669" y="46.666666666666671" width="125.00000000000006" height="26.333333333333329"/>
+                                <rect key="frame" x="151.66666666666666" y="78.666666666666657" width="124.99999999999997" height="26.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8WA-nW-44T">
-                                <rect key="frame" x="471" y="97.000000000000014" width="403" height="183.33333333333337"/>
+                                <rect key="frame" x="54" y="417.99999999999994" width="320" height="237.33333333333331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Fz-WN-Pn2">
-                                        <rect key="frame" x="0.0" y="0.0" width="403" height="85.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="112.66666666666667"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" priority="750" constant="320" id="Ccp-Qr-UiV"/>
@@ -65,7 +65,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qs5-be-asi">
-                                        <rect key="frame" x="0.0" y="97.666666666666657" width="403" height="85.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="124.66666666666663" width="320" height="112.66666666666669"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                         <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="6"/>
@@ -91,7 +91,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="inbrain_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Eqg-fe-wzI">
-                                <rect key="frame" x="373" y="316.33333333333331" width="180" height="34.666666666666686"/>
+                                <rect key="frame" x="124" y="757.33333333333337" width="180" height="34.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="UEr-aB-olj"/>
                                     <constraint firstAttribute="width" secondItem="Eqg-fe-wzI" secondAttribute="height" multiplier="663:128" id="UjI-bZ-sWA"/>
@@ -99,7 +99,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="Total Points: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omG-bU-MPr">
-                                <rect key="frame" x="606" y="288.33333333333331" width="133" height="24"/>
+                                <rect key="frame" x="147.66666666666666" y="663.33333333333337" width="132.99999999999997" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="k8e-kl-s38"/>
                                 </constraints>
@@ -151,45 +151,46 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="o21-En-loO"/>
                                 <exclude reference="tdT-VG-F7G"/>
-                                <exclude reference="eeo-06-ifE"/>
                                 <exclude reference="2JD-PW-xde"/>
                                 <exclude reference="L7d-RB-x7l"/>
-                                <exclude reference="o21-En-loO"/>
+                                <exclude reference="eeo-06-ifE"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=compact">
                             <mask key="constraints">
+                                <include reference="o21-En-loO"/>
                                 <include reference="tdT-VG-F7G"/>
                                 <exclude reference="P9d-Rl-XBk"/>
                                 <exclude reference="QcM-XA-XR6"/>
-                                <include reference="eeo-06-ifE"/>
-                                <exclude reference="ueO-X7-bqR"/>
                                 <include reference="2JD-PW-xde"/>
                                 <exclude reference="7us-Er-zjS"/>
                                 <include reference="L7d-RB-x7l"/>
                                 <exclude reference="b2s-9a-vW3"/>
-                                <include reference="o21-En-loO"/>
                                 <exclude reference="yH9-9l-9Yv"/>
+                                <include reference="eeo-06-ifE"/>
+                                <exclude reference="ueO-X7-bqR"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
                             <mask key="constraints">
+                                <include reference="o21-En-loO"/>
                                 <include reference="tdT-VG-F7G"/>
                                 <exclude reference="P9d-Rl-XBk"/>
                                 <exclude reference="QcM-XA-XR6"/>
-                                <include reference="eeo-06-ifE"/>
-                                <exclude reference="ueO-X7-bqR"/>
                                 <include reference="2JD-PW-xde"/>
                                 <exclude reference="7us-Er-zjS"/>
                                 <include reference="L7d-RB-x7l"/>
                                 <exclude reference="b2s-9a-vW3"/>
-                                <include reference="o21-En-loO"/>
                                 <exclude reference="yH9-9l-9Yv"/>
+                                <include reference="eeo-06-ifE"/>
+                                <exclude reference="ueO-X7-bqR"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="9u2-2O-1Bz"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="pointsLabel" destination="omG-bU-MPr" id="ez5-Kf-tb7"/>
                         <segue destination="k1G-Gz-tLE" kind="show" identifier="toNativeSurveys" id="eg4-bp-7Tc"/>
@@ -204,14 +205,14 @@
             <objects>
                 <viewController storyboardIdentifier="NativeSurveysViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k1G-Gz-tLE" customClass="NativeSurveysViewController" customModule="InBrainSurveys_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Du-7e-8YD">
-                        <rect key="frame" x="0.0" y="0.0" width="926" height="384"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pTE-mw-9La">
-                                <rect key="frame" x="0.0" y="0.0" width="926" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="428" height="50"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skies" translatesAutoresizingMaskIntoConstraints="NO" id="ZP2-qN-C51">
-                                        <rect key="frame" x="0.0" y="-7" width="926" height="57"/>
+                                        <rect key="frame" x="0.0" y="-7" width="428" height="57"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.5725490196078431" green="0.81568627450980391" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -223,7 +224,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="onO-ry-R3Q">
-                                <rect key="frame" x="0.0" y="50" width="926" height="334"/>
+                                <rect key="frame" x="0.0" y="50" width="428" height="788"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="12" id="yP5-Ym-OFz">
                                     <size key="itemSize" width="128" height="128"/>
@@ -260,14 +261,14 @@
             </objects>
             <point key="canvasLocation" x="1653.5999999999999" y="97.536945812807886"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--In Brain Navigation Controller-->
         <scene sceneID="agE-77-f4C">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P6G-6k-2JJ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P6G-6k-2JJ" customClass="InBrainNavigationController" customModule="InBrainSurveys_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="82K-is-81o">
-                        <rect key="frame" x="0.0" y="0.0" width="926" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

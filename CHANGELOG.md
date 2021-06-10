@@ -5,7 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.7.2](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.7.1) - 2021-05-05
+## [1.7.3](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.7.3) - 2021-06-10
+
+### Fixed
+- iOS 15.0 beta 1 navigation bar translucent bug
+---
+
+## [1.7.2](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.7.2) - 2021-05-05
 
 ### Fixed
 - Surveys availability for US users
