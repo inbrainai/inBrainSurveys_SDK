@@ -12,7 +12,7 @@ import InBrainSurveys_SDK_Swift
 
 private let cornerRadius: CGFloat = 13
 
-protocol NativeSurveyCellDelegate: class {
+protocol NativeSurveyCellDelegate: AnyObject {
     func onStartPressed(at cell: NativeSurveyCollectionViewCell)
 }
 

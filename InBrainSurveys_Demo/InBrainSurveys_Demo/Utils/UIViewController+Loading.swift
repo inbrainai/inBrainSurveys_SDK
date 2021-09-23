@@ -25,7 +25,13 @@ extension LoadableView where Self: UIViewController {
             return
         }
         
-        let activity = UIActivityIndicatorView(style: .whiteLarge)
+        let activity: UIActivityIndicatorView
+        if #available(iOS 13.0, *) {
+            activity = UIActivityIndicatorView(style: .large)
+        } else {
+            activity = UIActivityIndicatorView(style: .whiteLarge)
+        }
+        
         activity.color = UIColor(hex: "00A5ED")
         activity.hidesWhenStopped = true
         activity.startAnimating()

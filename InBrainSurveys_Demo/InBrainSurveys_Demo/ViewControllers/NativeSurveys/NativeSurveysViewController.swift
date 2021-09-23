@@ -112,7 +112,7 @@ extension NativeSurveysViewController: NativeSurveyDelegate {
     }
     
     func failedToReceiveNativeSurveys(error: Error) {
-        MessagePresenter.shared.show(message: "Ooops.. Something went wrog", type: .error)
+        MessagePresenter.shared.show(message: "Ooops.. Something went wrong", type: .error)
         print("Failded to receive native surveys: \(error.localizedDescription)")
         
         stopActivity()
@@ -124,7 +124,14 @@ extension NativeSurveysViewController: NativeSurveyCellDelegate {
         guard let ip = collectionView?.indexPath(for: cell) else { return }
         
         let survey = surveys[ip.row]
-        inBrain.showNativeSurveyWith(id: survey.id, from: self)
+        inBrain.showNativeSurvey(survey, from: self)
+        
+        /*
+            Another option to show selected survey - is to use method
+            inBrain.showNativeSurveyWith(id: survey.id, placementId: survey.placementId, from: self)
+         
+            Both options are valid and works the same `underhood`. Pls, use option you prefer
+        */
     }
 }
 

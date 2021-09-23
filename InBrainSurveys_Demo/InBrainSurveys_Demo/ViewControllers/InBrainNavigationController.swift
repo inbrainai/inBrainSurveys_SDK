@@ -6,14 +6,6 @@
 //  Copyright © 2021 InBrain. All rights reserved.
 //
 
-//
-//  InBrainNavigationController.swift
-//  InBrainSurveys_SDK_Swift
-//
-//  Created by Sergey Blazhko on 23.09.2020.
-//  Copyright © 2020 InBrain. All rights reserved.
-//
-
 import UIKit
 
 //iOS 15 nav bar translucent workaround

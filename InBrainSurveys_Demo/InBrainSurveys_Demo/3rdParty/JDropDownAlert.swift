@@ -49,17 +49,39 @@ open class JDropDownAlert: UIButton {
     open var position = AlertPosition.top
     open var direction = AnimationDirection.normal
 
-    fileprivate let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
-    fileprivate let screenWidth = UIScreen.main.bounds.size.width
-    fileprivate let screenHeight = UIScreen.main.bounds.size.height
+    private var keyWindow: UIWindow? {
+        return UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+    }
+    
+    private lazy var statusBarHeight: CGFloat = {
+        if #available(iOS 13.0, *) {
+            return keyWindow?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+        } else {
+            return UIApplication.shared.statusBarFrame.size.height
+        }
+    }()
+    
+    private lazy var screenWidth: CGFloat = {
+        if let keyWindow = keyWindow {
+            return keyWindow.bounds.size.width
+        }
+        return UIScreen.main.bounds.size.width
+    }()
 
-    open var titleFont: UIFont = UIFont.boldSystemFont(ofSize: 16) {
+    private lazy var screenHeight: CGFloat = {
+        if let keyWindow = keyWindow {
+            return keyWindow.bounds.size.height
+        }
+        return UIScreen.main.bounds.size.height
+    }()
+
+    open var titleFont: UIFont = .boldSystemFont(ofSize: 16) {
         didSet {
             topLabel.font = titleFont
         }
     }
 
-    open var messageFont: UIFont = UIFont.systemFont(ofSize: 14) {
+    open var messageFont: UIFont = .systemFont(ofSize: 14) {
         didSet {
             messageLabel.font = messageFont
         }

@@ -102,7 +102,7 @@ private extension OptionsViewController {
         
         //If no language set - device language will be used.
         //Supported languages may be found at SDK docs
-        inBrain.setLanguage(value: "en-us")
+        try? inBrain.setLanguage("en-us")
 
         //Additional data to skip apropriate questions during profiler
         let data: [[String : Any]] = [["gender": "male"], ["age" : 34]]

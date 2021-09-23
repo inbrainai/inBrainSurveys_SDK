@@ -40,7 +40,7 @@ dyld: Library not loaded: @rpath/libswiftCore.dylib ...
 
 # Configuration
 
-InBrain SDK configuration pretty simple and can be completed att app launch or before SDK using. Bellow the proposed way how to setup InBrain SDK properly:
+InBrain SDK configuration pretty simple and can be completed at app launch or before SDK using. Bellow the proposed way how to setup InBrain SDK properly:
 - Set API keys and reward callback target **setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool)** just after app launch;
 - Set **inBrainDelegate** if you would like to receive an events;
 - Set **userID** using **inBrain.set(userID: "userID")** function just you get it. If no **userID** provided - **UIDevice.current.identifierForVendor** will be used instead.
@@ -48,7 +48,7 @@ InBrain SDK configuration pretty simple and can be completed att app launch or b
 **API Client** and **API Secret** provided by InBrain; \
 **isS2S** -  Is your app enabled with Server-to-Server(S2S) callbacks? Set to true if so, false if no server architecture.
 
-Main setup completed and InBrain WebView can be shown. The additional config oprions may be found bellow.
+Main setup completed and InBrain SDK can be used. Additional config oprions may be found bellow.
 
 # Usage
 
@@ -95,7 +95,10 @@ There a few steps to use InBrain Native Surveys:
 1) Set **InBrain.shared.nativeSurveysDelegate**;
 2) Fetch Native Surveys using **InBrain.shared.getNativeSurveys()** function;
 3) Receive Native Surveys using **nativeSurveysReceived(_ surveys: [InBrainNativeSurvey])** function of nativeSurveysDelegate and show them to the user;
-4) Once user choosed some survey - present InBrain WebView using **showNativeSurveyWith(nativeId: String)** or **showNativeSurveyWith(nativeId: String, from viewController: UIViewController)** function.
+4) Once user choosed some survey - present InBrain WebView using any **showNativeSurveyWith(** or **showNativeSurvey(** function.
+
+Methods #2 and #4 have optional placementId parameter.
+Each native survey contains own placementId, which can be used to show the survey.
 
 **Please, note:** SDK provides new portion of Native Surveys in a next cases:
 - If **InBrain.shared.getNativeSurveys()** called;
@@ -187,7 +190,6 @@ This call should **always** be made following reward data processing.
 
 **setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool)**\
 **setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool, userID: String)** \
-**setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool, userID: String?, language: String)**
 * Initial config of InBrain SDK
 
 **set(userID: String?)**
@@ -202,8 +204,8 @@ This call should **always** be made following reward data processing.
 * Presents the InBrain WebView with configuration, provided before.
 * Please, note:  SDK should be configured before showing the surveys, or it will have no effect.
 
-**showNativeSurveyWith(id: String)** \
-**showNativeSurveyWith(id: String, from viewController: UIViewController)**
+**showNativeSurveyWith(id: String, placementId: String?, from viewController: UIViewController?)** \
+**showNativeSurvey(_ survey: InBrainNativeSurvey, from viewController: UIViewController?)**
 * Presents the InBrain Native Survey with configuration, provided before.
 * Please, note:  SDK should be configured before showing the survey, or it will have no effect.
 

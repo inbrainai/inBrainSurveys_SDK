@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "InBrainSurveys"
-  s.version      = "1.7.3"
+  s.version      = "1.8.0"
   s.summary      = "Monetization surveys for apps, powered by inBrain.ai."
   s.description  = "In-App monetization via surveys, powered by inBrain.ai."
 
@@ -14,6 +14,8 @@ Pod::Spec.new do |s|
   s.source_files = "InBrainSurveys_SDK_Swift.xcframework/*/*.framework/Headers/*.h"
   s.vendored_frameworks = "InBrainSurveys_SDK_Swift.xcframework"
   s.ios.frameworks = 'UIKit', 'Foundation', 'SystemConfiguration', 'WebKit'
+
+  s.static_framework = true
 
 end
 

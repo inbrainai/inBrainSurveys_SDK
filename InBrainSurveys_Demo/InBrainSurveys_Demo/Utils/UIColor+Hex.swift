@@ -13,11 +13,16 @@ extension UIColor {
         let scanner = Scanner(string: hex)
 
         if hex.hasPrefix("#") {
-            scanner.scanLocation = 1
+            if #available(iOS 13.0, *) {
+                let startIndex = hex.startIndex
+                scanner.currentIndex = hex.index(after: startIndex)
+            } else {
+                scanner.scanLocation = 1
+            }
         }
 
-        var color: UInt32 = 0
-        scanner.scanHexInt32(&color)
+        var color: UInt64 = 0
+        scanner.scanHexInt64(&color)
 
         let mask = 0x0000_00FF
         let r = Int(color >> 16) & mask

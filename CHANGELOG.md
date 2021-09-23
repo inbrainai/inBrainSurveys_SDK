@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.8.0](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.8.0) - 2021-09-23
+
+### Added
+- placement_id available for `Native Surveys`;
+- language format validation.
+
+### Fixed
+- Wrong language/postcode detection bug;
+- Loading indicator wasn't hidden at some screens. 
+
+### Removed 
+- Deprecated methods.
+---
+
 ## [1.7.3](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.7.3) - 2021-06-10
 
 ### Fixed
