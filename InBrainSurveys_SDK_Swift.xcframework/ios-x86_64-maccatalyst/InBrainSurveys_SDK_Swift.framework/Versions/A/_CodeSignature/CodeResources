@@ -6,11 +6,11 @@
 	<dict>
 		<key>Resources/Assets.car</key>
 		<data>
-		45aZJdKlS+U3/a+IMQhRjPlaHLg=
+		N/0S0J68vv30XRp+w83EbbfXe5A=
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		wuWIyZnbT5x202AlTmxFlaOYSv8=
+		pmjr9eEPLGg49jhmNivFksdWDcU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -33,42 +33,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rUPrCGrlaqqt8iXLXEpAKPnE8SMXiw4PRM+C1G+WqXQ=
+			6S9LNk9jj8LBgwnNeB/OrufBFzmA3hSJTHpF4l8de54=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			G1AD0JeqenCQRP2Hoe9YCpQarHnRkuR4teBqdWvL8pQ=
+			biMr5lykbW49lPf/VDz9DdyemqZXroyk9VtynyrIb8g=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uGLmQlw4To3imlalJVESJ/r3SaAAHulYH+Qigx0HSsI=
+			hLmD3CZ2JrwaCw3rAhJJFmr9MmI08PvrvbVB9TuU63c=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rUPrCGrlaqqt8iXLXEpAKPnE8SMXiw4PRM+C1G+WqXQ=
+			6S9LNk9jj8LBgwnNeB/OrufBFzmA3hSJTHpF4l8de54=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			G1AD0JeqenCQRP2Hoe9YCpQarHnRkuR4teBqdWvL8pQ=
+			biMr5lykbW49lPf/VDz9DdyemqZXroyk9VtynyrIb8g=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uGLmQlw4To3imlalJVESJ/r3SaAAHulYH+Qigx0HSsI=
+			hLmD3CZ2JrwaCw3rAhJJFmr9MmI08PvrvbVB9TuU63c=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sjFTcobnaF3lXW4mmcxYZ4gGctBKtfw5k73Mfrpibr0=
+			XviFFHv1XQVVUB9bffD/9fl/4t66Gq5A6uouEIxKbJI=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Sqnm5su5eIyi6i7WtSWPLYFG7zTYYWjKOnKMuKeUwYk=
+			E1fDEStb9h9lFYIe8eqVzIx+8jfe2lZwjcD1dBqaB8g=
 			</data>
 		</dict>
 	</dict>
