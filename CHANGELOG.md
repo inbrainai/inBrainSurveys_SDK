@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.8.1](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.8.1) - 2021-10-14
+
+### Added
+- `placementId` to NativeSurveyDelegate methods.
+
+### Fixed
+- archive with bitcode. 
+
 ## [1.8.0](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.8.0) - 2021-09-23
 
 ### Added

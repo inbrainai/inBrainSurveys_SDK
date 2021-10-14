@@ -91,18 +91,22 @@ class ViewController: UIViewController {
 ``` 
 ## Native surveys
 
-There a few steps to use InBrain Native Surveys:
+InBrain iOS SDK provides two options to handle *NativeSurveys*, please use the best fits for you.
+**Imoprtant:** After survey completed - it becames invalid and cannot be opened again.
+
+First method - using *NativeSurveysDelegate*, there are few steps to use it:
 1) Set **InBrain.shared.nativeSurveysDelegate**;
-2) Fetch Native Surveys using **InBrain.shared.getNativeSurveys()** function;
-3) Receive Native Surveys using **nativeSurveysReceived(_ surveys: [InBrainNativeSurvey])** function of nativeSurveysDelegate and show them to the user;
+2) Fetch Native Surveys using **InBrain.shared.getNativeSurveys(placementId:)** function;
+3) Receive Native Surveys using **nativeSurveysReceived(\_ surveys: [InBrainNativeSurvey], placementId: String?)** function of nativeSurveysDelegate and show them to the user;
 4) Once user choosed some survey - present InBrain WebView using any **showNativeSurveyWith(** or **showNativeSurvey(** function.
 
-Methods #2 and #4 have optional placementId parameter.
-Each native survey contains own placementId, which can be used to show the survey.
+Method #4 has optional placementId parameter.
 
-**Please, note:** SDK provides new portion of Native Surveys in a next cases:
-- If **InBrain.shared.getNativeSurveys()** called;
-- After user completed some of Native Surveys, received before.
+**Important notes:**
+- In order to keep you with up-to-date surveys - SDK will provide a fresh portion of **NativeSurveys** for the same placementId, as completed survey has;
+- The same NativeSurvey may be related to different placements. If some survey appears at lists with different placementId - please take care about refreshing surveys for rest placements;
+- If you are using SurveyWall as well - please take care about refreshing NativeSurveys after some survey(s) completed.
+Use **surveysClosed(byWebView: Bool, completedSurvey: Bool)** method of **InBrainDelegate** to detect InBbrainWebView dismissal
 
 Sample code:
 ```
@@ -128,21 +132,33 @@ class NativeSurveysViewController: UIViewController {
 
 //MARK: - NativeSurveyDelegate
 extension NativeSurveysViewController: NativeSurveyDelegate {
-    func nativeSurveysLoadingStarted() {
+    func nativeSurveysLoadingStarted(placementId: String?) {
         //Show some activity to the user while surveys loading is in process
     }
 
-    func nativeSurveysReceived(_ surveys: [InBrainNativeSurvey]) {
+    func nativeSurveysReceived(_ surveys: [InBrainNativeSurvey], placementId: String?) {
         //Cache surveys and show them to the user
     }
     
-    func failedToReceiveNativeSurveys(error: Error) {
+    func failedToReceiveNativeSurveys(error: Error, placementId: String?) {
         //Handle error depends on app logic
     }
-
 }
 
 ``` 
+
+The second option - is to get NativeSurveys just once with callbacks:
+1) Fetch Native Surveys using **InBrain.shared.getNativeSurveys(placementId:success:failed)** function;
+2) Show the surveys to the user;
+3) Once user choosed some survey - present InBrain WebView using any **showNativeSurveyWith(** or **showNativeSurvey(** function.
+
+Method #3 has optional placementId parameter.
+
+**Important notes:**
+- We are proposing to fetch **NativeSurveys** each time after **InBbrainWebView** closed and some survey(s) completed. Use **surveysClosed(byWebView: Bool, completedSurvey: Bool)** method of **InBrainDelegate** to detect InBbrainWebView dismissal;
+- The same NativeSurvey may be related to different placements. If some survey contains at lists with different placementId - surveys for each placement needs to be updated.
+
+
 **Please, note:** SDK should be configured *before* using Regular or Native Surveys.
 
 # Advanced Usage
@@ -189,7 +205,7 @@ This call should **always** be made following reward data processing.
 ## inBrain Functions
 
 **setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool)**\
-**setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool, userID: String)** \
+**setInBrain(apiClientID: String, apiSecret: String, isS2S: Bool, userID: String)**\
 * Initial config of InBrain SDK
 
 **set(userID: String?)**
@@ -200,14 +216,17 @@ This call should **always** be made following reward data processing.
 * Supported dataOptions keys "age" & "gender"
 
 **showSurveys()** \
-**showSurveys(from viewController: UIViewController)**
+**showSurveys(from viewController: UIViewController?)**
 * Presents the InBrain WebView with configuration, provided before.
 * Please, note:  SDK should be configured before showing the surveys, or it will have no effect.
+* Important: If you are using **NativeSurveys** (regardless of placementId) - please, take care about refreshing them after some survey(s) completed. Additional details may be found at **getNativeSurveys** function description.
+
 
 **showNativeSurveyWith(id: String, placementId: String?, from viewController: UIViewController?)** \
 **showNativeSurvey(_ survey: InBrainNativeSurvey, from viewController: UIViewController?)**
 * Presents the InBrain Native Survey with configuration, provided before.
 * Please, note:  SDK should be configured before showing the survey, or it will have no effect.
+* Important: If you are using **NativeSurveys** (regardless of placementId) - please, take care about refreshing them after some survey(s) completed. Additional details may be found at **getNativeSurveys** function description.
 
 **getRewards() (Useful for server less app)**
 * InBrainDelegate must be set and implementation of inBrainRewardsReceived(rewardsArray: [InBrainReward]) function must be available to receive reward data.
@@ -231,20 +250,19 @@ Accepted languages: `"de-de"`, `"en-au"`, `"en-ca"`, `"en-gb"`, `"en-in"`, `"en-
 ***didFailToReceiveRewards(error: Error)***
 * This delegate function provides an error if *getRewards()* failed
 
-***surveysClosed()***
-* This delegate function calls back whenever the InBrainWebView is dismissed
+***surveysClosed(byWebView: Bool, completedSurvey: Bool)***
+* This delegate function calls back whenever the InBrainWebView is dismissed.
+* If `byWebView == true` - dismissed from special web page placement; If `byWebView == false` - dismissed by the user.
+* `completedSurvey == true` - some survey(s) completed (succeded or disqualified).
 
-***surveysClosedFromPage()***
-* This delegate function calls back whenever the InBrainWebView is dismissed from special web page placement
-
-### nativeSurveysDelegate functions
-***func nativeSurveysLoadingStarted()***
+### NativeSurveysDelegate functions
+***func nativeSurveysLoadingStarted(placementId: String?)***
 * Сalled just after loading of NativeSurveys started.
 
-***nativeSurveysReceived(_ surveys: [InBrainNativeSurvey])***
+***nativeSurveysReceived(_ surveys: [InBrainNativeSurvey], placementId: String?)***
 * Provides fresh portion of Native surveys.
 
-***failedToReceiveNativeSurveys(error: Error)***
+***failedToReceiveNativeSurveys(error: Error, placementId: String?)***
 * Called if loading of Native Surveys failed
 
 ## Customize inBrain
@@ -296,7 +314,7 @@ In order to fix the issue for Xcode 12 - please, add following lines to the .pod
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-      #config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
      end
   end
 end
