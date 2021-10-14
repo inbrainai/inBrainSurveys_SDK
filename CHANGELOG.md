@@ -5,12 +5,6 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.8.2](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.8.2) - 2021-10-14
-
-### Fixed
-- SDK reference instead of actual SDK. 
----
-
 ## [1.8.1](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.8.1) - 2021-10-14
 
 ### Added
