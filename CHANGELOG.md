@@ -12,6 +12,7 @@ and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - archive with bitcode. 
+---
 
 ## [1.8.0](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.8.0) - 2021-09-23
 
