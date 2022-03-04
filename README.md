@@ -4,9 +4,9 @@ Survey library to monetize your mobile app, provided by inBrain.ai.\
 Please, check the **InBrainSurveys_Demo** app for getting integration example.
 
 # Requirements
-* iOS 10.0+ / Catalyst (macOS 10.15.1+)
-* Swift 4.2+
-* Xcode 11.3.1+
+* iOS 11.0+ / Catalyst (macOS 10.15.1+)
+* Swift 5.0+
+* Xcode 12+
 
 # Installation
 ### CocoaPods
@@ -305,19 +305,3 @@ In case of Objective-C projects building for simulator may be failed with error:
       /usr/lib/swift/libswiftCore.dylib: mach-o, but not built for iOS simulator
 ```
 To resolve this issue open Project -> Target -> Build Settings -> set **Always Embed Swift Standard Libraries** to **YES**.
-
-## No such module 
-Xcode 12 introduced architecture-related updates, which caused to `No such module `InBrainSurveys_SDK_Swift`` error alongside with `[CP] Unable to find matching .xcframework slice in 'path_to_InBrainSurveys_SDK InBrainSurveys_SDK_Swift framework ios-i386_x86_64-simulator ios-armv7_arm64' for the current build architectures (arm64 x86_64)` warning.
-
-In order to fix the issue for Xcode 12 - please, add following lines to the .podfile:
-```
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |config|
-      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
-     end
-  end
-end
-```
-
-This issue not fixed at our side in order to keep Xcode 11 compatible.

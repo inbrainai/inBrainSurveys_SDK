@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.8.4](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.8.4) - 2022-03-04
+
+### Fixed
+- Loading indicator wasn't hidden at some screens.
+
+### Removed 
+- iOS 10 support;
+- Xcode 11 support.
+---
+
 ## [1.8.3](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.8.3) - 2022-01-20
 
 ### Fixed
