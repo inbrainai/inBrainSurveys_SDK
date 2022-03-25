@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "InBrainSurveys"
-  s.version      = "1.8.4"
+  s.version      = "1.8.5"
   s.summary      = "Monetization surveys for apps, powered by inBrain.ai."
   s.description  = "In-App monetization via surveys, powered by inBrain.ai."
 
@@ -14,7 +14,6 @@ Pod::Spec.new do |s|
   s.source_files = "InBrainSurveys_SDK_Swift.xcframework/*/*.framework/Headers/*.h"
 
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.vendored_frameworks = "InBrainSurveys_SDK_Swift.xcframework"
   s.ios.frameworks = 'UIKit', 'Foundation', 'SystemConfiguration', 'WebKit'
 

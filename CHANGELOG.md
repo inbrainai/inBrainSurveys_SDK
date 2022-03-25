@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.8.5](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.8.5) - 2022-03-25
+
+### Fixed
+- `.swiftsourceinfo` warning when building for simulators.
+
+### Added
+- Get current/upcoming `Currency Sale`.
+
+### Removed 
+- Xcode 12 support.
+---
+
 ## [1.8.4](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.8.4) - 2022-03-04
 
 ### Fixed
