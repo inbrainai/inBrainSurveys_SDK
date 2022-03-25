@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		MCYC5f2bUfdV4Vx5xjlggFC1bFE=
+		71mOFqeX6IevPEhsJtrXUpynzsM=
 		</data>
 		<key>Headers/InBrainSurveys_SDK_Swift-Swift.h</key>
 		<data>
-		3/y7A9AOydca8jPtsq85YwEEtD8=
+		KgZldPfhMYFsZvNlBJCZi2q/Aj8=
 		</data>
 		<key>Headers/InBrainSurveys_SDK_Swift.h</key>
 		<data>
@@ -18,39 +18,19 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		epML8u/9Tqs9Ci8/MMMsRpwBNSM=
-		</data>
-		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
-		<data>
-		TWmL1hikwJFUeGdGVOl7bMeWVEI=
-		</data>
-		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/Project/x86_64.swiftsourceinfo</key>
-		<data>
-		TWmL1hikwJFUeGdGVOl7bMeWVEI=
+		jGi0kUFIfuE6gAn5p5zWpfuWUu8=
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		+TljkSBZt2DdrbDLls+jtHvdn+k=
+		plY+V+8QmgfwwkZ7GksePMz8jGI=
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		kcRRauk/Q8rh0nMQXFkjWTCkViI=
+		bnYpX1r6rzTUPzok+L+A4Iyp7ek=
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		EKQ3z/TcdEj1gnKvUn6TWlhmWaI=
-		</data>
-		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64.swiftdoc</key>
-		<data>
-		+TljkSBZt2DdrbDLls+jtHvdn+k=
-		</data>
-		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64.swiftinterface</key>
-		<data>
-		kcRRauk/Q8rh0nMQXFkjWTCkViI=
-		</data>
-		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64.swiftmodule</key>
-		<data>
-		EKQ3z/TcdEj1gnKvUn6TWlhmWaI=
+		RvREiXTUsFkz+lwo6xI7XzfO+RU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -63,14 +43,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			uJTAJYhBW9mHlDyEYxtt5C54CUIUkL6n4WXfclxX8Co=
+			i1v0D8r99xXyIff/7a59P5Verj7padycGr7/Vw/jmbw=
 			</data>
 		</dict>
 		<key>Headers/InBrainSurveys_SDK_Swift-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YL4C7a2gXAGh4ttJ3bawYe7imY/0+vEic+Jj+jdOSA0=
+			LPZ4JjtTUSEFdgwR91Mxnef0B+jvk6E2VKqUFQ0Po9o=
 			</data>
 		</dict>
 		<key>Headers/InBrainSurveys_SDK_Swift.h</key>
@@ -80,60 +60,25 @@
 			iE5H/k8t6XDMFpzhbRUC/XJQPw7+j9tVAlLYThLSwv0=
 			</data>
 		</dict>
-		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			VKYXbzF/Ct3Wdl4ByrQClNczC0NDxW96QvSFDS+ktX0=
-			</data>
-		</dict>
-		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/Project/x86_64.swiftsourceinfo</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			VKYXbzF/Ct3Wdl4ByrQClNczC0NDxW96QvSFDS+ktX0=
-			</data>
-		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HLLSM1VJ7CeFxYm0k3YpZs5aARDqa8INgT8DCw0YMjY=
+			rBGcb5w+9EZeIUsUhnlHE7PILquNwOLKT0phy7ks85E=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8JPgnJJNmfdUpb3f0TNqiMzPkricglYd6EYESpjO8Eo=
+			Ekxyx9QCeR98bp1XZcmlXjfCy4JvK5fzHsmZKrtHodA=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WZ9AZCULvcI9XicqRPg/BdOPA0wAVkuPyThBGdk8tdw=
-			</data>
-		</dict>
-		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64.swiftdoc</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			HLLSM1VJ7CeFxYm0k3YpZs5aARDqa8INgT8DCw0YMjY=
-			</data>
-		</dict>
-		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64.swiftinterface</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			8JPgnJJNmfdUpb3f0TNqiMzPkricglYd6EYESpjO8Eo=
-			</data>
-		</dict>
-		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64.swiftmodule</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			WZ9AZCULvcI9XicqRPg/BdOPA0wAVkuPyThBGdk8tdw=
+			vak6x4fk1jEhs7ljDrtapMexaNK9KFsHUJ9BaqS2shs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

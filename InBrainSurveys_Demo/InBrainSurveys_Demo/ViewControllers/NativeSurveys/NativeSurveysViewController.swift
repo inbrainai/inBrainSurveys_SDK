@@ -81,7 +81,7 @@ extension NativeSurveysViewController: UICollectionViewDelegateFlowLayout {
 
 //MARK: - NativeSurveyDelegate
 extension NativeSurveysViewController: NativeSurveyDelegate {
-    func nativeSurveysLoadingStarted() {
+    func nativeSurveysLoadingStarted(placementId: String?) {
         startActivity()
         surveys.removeAll()
         
@@ -90,7 +90,7 @@ extension NativeSurveysViewController: NativeSurveyDelegate {
         }
     }
         
-    func nativeSurveysReceived(_ surveys: [InBrainNativeSurvey]) {
+    func nativeSurveysReceived(_ surveys: [InBrainNativeSurvey], placementId: String?) {
         self.surveys = surveys
 
         defer { stopActivity() }
@@ -111,7 +111,7 @@ extension NativeSurveysViewController: NativeSurveyDelegate {
         }
     }
     
-    func failedToReceiveNativeSurveys(error: Error) {
+    func failedToReceiveNativeSurveys(error: Error, placementId: String?) {
         MessagePresenter.shared.show(message: "Ooops.. Something went wrong", type: .error)
         print("Failded to receive native surveys: \(error.localizedDescription)")
         
