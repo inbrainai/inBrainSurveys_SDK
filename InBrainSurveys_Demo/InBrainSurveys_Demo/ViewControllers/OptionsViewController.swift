@@ -32,17 +32,17 @@ class OptionsViewController: UIViewController, LoadableView {
         startActivity()
         view.isUserInteractionEnabled = false
         MessagePresenter.shared.show(message: "Loading Surveys", type: .loading)
-        
+
         inBrain.checkForAvailableSurveys { [weak self] hasSurveys, _  in
             MessagePresenter.shared.hideAlert()
             self?.view.isUserInteractionEnabled = true
             self?.stopActivity()
-            
+
             guard hasSurveys else {
                 MessagePresenter.shared.show(message: "Ooops.. No surveys available right now!", type: .error)
                 return
             }
-            
+
             self?.inBrain.showSurveys()
         }
     }
@@ -74,12 +74,8 @@ extension OptionsViewController: InBrainDelegate {
         inBrain.confirmRewards(txIdArray: ids)
     }
     
-    func surveysClosed() {
+    func surveysClosed(byWebView: Bool, completedSurvey: Bool) {
         print("Surveys closed")
-    }
-    
-    func surveysClosedFromPage() {
-        print("Surveys closed From Page")
     }
 }
 
@@ -99,7 +95,7 @@ private extension OptionsViewController {
         
         //If no userId set - `identifierForVendor` will be used.
         inBrain.set(userID: "demo@demo.demo")
-        
+
         //If no language set - device language will be used.
         //Supported languages may be found at SDK docs
         try? inBrain.setLanguage("en-us")
