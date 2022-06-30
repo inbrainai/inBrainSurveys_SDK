@@ -6,11 +6,11 @@
 	<dict>
 		<key>Resources/Assets.car</key>
 		<data>
-		Qi0RFkHe/A9IOLr3red5kwWtw0o=
+		QuZvAwWUZZKU5aFOYYfsAWICeDU=
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		yAsUi5ufUHdNVo6kYvkziGnxMPA=
+		8fWr2/PrT7tWolep6s0rXBdKMH8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -19,7 +19,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jdN1YPSEuSlJCa3lIVlaTUJeV7gmxf7sF9cdNsZMk/E=
+			rfYmgg6GOAL0sGYKjDZZJn3mBsTYZ+oxXZnaK2YqlNc=
 			</data>
 		</dict>
 		<key>Headers/InBrainSurveys_SDK_Swift.h</key>
@@ -33,42 +33,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yJOw16xW+Sq1KL7a9k7s/cdihvNxa0/xOKH7VKTDMV8=
+			MN2yoKP79JEViEYPiJ3WTYq/AyFMNA7RxsafzE5EhPo=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/arm64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jOGSQTrqecUR7JF5bXPiHJQLaTdAZ3j4EblNBYDWYhs=
+			coHNQR87wXQqgRNTtyWHs7OkbmJq0I9UV9KFfgsOdl4=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/arm64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/Zt8mbjTTF7z9FwRLxXZuaky/VoaldfMtW/XLIvfMv0=
+			qo//tmbaT8k5FHp7IcnpNFkEvfws+CklkaCBLcMRVYI=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-macabi.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Mkqv0bJwxi2DVPHVz1rIdAsu3Nj9h+uolOGJjwqVyzw=
+			3zVWBGpX/zKCBiwv2hZNscP2uqqM7k1ZhVNL9kF9FV8=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-macabi.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lxkdE67lph8Us2MRWG4k+RSJTRXbeiIYy2QncJHNwU4=
+			zzwHFZ7SggnUKFbyMr2Mo1XZo0RHduXkz0mMrekIuK4=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-macabi.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3VBxpDfwOPWktq4MPL+e8Yay5dGu2m5SLBGvmgAy+dM=
+			ntbq6mMdLjCyj6gCazAO/KxTZeAYtaMY6g5CcWMe51I=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -82,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iUZaE1EMo56ymLLPSLp66+AZ6kd9rNtil5lk3UvZUM8=
+			PT14V2+rLnyV7sQVPDHKq6ojmsS9UOjDiuDehebkPXA=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sDz5mITKRXcsei4TRIXfChVdHcww9LNS+YmARxEVqjQ=
+			qQ4IAhx0+MujN1wrdeGOWfQh+yQ42d7UPBJsW6eFlc8=
 			</data>
 		</dict>
 	</dict>

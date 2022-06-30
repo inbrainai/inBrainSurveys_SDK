@@ -170,6 +170,9 @@ inBrain.setInBrainValuesFor(sessionID: "testing33_Session", dataOptions: data)
 ```
 **Please, note:** All the configs should be done before showing the surveys, or it will have no effect.
 
+## Currency Sale
+The SDK provides an option to get active currency sale. That may be done with method **getCurrencySale(success: @escaping(InBrainCurrencySale?) -> (), failed: @escaping ErrorCallback)**.
+
 ## Reward Hooks For Server2Server Apps
 You can add your callback in your dashboard and test the response!\
 If you need any assistance in getting your callback working properly, please email us at [dev@inbrain.ai](dev@inbrain.ai)

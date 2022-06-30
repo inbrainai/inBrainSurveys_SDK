@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target x86_64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name InBrainSurveys_SDK_Swift
 import Foundation
 @_exported import InBrainSurveys_SDK_Swift
@@ -78,12 +78,26 @@ import _Concurrency
   @objc public init(backgroundColor: UIKit.UIColor? = nil, buttonsColor: UIKit.UIColor? = nil, titleColor: UIKit.UIColor? = nil, isTranslucent: Swift.Bool = false, hasShadow: Swift.Bool = false)
   @objc deinit
 }
+@objc public enum SurveyProfileMatch : Swift.Int, Swift.Decodable {
+  case newSurvey = 0
+  case poorMatch
+  case fairMatch
+  case goodMatch
+  case greatMatch
+  case excellentMatch
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc public class InBrainNativeSurvey : ObjectiveC.NSObject, Swift.Decodable {
   @objc final public let id: Swift.String
   @objc final public let placementId: Swift.String?
   @objc final public let rank: Swift.Int
   @objc final public let time: Swift.Int
   @objc final public let value: Swift.Double
+  @objc final public let profileMatch: InBrainSurveys_SDK_Swift.SurveyProfileMatch
   @objc final public let currencySale: Swift.Bool
   @objc final public let multiplier: Swift.Double
   @objc override dynamic public var description: Swift.String {
@@ -119,3 +133,6 @@ public typealias ErrorCallback = (Swift.Error) -> ()
   public init(from decoder: Swift.Decoder) throws
   @objc deinit
 }
+extension InBrainSurveys_SDK_Swift.SurveyProfileMatch : Swift.Equatable {}
+extension InBrainSurveys_SDK_Swift.SurveyProfileMatch : Swift.Hashable {}
+extension InBrainSurveys_SDK_Swift.SurveyProfileMatch : Swift.RawRepresentable {}
