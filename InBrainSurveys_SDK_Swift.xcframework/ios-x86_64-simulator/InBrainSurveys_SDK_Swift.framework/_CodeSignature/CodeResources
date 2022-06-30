@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		71mOFqeX6IevPEhsJtrXUpynzsM=
+		J0/gOF3KB6HXNgrAipoiGPf5TV4=
 		</data>
 		<key>Headers/InBrainSurveys_SDK_Swift-Swift.h</key>
 		<data>
-		KgZldPfhMYFsZvNlBJCZi2q/Aj8=
+		c/KBrbolFPqYKSp/2gzKm/v8+tk=
 		</data>
 		<key>Headers/InBrainSurveys_SDK_Swift.h</key>
 		<data>
@@ -18,19 +18,19 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		jGi0kUFIfuE6gAn5p5zWpfuWUu8=
+		RFvztW0mZJbL+MjXc5NOhQapUj0=
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		plY+V+8QmgfwwkZ7GksePMz8jGI=
+		oHyeCMvm60XQJFGgWYS8yUyiVcU=
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		bnYpX1r6rzTUPzok+L+A4Iyp7ek=
+		YOCKyvSOytmn1Qf0p0VolM/r6cw=
 		</data>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		RvREiXTUsFkz+lwo6xI7XzfO+RU=
+		N8KhCuizXJo64wTJffbUKbA8Z78=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -43,14 +43,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			i1v0D8r99xXyIff/7a59P5Verj7padycGr7/Vw/jmbw=
+			UMOKMRx9dpwZTrNxUnX9XDC/L7CBpbIyHZ8rAX/5enQ=
 			</data>
 		</dict>
 		<key>Headers/InBrainSurveys_SDK_Swift-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LPZ4JjtTUSEFdgwR91Mxnef0B+jvk6E2VKqUFQ0Po9o=
+			S0cBWKlyFM8R3XRkPTikd+O7T0uYr15UiChxlAc2754=
 			</data>
 		</dict>
 		<key>Headers/InBrainSurveys_SDK_Swift.h</key>
@@ -64,21 +64,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rBGcb5w+9EZeIUsUhnlHE7PILquNwOLKT0phy7ks85E=
+			E+26HGH8TxE5mTrhMOZawkEQOGYLGiFWU7pZgdqXgPA=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ekxyx9QCeR98bp1XZcmlXjfCy4JvK5fzHsmZKrtHodA=
+			lujoBvVPVdTPw3ZnH5jKGXOsK9df3XooMFzEmjYYa7w=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys_SDK_Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vak6x4fk1jEhs7ljDrtapMexaNK9KFsHUJ9BaqS2shs=
+			ccM1RISEgjmt+R5e3E1m3EowoQMkJsspBRvoyzKst9o=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

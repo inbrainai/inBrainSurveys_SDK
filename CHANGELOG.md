@@ -5,15 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.8.6](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.8.6) - 2022-06-30
+
+### Added
+- `profileMatch` property to NativeSurvey object.
+---
+
 ## [1.8.5](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.8.5) - 2022-03-25
 
 ### Fixed
 - `.swiftsourceinfo` warning when building for simulators.
 
 ### Added
-- Get current/upcoming `Currency Sale`.
+- Get active `Currency Sale`.
 
 ### Removed 
+- arm64 arch for simulators;
 - Xcode 12 support.
 ---
 
