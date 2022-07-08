@@ -512,6 +512,7 @@ SWIFT_PROTOCOL("_TtP24InBrainSurveys_SDK_Swift20NativeSurveyDelegate_")
 - (void)failedToReceiveNativeSurveysWithError:(NSError * _Nonnull)error placementId:(NSString * _Nullable)placementId;
 @end
 
+/// Indicates how the survey match user’s profile
 typedef SWIFT_ENUM(NSInteger, SurveyProfileMatch, open) {
   SurveyProfileMatchNewSurvey = 0,
   SurveyProfileMatchPoorMatch = 1,
@@ -1042,6 +1043,7 @@ SWIFT_PROTOCOL("_TtP24InBrainSurveys_SDK_Swift20NativeSurveyDelegate_")
 - (void)failedToReceiveNativeSurveysWithError:(NSError * _Nonnull)error placementId:(NSString * _Nullable)placementId;
 @end
 
+/// Indicates how the survey match user’s profile
 typedef SWIFT_ENUM(NSInteger, SurveyProfileMatch, open) {
   SurveyProfileMatchNewSurvey = 0,
   SurveyProfileMatchPoorMatch = 1,
