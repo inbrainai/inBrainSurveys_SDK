@@ -5,6 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.0.0](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.0.0) - 2022-10-27
+
+### Added
+- `InBrainSurveyCategory` - enum, represents all the supported categories;
+- `categories` (`categoryIds` for Obj-C) property to `NativeSurvey`;
+- `InBrainSurveyFilter` - filter for fetching Native Surveys;
+- Ability to fetch Native Surveys, filtered by categories.
+
+### Changed
+- `InBrainSurveys_SDK_Swift` renamed to `InBrainSurveys`; 
+- `NativeSurvey`'s `placementId` property replaced with `searchId`;
+- Fetching Native Surveys with `filter` instead of `placementId`;
+- Show Native Survey with `searchId` instead of `placementId`;
+- Survey interruption flow updated.
+
+### Fixed
+- Resume loading indicator when app goes foreground.
+
+### Removed
+- iOS 11 support.
+---
+
 ## [1.8.7](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.8.7) - 2022-07-08
 
 ### Changed
@@ -14,6 +36,7 @@ and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 ## [1.8.6](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.8.6) - 2022-06-30
 
 ### Added
+- `SurveyProfileMatch` enum, which indicates how the surveys matches to the user's profile;
 - `profileMatch` property to NativeSurvey object.
 ---
 
@@ -126,7 +149,7 @@ and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 - Custom loading indicator.
 
 ### Fixed
-- Open redirects and links at new widnow.
+- Open redirects and links at new window.
 ---
 
 ## [1.4.12](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/1.4.12) - 2020-12-11

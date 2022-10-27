@@ -8,7 +8,7 @@
 
 import UIKit
 
-import InBrainSurveys_SDK_Swift
+import InBrainSurveys
 
 private let cornerRadius: CGFloat = 13
 
