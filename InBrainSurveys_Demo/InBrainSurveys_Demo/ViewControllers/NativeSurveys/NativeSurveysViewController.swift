@@ -8,7 +8,7 @@
 
 import UIKit
 
-import InBrainSurveys_SDK_Swift
+import InBrainSurveys
 
 class NativeSurveysViewController: UIViewController, LoadableView {
     
@@ -43,14 +43,17 @@ class NativeSurveysViewController: UIViewController, LoadableView {
         collectionView?.alpha = 0
         
         inBrain.nativeSurveysDelegate = self
-        inBrain.getNativeSurveys()
+
+        let filter = InBrainSurveyFilter(placementId: nil,
+                                         categories: [.automotive, .business],
+                                         excludedCategories: [.childrenAndParenting])
+        inBrain.getNativeSurveys(filter: filter)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-
 }
 
 //MARK: - UICollectionViewDelegate, UICollectionViewDataSource
@@ -81,7 +84,7 @@ extension NativeSurveysViewController: UICollectionViewDelegateFlowLayout {
 
 //MARK: - NativeSurveyDelegate
 extension NativeSurveysViewController: NativeSurveyDelegate {
-    func nativeSurveysLoadingStarted(placementId: String?) {
+    func nativeSurveysLoadingStarted(filter: InBrainSurveyFilter?) {
         startActivity()
         surveys.removeAll()
         
@@ -90,7 +93,7 @@ extension NativeSurveysViewController: NativeSurveyDelegate {
         }
     }
         
-    func nativeSurveysReceived(_ surveys: [InBrainNativeSurvey], placementId: String?) {
+    func nativeSurveysReceived(_ surveys: [InBrainNativeSurvey], filter: InBrainSurveyFilter?) {
         self.surveys = surveys
 
         defer { stopActivity() }
@@ -111,7 +114,7 @@ extension NativeSurveysViewController: NativeSurveyDelegate {
         }
     }
     
-    func failedToReceiveNativeSurveys(error: Error, placementId: String?) {
+    func failedToReceiveNativeSurveys(error: Error, filter: InBrainSurveyFilter?) {
         MessagePresenter.shared.show(message: "Ooops.. Something went wrong", type: .error)
         print("Failded to receive native surveys: \(error.localizedDescription)")
         

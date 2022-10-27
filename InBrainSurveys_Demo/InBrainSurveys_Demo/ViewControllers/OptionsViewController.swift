@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import InBrainSurveys_SDK_Swift
+import InBrainSurveys
 
 class OptionsViewController: UIViewController, LoadableView {
     @IBOutlet weak var pointsLabel: UILabel?

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		672A9415290A69F200CCA2BB /* InBrainSurveys.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 672A9414290A69F200CCA2BB /* InBrainSurveys.xcframework */; };
+		672A9416290A69F200CCA2BB /* InBrainSurveys.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 672A9414290A69F200CCA2BB /* InBrainSurveys.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67907675252D950700BBFCDE /* MessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67907674252D950700BBFCDE /* MessagePresenter.swift */; };
 		6790767B252D95CF00BBFCDE /* JDropDownAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6790767A252D95CF00BBFCDE /* JDropDownAlert.swift */; };
 		6790768D252DDF1B00BBFCDE /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6790768C252DDF1B00BBFCDE /* UIViewController+Loading.swift */; };
 		67DC83C32671ECE800C9B026 /* InBrainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DC83C22671ECE800C9B026 /* InBrainNavigationController.swift */; };
-		67EE93DF25357E5B00CB7323 /* InBrainSurveys_SDK_Swift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67EE93DE25357E5B00CB7323 /* InBrainSurveys_SDK_Swift.xcframework */; };
-		67EE93E025357E5B00CB7323 /* InBrainSurveys_SDK_Swift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67EE93DE25357E5B00CB7323 /* InBrainSurveys_SDK_Swift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		67F7C8B3252709040051F6A1 /* NativeSurveysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7C8B2252709040051F6A1 /* NativeSurveysViewController.swift */; };
 		67F7C8C325270FDC0051F6A1 /* NativeSurveyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7C8C125270FDC0051F6A1 /* NativeSurveyCollectionViewCell.swift */; };
 		67F7C8C425270FDC0051F6A1 /* NativeSurveyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67F7C8C225270FDC0051F6A1 /* NativeSurveyCollectionViewCell.xib */; };
@@ -26,13 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		67C1BD3C251C849F00A9FBE2 /* Embed Frameworks */ = {
+		672A9417290A69F300CCA2BB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				67EE93E025357E5B00CB7323 /* InBrainSurveys_SDK_Swift.xcframework in Embed Frameworks */,
+				672A9416290A69F200CCA2BB /* InBrainSurveys.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		672A9414290A69F200CCA2BB /* InBrainSurveys.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = InBrainSurveys.xcframework; path = ../InBrainSurveys.xcframework; sourceTree = "<group>"; };
 		67907674252D950700BBFCDE /* MessagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePresenter.swift; sourceTree = "<group>"; };
 		6790767A252D95CF00BBFCDE /* JDropDownAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDropDownAlert.swift; sourceTree = "<group>"; };
 		6790768C252DDF1B00BBFCDE /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
@@ -66,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67EE93DF25357E5B00CB7323 /* InBrainSurveys_SDK_Swift.xcframework in Frameworks */,
+				672A9415290A69F200CCA2BB /* InBrainSurveys.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +172,7 @@
 		D964EAA12264BF2800C683CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				672A9414290A69F200CCA2BB /* InBrainSurveys.xcframework */,
 				67EE93DE25357E5B00CB7323 /* InBrainSurveys_SDK_Swift.xcframework */,
 				D964EAA42264BF3100C683CE /* WebKit.framework */,
 				D964EAA22264BF2800C683CE /* UIKit.framework */,
@@ -188,7 +190,7 @@
 				D964EA752264BDB800C683CE /* Sources */,
 				D964EA762264BDB800C683CE /* Frameworks */,
 				D964EA772264BDB800C683CE /* Resources */,
-				67C1BD3C251C849F00A9FBE2 /* Embed Frameworks */,
+				672A9417290A69F300CCA2BB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
