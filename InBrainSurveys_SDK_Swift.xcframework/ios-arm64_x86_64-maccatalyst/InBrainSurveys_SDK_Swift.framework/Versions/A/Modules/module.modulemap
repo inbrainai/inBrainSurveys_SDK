@@ -6,6 +6,6 @@ framework module InBrainSurveys_SDK_Swift {
 }
 
 module InBrainSurveys_SDK_Swift.Swift {
-    header "InBrainSurveys_SDK_Swift-Swift.h"
-    requires objc
+  header "InBrainSurveys_SDK_Swift-Swift.h"
+  requires objc
 }

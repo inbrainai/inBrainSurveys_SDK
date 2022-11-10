@@ -1,0 +1,4999 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InBrainDelegate",
+        "printedName": "InBrainDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "didReceiveInBrainRewards",
+            "printedName": "didReceiveInBrainRewards(rewardsArray:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[InBrainSurveys_SDK_Swift.InBrainReward]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "InBrainReward",
+                    "printedName": "InBrainSurveys_SDK_Swift.InBrainReward",
+                    "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainReward"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(pl)InBrainDelegate(im)didReceiveInBrainRewardsWithRewardsArray:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB8DelegateP010didReceiveaB7Rewards12rewardsArrayySayAA0aB6RewardCG_tF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "genericSig": "<τ_0_0 where τ_0_0 : InBrainSurveys_SDK_Swift.InBrainDelegate>",
+            "sugared_genericSig": "<Self where Self : InBrainSurveys_SDK_Swift.InBrainDelegate>",
+            "protocolReq": true,
+            "objc_name": "didReceiveInBrainRewardsWithRewardsArray:",
+            "declAttributes": [
+              "Optional",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didFailToReceiveRewards",
+            "printedName": "didFailToReceiveRewards(error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "Swift.Error",
+                "usr": "s:s5ErrorP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(pl)InBrainDelegate(im)didFailToReceiveRewardsWithError:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB8DelegateP23didFailToReceiveRewards5errorys5Error_p_tF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "genericSig": "<τ_0_0 where τ_0_0 : InBrainSurveys_SDK_Swift.InBrainDelegate>",
+            "sugared_genericSig": "<Self where Self : InBrainSurveys_SDK_Swift.InBrainDelegate>",
+            "protocolReq": true,
+            "objc_name": "didFailToReceiveRewardsWithError:",
+            "declAttributes": [
+              "Optional",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "surveysClosed",
+            "printedName": "surveysClosed(byWebView:completedSurvey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(pl)InBrainDelegate(im)surveysClosedByWebView:completedSurvey:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB8DelegateP13surveysClosed9byWebView15completedSurveyySb_SbtF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "genericSig": "<τ_0_0 where τ_0_0 : InBrainSurveys_SDK_Swift.InBrainDelegate>",
+            "sugared_genericSig": "<Self where Self : InBrainSurveys_SDK_Swift.InBrainDelegate>",
+            "protocolReq": true,
+            "objc_name": "surveysClosedByWebView:completedSurvey:",
+            "declAttributes": [
+              "Optional",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(pl)InBrainDelegate",
+        "mangledName": "$s24InBrainSurveys_SDK_Swift0aB8DelegateP",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NativeSurveyDelegate",
+        "printedName": "NativeSurveyDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "nativeSurveysLoadingStarted",
+            "printedName": "nativeSurveysLoadingStarted(placementId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(pl)NativeSurveyDelegate(im)nativeSurveysLoadingStartedWithPlacementId:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift20NativeSurveyDelegateP06nativeC14LoadingStarted11placementIdySSSg_tF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "genericSig": "<τ_0_0 where τ_0_0 : InBrainSurveys_SDK_Swift.NativeSurveyDelegate>",
+            "sugared_genericSig": "<Self where Self : InBrainSurveys_SDK_Swift.NativeSurveyDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "nativeSurveysReceived",
+            "printedName": "nativeSurveysReceived(_:placementId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[InBrainSurveys_SDK_Swift.InBrainNativeSurvey]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "InBrainNativeSurvey",
+                    "printedName": "InBrainSurveys_SDK_Swift.InBrainNativeSurvey",
+                    "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(pl)NativeSurveyDelegate(im)nativeSurveysReceived:placementId:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift20NativeSurveyDelegateP06nativeC8Received_11placementIdySayAA0abfG0CG_SSSgtF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "genericSig": "<τ_0_0 where τ_0_0 : InBrainSurveys_SDK_Swift.NativeSurveyDelegate>",
+            "sugared_genericSig": "<Self where Self : InBrainSurveys_SDK_Swift.NativeSurveyDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "failedToReceiveNativeSurveys",
+            "printedName": "failedToReceiveNativeSurveys(error:placementId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "Swift.Error",
+                "usr": "s:s5ErrorP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(pl)NativeSurveyDelegate(im)failedToReceiveNativeSurveysWithError:placementId:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift20NativeSurveyDelegateP015failedToReceivefC05error11placementIdys5Error_p_SSSgtF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "genericSig": "<τ_0_0 where τ_0_0 : InBrainSurveys_SDK_Swift.NativeSurveyDelegate>",
+            "sugared_genericSig": "<Self where Self : InBrainSurveys_SDK_Swift.NativeSurveyDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(pl)NativeSurveyDelegate",
+        "mangledName": "$s24InBrainSurveys_SDK_Swift20NativeSurveyDelegateP",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SystemConfiguration",
+        "printedName": "SystemConfiguration",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InBrain",
+        "printedName": "InBrain",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InBrain",
+                "printedName": "InBrainSurveys_SDK_Swift.InBrain",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(cpy)shared",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C6sharedACvpZ",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "InBrain",
+                    "printedName": "InBrainSurveys_SDK_Swift.InBrain",
+                    "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(cm)shared",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C6sharedACvgZ",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "inBrainDelegate",
+            "printedName": "inBrainDelegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "InBrainSurveys_SDK_Swift.InBrainDelegate?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(py)inBrainDelegate",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C02inB8DelegateAA0abG0_pSgvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "InBrainSurveys_SDK_Swift.InBrainDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "InBrainDelegate",
+                        "printedName": "InBrainSurveys_SDK_Swift.InBrainDelegate",
+                        "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(pl)InBrainDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)inBrainDelegate",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C02inB8DelegateAA0abG0_pSgvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "InBrainSurveys_SDK_Swift.InBrainDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "InBrainDelegate",
+                        "printedName": "InBrainSurveys_SDK_Swift.InBrainDelegate",
+                        "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(pl)InBrainDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)setInBrainDelegate:",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C02inB8DelegateAA0abG0_pSgvs",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24InBrainSurveys_SDK_Swift0aB0C02inB8DelegateAA0abG0_pSgvM",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C02inB8DelegateAA0abG0_pSgvM",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "nativeSurveysDelegate",
+            "printedName": "nativeSurveysDelegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "InBrainSurveys_SDK_Swift.NativeSurveyDelegate?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(py)nativeSurveysDelegate",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C06nativeC8DelegateAA012NativeSurveyG0_pSgvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl",
+              "ObjC"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "InBrainSurveys_SDK_Swift.NativeSurveyDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NativeSurveyDelegate",
+                        "printedName": "InBrainSurveys_SDK_Swift.NativeSurveyDelegate",
+                        "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(pl)NativeSurveyDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)nativeSurveysDelegate",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C06nativeC8DelegateAA012NativeSurveyG0_pSgvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "InBrainSurveys_SDK_Swift.NativeSurveyDelegate?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NativeSurveyDelegate",
+                        "printedName": "InBrainSurveys_SDK_Swift.NativeSurveyDelegate",
+                        "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(pl)NativeSurveyDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)setNativeSurveysDelegate:",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C06nativeC8DelegateAA012NativeSurveyG0_pSgvs",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24InBrainSurveys_SDK_Swift0aB0C06nativeC8DelegateAA012NativeSurveyG0_pSgvM",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C06nativeC8DelegateAA012NativeSurveyG0_pSgvM",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isOnScreen",
+            "printedName": "isOnScreen",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(py)isOnScreen",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C10isOnScreenSbvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)isOnScreen",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C10isOnScreenSbvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setInBrain",
+            "printedName": "setInBrain(apiClientID:apiSecret:isS2S:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)setInBrainWithApiClientID:apiSecret:isS2S:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C03setaB011apiClientID0G6Secret5isS2SySS_SSSbtF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "objc_name": "setInBrainWithApiClientID:apiSecret:isS2S:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setInBrain",
+            "printedName": "setInBrain(apiClientID:apiSecret:isS2S:userID:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)setInBrainWithApiClientID:apiSecret:isS2S:userID:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C03setaB011apiClientID0G6Secret5isS2S04userI0ySS_SSSbSSSgtF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "objc_name": "setInBrainWithApiClientID:apiSecret:isS2S:userID:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "set",
+            "printedName": "set(userID:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)setWithUserID:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C3set6userIDySSSg_tF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "objc_name": "setWithUserID:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setNavigationBarTitle",
+            "printedName": "setNavigationBarTitle(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)setNavigationBarTitle:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C21setNavigationBarTitleyySSF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setNavigationBarConfig",
+            "printedName": "setNavigationBarConfig(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "InBrainNavBarConfig",
+                "printedName": "InBrainSurveys_SDK_Swift.InBrainNavBarConfig",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNavBarConfig"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)setNavigationBarConfig:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C22setNavigationBarConfigyyAA0ab3NavhI0CF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setStatusBarConfig",
+            "printedName": "setStatusBarConfig(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "InBrainStatusBarConfig",
+                "printedName": "InBrainSurveys_SDK_Swift.InBrainStatusBarConfig",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainStatusBarConfig"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)setStatusBarConfig:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C18setStatusBarConfigyyAA0abghI0CF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setInBrainValuesFor",
+            "printedName": "setInBrainValuesFor(sessionID:dataOptions:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[[Swift.String : Any]]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[[Swift.String : Any]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Any]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)setInBrainValuesForSessionID:dataOptions:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C03setaB9ValuesFor9sessionID11dataOptionsySSSg_SaySDySSypGGSgtF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "objc_name": "setInBrainValuesForSessionID:dataOptions:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setLanguage",
+            "printedName": "setLanguage(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)setLanguage:error:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C11setLanguageyySSKF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "checkForAvailableSurveys",
+            "printedName": "checkForAvailableSurveys(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool, Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Bool, Swift.Error?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)checkForAvailableSurveysWithCompletion:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C017checkForAvailableC010completionyySb_s5Error_pSgtc_tF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "objc_name": "checkForAvailableSurveysWithCompletion:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showSurveys",
+            "printedName": "showSurveys(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)showSurveysFrom:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C04showC04fromySo16UIViewControllerCSg_tF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "objc_name": "showSurveysFrom:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showNativeSurvey",
+            "printedName": "showNativeSurvey(_:from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "InBrainNativeSurvey",
+                "printedName": "InBrainSurveys_SDK_Swift.InBrainNativeSurvey",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)showNativeSurvey:from:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C16showNativeSurvey_4fromyAA0abgH0C_So16UIViewControllerCSgtF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "showNativeSurveyWith",
+            "printedName": "showNativeSurveyWith(id:placementId:from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)showNativeSurveyWithId:placementId:from:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C20showNativeSurveyWith2id11placementId4fromySS_SSSgSo16UIViewControllerCSgtF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "objc_name": "showNativeSurveyWithId:placementId:from:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getRewards",
+            "printedName": "getRewards(success:failed:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([InBrainSurveys_SDK_Swift.InBrainReward]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[InBrainSurveys_SDK_Swift.InBrainReward]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "InBrainReward",
+                        "printedName": "InBrainSurveys_SDK_Swift.InBrainReward",
+                        "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainReward"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Error) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)getRewardsWithSuccess:failed:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C10getRewards7success6failedyySayAA0aB6RewardCGc_ys5Error_pctF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "objc_name": "getRewardsWithSuccess:failed:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getRewards",
+            "printedName": "getRewards()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)getRewards",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C10getRewardsyyF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "confirmRewards",
+            "printedName": "confirmRewards(txIdArray:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Int]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)confirmRewardsWithTxIdArray:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C14confirmRewards9txIdArrayySaySiG_tF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "objc_name": "confirmRewardsWithTxIdArray:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getCurrencySale",
+            "printedName": "getCurrencySale(success:failed:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InBrainSurveys_SDK_Swift.InBrainCurrencySale?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "InBrainSurveys_SDK_Swift.InBrainCurrencySale?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "InBrainCurrencySale",
+                        "printedName": "InBrainSurveys_SDK_Swift.InBrainCurrencySale",
+                        "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainCurrencySale"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Error) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)getCurrencySaleWithSuccess:failed:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C15getCurrencySale7success6failedyyAA0abgH0CSgc_ys5Error_pctF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "objc_name": "getCurrencySaleWithSuccess:failed:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getNativeSurveys",
+            "printedName": "getNativeSurveys(placementId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)getNativeSurveysWithPlacementId:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C09getNativeC011placementIdySSSg_tF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "objc_name": "getNativeSurveysWithPlacementId:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getNativeSurveys",
+            "printedName": "getNativeSurveys(placementID:success:failed:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([InBrainSurveys_SDK_Swift.InBrainNativeSurvey]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[InBrainSurveys_SDK_Swift.InBrainNativeSurvey]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "InBrainNativeSurvey",
+                        "printedName": "InBrainSurveys_SDK_Swift.InBrainNativeSurvey",
+                        "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Error) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)getNativeSurveysWithPlacementID:success:failed:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C09getNativeC011placementID7success6failedySSSg_ySayAA0abG6SurveyCGcys5Error_pctF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "objc_name": "getNativeSurveysWithPlacementID:success:failed:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setInBrain",
+            "printedName": "setInBrain(apiClientID:apiSecret:isS2S:userID:language:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)setInBrainWithApiClientID:apiSecret:isS2S:userID:language:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C03setaB011apiClientID0G6Secret5isS2S04userI08languageySS_SSSbSSSgSStF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "deprecated": true,
+            "objc_name": "setInBrainWithApiClientID:apiSecret:isS2S:userID:language:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setLanguage",
+            "printedName": "setLanguage(value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain(im)setLanguageWithValue:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C11setLanguage5valueySS_tF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "deprecated": true,
+            "objc_name": "setLanguageWithValue:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrain",
+        "mangledName": "$s24InBrainSurveys_SDK_Swift0aB0C",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InBrainNavBarConfig",
+        "printedName": "InBrainNavBarConfig",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(backgroundColor:buttonsColor:titleColor:isTranslucent:hasShadow:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InBrainNavBarConfig",
+                "printedName": "InBrainSurveys_SDK_Swift.InBrainNavBarConfig",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNavBarConfig"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNavBarConfig(im)initWithBackgroundColor:buttonsColor:titleColor:isTranslucent:hasShadow:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NavBarConfigC15backgroundColor07buttonsJ005titleJ013isTranslucent9hasShadowACSo7UIColorCSg_A2KS2btcfc",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "objc_name": "initWithBackgroundColor:buttonsColor:titleColor:isTranslucent:hasShadow:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InBrainNavBarConfig",
+                "printedName": "InBrainSurveys_SDK_Swift.InBrainNavBarConfig",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNavBarConfig"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNavBarConfig(im)init",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NavBarConfigCACycfc",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNavBarConfig",
+        "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NavBarConfigC",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SurveyProfileMatch",
+        "printedName": "SurveyProfileMatch",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "newSurvey",
+            "printedName": "newSurvey",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InBrainSurveys_SDK_Swift.SurveyProfileMatch.Type) -> InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SurveyProfileMatch",
+                    "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                    "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SurveyProfileMatch",
+                        "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                        "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch@SurveyProfileMatchNewSurvey",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift18SurveyProfileMatchO03newF0yA2CmF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "poorMatch",
+            "printedName": "poorMatch",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InBrainSurveys_SDK_Swift.SurveyProfileMatch.Type) -> InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SurveyProfileMatch",
+                    "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                    "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SurveyProfileMatch",
+                        "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                        "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch@SurveyProfileMatchPoorMatch",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift18SurveyProfileMatchO04poorH0yA2CmF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "fairMatch",
+            "printedName": "fairMatch",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InBrainSurveys_SDK_Swift.SurveyProfileMatch.Type) -> InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SurveyProfileMatch",
+                    "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                    "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SurveyProfileMatch",
+                        "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                        "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch@SurveyProfileMatchFairMatch",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift18SurveyProfileMatchO04fairH0yA2CmF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "goodMatch",
+            "printedName": "goodMatch",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InBrainSurveys_SDK_Swift.SurveyProfileMatch.Type) -> InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SurveyProfileMatch",
+                    "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                    "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SurveyProfileMatch",
+                        "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                        "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch@SurveyProfileMatchGoodMatch",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift18SurveyProfileMatchO04goodH0yA2CmF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "greatMatch",
+            "printedName": "greatMatch",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InBrainSurveys_SDK_Swift.SurveyProfileMatch.Type) -> InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SurveyProfileMatch",
+                    "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                    "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SurveyProfileMatch",
+                        "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                        "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch@SurveyProfileMatchGreatMatch",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift18SurveyProfileMatchO05greatH0yA2CmF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
+            "name": "excellentMatch",
+            "printedName": "excellentMatch",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InBrainSurveys_SDK_Swift.SurveyProfileMatch.Type) -> InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SurveyProfileMatch",
+                    "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                    "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "SurveyProfileMatch",
+                        "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                        "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch@SurveyProfileMatchExcellentMatch",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift18SurveyProfileMatchO09excellentH0yA2CmF",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 5
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SurveyProfileMatch",
+                    "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                    "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:24InBrainSurveys_SDK_Swift18SurveyProfileMatchO8rawValueACSgSi_tcfc",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift18SurveyProfileMatchO8rawValueACSgSi_tcfc",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:24InBrainSurveys_SDK_Swift18SurveyProfileMatchO8rawValueSivp",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift18SurveyProfileMatchO8rawValueSivp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:24InBrainSurveys_SDK_Swift18SurveyProfileMatchO8rawValueSivg",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift18SurveyProfileMatchO8rawValueSivg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch",
+        "mangledName": "$s24InBrainSurveys_SDK_Swift18SurveyProfileMatchO",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InBrainNativeSurvey",
+        "printedName": "InBrainNativeSurvey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "id",
+            "printedName": "id",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(py)id",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC2idSSvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(im)id",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC2idSSvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "placementId",
+            "printedName": "placementId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(py)placementId",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC11placementIdSSSgvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(im)placementId",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC11placementIdSSSgvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rank",
+            "printedName": "rank",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(py)rank",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC4rankSivp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(im)rank",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC4rankSivg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "time",
+            "printedName": "time",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(py)time",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC4timeSivp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(im)time",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC4timeSivg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "value",
+            "printedName": "value",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(py)value",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC5valueSdvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(im)value",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC5valueSdvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "profileMatch",
+            "printedName": "profileMatch",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SurveyProfileMatch",
+                "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(py)profileMatch",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC12profileMatchAA0g7ProfileI0Ovp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SurveyProfileMatch",
+                    "printedName": "InBrainSurveys_SDK_Swift.SurveyProfileMatch",
+                    "usr": "c:@M@InBrainSurveys_SDK_Swift@E@SurveyProfileMatch"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(im)profileMatch",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC12profileMatchAA0g7ProfileI0Ovg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currencySale",
+            "printedName": "currencySale",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(py)currencySale",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC12currencySaleSbvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(im)currencySale",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC12currencySaleSbvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "multiplier",
+            "printedName": "multiplier",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(py)multiplier",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC10multiplierSdvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(im)multiplier",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC10multiplierSdvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(py)description",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC11descriptionSSvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "overriding": true,
+            "objc_name": "description",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(im)description",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC11descriptionSSvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InBrainNativeSurvey",
+                "printedName": "InBrainSurveys_SDK_Swift.InBrainNativeSurvey",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:24InBrainSurveys_SDK_Swift0aB12NativeSurveyC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Required",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InBrainNativeSurvey",
+                "printedName": "InBrainSurveys_SDK_Swift.InBrainNativeSurvey",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey(im)init",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyCACycfc",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainNativeSurvey",
+        "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12NativeSurveyC",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift"
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InBrainCurrencySale",
+        "printedName": "InBrainCurrencySale",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "title",
+            "printedName": "title",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainCurrencySale(py)title",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12CurrencySaleC5titleSSvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainCurrencySale(im)title",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12CurrencySaleC5titleSSvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "multiplier",
+            "printedName": "multiplier",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainCurrencySale(py)multiplier",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12CurrencySaleC10multiplierSdvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainCurrencySale(im)multiplier",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12CurrencySaleC10multiplierSdvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "start",
+            "printedName": "start",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainCurrencySale(py)start",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12CurrencySaleC5start10Foundation4DateVvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainCurrencySale(im)start",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12CurrencySaleC5start10Foundation4DateVvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "end",
+            "printedName": "end",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainCurrencySale(py)end",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12CurrencySaleC3end10Foundation4DateVvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainCurrencySale(im)end",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12CurrencySaleC3end10Foundation4DateVvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainCurrencySale(py)description",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12CurrencySaleC11descriptionSSvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "overriding": true,
+            "objc_name": "description",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainCurrencySale(im)description",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12CurrencySaleC11descriptionSSvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InBrainCurrencySale",
+                "printedName": "InBrainSurveys_SDK_Swift.InBrainCurrencySale",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainCurrencySale"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:24InBrainSurveys_SDK_Swift0aB12CurrencySaleC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12CurrencySaleC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InBrainCurrencySale",
+                "printedName": "InBrainSurveys_SDK_Swift.InBrainCurrencySale",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainCurrencySale"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainCurrencySale(im)init",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12CurrencySaleCACycfc",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainCurrencySale",
+        "mangledName": "$s24InBrainSurveys_SDK_Swift0aB12CurrencySaleC",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InBrainStatusBarConfig",
+        "printedName": "InBrainStatusBarConfig",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(statusBarStyle:hideStatusBar:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InBrainStatusBarConfig",
+                "printedName": "InBrainSurveys_SDK_Swift.InBrainStatusBarConfig",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainStatusBarConfig"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIStatusBarStyle",
+                "printedName": "UIKit.UIStatusBarStyle",
+                "usr": "c:@E@UIStatusBarStyle"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainStatusBarConfig(im)initWithStatusBarStyle:hideStatusBar:",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB15StatusBarConfigC06statusG5Style04hidefG0ACSo08UIStatusgJ0V_Sbtcfc",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "objc_name": "initWithStatusBarStyle:hideStatusBar:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InBrainStatusBarConfig",
+                "printedName": "InBrainSurveys_SDK_Swift.InBrainStatusBarConfig",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainStatusBarConfig"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainStatusBarConfig(im)init",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB15StatusBarConfigCACycfc",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainStatusBarConfig",
+        "mangledName": "$s24InBrainSurveys_SDK_Swift0aB15StatusBarConfigC",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift"
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InBrainReward",
+        "printedName": "InBrainReward",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "transactionId",
+            "printedName": "transactionId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainReward(py)transactionId",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB6RewardC13transactionIdSivp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainReward(im)transactionId",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB6RewardC13transactionIdSivg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "amount",
+            "printedName": "amount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainReward(py)amount",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB6RewardC6amountSfvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainReward(im)amount",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB6RewardC6amountSfvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currency",
+            "printedName": "currency",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainReward(py)currency",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB6RewardC8currencySSvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainReward(im)currency",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB6RewardC8currencySSvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "transactionType",
+            "printedName": "transactionType",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainReward(py)transactionType",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB6RewardC15transactionTypeSivp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainReward(im)transactionType",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB6RewardC15transactionTypeSivg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainReward(py)description",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB6RewardC11descriptionSSvp",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "overriding": true,
+            "objc_name": "description",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainReward(im)description",
+                "mangledName": "$s24InBrainSurveys_SDK_Swift0aB6RewardC11descriptionSSvg",
+                "moduleName": "InBrainSurveys_SDK_Swift",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InBrainReward",
+                "printedName": "InBrainSurveys_SDK_Swift.InBrainReward",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainReward"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:24InBrainSurveys_SDK_Swift0aB6RewardC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB6RewardC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InBrainReward",
+                "printedName": "InBrainSurveys_SDK_Swift.InBrainReward",
+                "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainReward"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainReward(im)init",
+            "mangledName": "$s24InBrainSurveys_SDK_Swift0aB6RewardCACycfc",
+            "moduleName": "InBrainSurveys_SDK_Swift",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@InBrainSurveys_SDK_Swift@objc(cs)InBrainReward",
+        "mangledName": "$s24InBrainSurveys_SDK_Swift0aB6RewardC",
+        "moduleName": "InBrainSurveys_SDK_Swift",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "UIActivityIndicatorView",
+        "printedName": "UIActivityIndicatorView",
+        "declKind": "Class",
+        "usr": "c:objc(cs)UIActivityIndicatorView",
+        "moduleName": "UIKit",
+        "isOpen": true,
+        "intro_iOS": "2.0",
+        "objc_name": "UIActivityIndicatorView",
+        "declAttributes": [
+          "Available",
+          "ObjC",
+          "NonSendable",
+          "Custom",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)UIView",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "UIKit.UIView",
+          "UIKit.UIResponder",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "__DefaultCustomPlaygroundQuickLookable",
+            "printedName": "__DefaultCustomPlaygroundQuickLookable",
+            "usr": "s:s38__DefaultCustomPlaygroundQuickLookableP",
+            "mangledName": "$ss38__DefaultCustomPlaygroundQuickLookableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/Reachability.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2932,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/Reachability.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3004,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/InBrain.swift",
+      "kind": "StringLiteral",
+      "offset": 910,
+      "length": 20,
+      "value": "\"inBrain.ai Surveys\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/StrokeAnimation.swift",
+      "kind": "StringLiteral",
+      "offset": 269,
+      "length": 13,
+      "value": "\"strokeStart\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/StrokeAnimation.swift",
+      "kind": "StringLiteral",
+      "offset": 302,
+      "length": 11,
+      "value": "\"strokeEnd\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/StrokeAnimation.swift",
+      "kind": "StringLiteral",
+      "offset": 269,
+      "length": 13,
+      "value": "\"strokeStart\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/StrokeAnimation.swift",
+      "kind": "StringLiteral",
+      "offset": 302,
+      "length": 11,
+      "value": "\"strokeEnd\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/StrokeAnimation.swift",
+      "kind": "StringLiteral",
+      "offset": 182,
+      "length": 15,
+      "value": "\"InBrainSurveys_SDK_Swift.StrokeAnimation\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Configs\/InBrainNavBarConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1072,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Configs\/InBrainNavBarConfig.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1106,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Configs\/InBrainNavBarConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 199,
+      "length": 19,
+      "value": "\"InBrainSurveys_SDK_Swift.InBrainNavBarConfig\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainNativeSurvey.swift",
+      "kind": "StringLiteral",
+      "offset": 324,
+      "length": 21,
+      "value": "\"conversionThreshold\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainNativeSurvey.swift",
+      "kind": "StringLiteral",
+      "offset": 324,
+      "length": 21,
+      "value": "\"conversionThreshold\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainNativeSurvey.swift",
+      "kind": "IntegerLiteral",
+      "offset": 690,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainNativeSurvey.swift",
+      "kind": "IntegerLiteral",
+      "offset": 701,
+      "length": 9,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainNativeSurvey.swift",
+      "kind": "IntegerLiteral",
+      "offset": 720,
+      "length": 9,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainNativeSurvey.swift",
+      "kind": "IntegerLiteral",
+      "offset": 739,
+      "length": 9,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainNativeSurvey.swift",
+      "kind": "IntegerLiteral",
+      "offset": 758,
+      "length": 10,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainNativeSurvey.swift",
+      "kind": "IntegerLiteral",
+      "offset": 778,
+      "length": 14,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainNativeSurvey.swift",
+      "kind": "IntegerLiteral",
+      "offset": 690,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainNativeSurvey.swift",
+      "kind": "IntegerLiteral",
+      "offset": 701,
+      "length": 9,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainNativeSurvey.swift",
+      "kind": "IntegerLiteral",
+      "offset": 720,
+      "length": 9,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainNativeSurvey.swift",
+      "kind": "IntegerLiteral",
+      "offset": 739,
+      "length": 9,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainNativeSurvey.swift",
+      "kind": "IntegerLiteral",
+      "offset": 758,
+      "length": 10,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainNativeSurvey.swift",
+      "kind": "IntegerLiteral",
+      "offset": 778,
+      "length": 14,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainNativeSurvey.swift",
+      "kind": "StringLiteral",
+      "offset": 815,
+      "length": 19,
+      "value": "\"InBrainSurveys_SDK_Swift.InBrainNativeSurvey\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/RotationAnimation.swift",
+      "kind": "IntegerLiteral",
+      "offset": 375,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/RotationAnimation.swift",
+      "kind": "StringLiteral",
+      "offset": 184,
+      "length": 17,
+      "value": "\"InBrainSurveys_SDK_Swift.RotationAnimation\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/ViewControllers\/InBrainWebViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 750,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/ViewControllers\/InBrainWebViewController.swift",
+      "kind": "Array",
+      "offset": 1033,
+      "length": 179,
+      "value": "[\"surveyOpened\", \"surveyClosed\", \"toggleNativeButtons\", \"logHandler\", \"dismissWebView\", \"nativeSurveyClosed\"]"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/ViewControllers\/InBrainWebViewController.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1350,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/ViewControllers\/InBrainWebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 430,
+      "length": 24,
+      "value": "\"InBrainSurveys_SDK_Swift.InBrainWebViewController\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/ViewControllers\/InBrainNavigationController.swift",
+      "kind": "StringLiteral",
+      "offset": 194,
+      "length": 27,
+      "value": "\"InBrainSurveys_SDK_Swift.InBrainNavigationController\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/ViewControllers\/InBrainNavigationController.swift",
+      "kind": "StringLiteral",
+      "offset": 194,
+      "length": 27,
+      "value": "\"InBrainSurveys_SDK_Swift.InBrainNavigationController\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/ViewControllers\/InBrainNavigationController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5902,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/ViewControllers\/InBrainNavigationController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5913,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainCurrencySale.swift",
+      "kind": "StringLiteral",
+      "offset": 247,
+      "length": 13,
+      "value": "\"description\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainCurrencySale.swift",
+      "kind": "StringLiteral",
+      "offset": 298,
+      "length": 9,
+      "value": "\"startOn\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainCurrencySale.swift",
+      "kind": "StringLiteral",
+      "offset": 323,
+      "length": 7,
+      "value": "\"endOn\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainCurrencySale.swift",
+      "kind": "StringLiteral",
+      "offset": 247,
+      "length": 13,
+      "value": "\"description\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainCurrencySale.swift",
+      "kind": "StringLiteral",
+      "offset": 298,
+      "length": 9,
+      "value": "\"startOn\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainCurrencySale.swift",
+      "kind": "StringLiteral",
+      "offset": 323,
+      "length": 7,
+      "value": "\"endOn\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainCurrencySale.swift",
+      "kind": "StringLiteral",
+      "offset": 359,
+      "length": 19,
+      "value": "\"InBrainSurveys_SDK_Swift.InBrainCurrencySale\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Configs\/InBrainStatusBarConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 202,
+      "length": 22,
+      "value": "\"InBrainSurveys_SDK_Swift.InBrainStatusBarConfig\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/SDKConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 346,
+      "length": 4,
+      "value": "\"qa\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/SDKConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 367,
+      "length": 6,
+      "value": "\"prod\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/SDKConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 346,
+      "length": 4,
+      "value": "\"qa\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/SDKConfig.swift",
+      "kind": "StringLiteral",
+      "offset": 367,
+      "length": 6,
+      "value": "\"prod\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 290,
+      "length": 9,
+      "value": "\"OPTIONS\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 319,
+      "length": 5,
+      "value": "\"GET\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 344,
+      "length": 6,
+      "value": "\"HEAD\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 370,
+      "length": 6,
+      "value": "\"POST\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 396,
+      "length": 5,
+      "value": "\"PUT\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 421,
+      "length": 7,
+      "value": "\"PATCH\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 448,
+      "length": 8,
+      "value": "\"DELETE\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 476,
+      "length": 7,
+      "value": "\"TRACE\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 503,
+      "length": 9,
+      "value": "\"CONNECT\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 290,
+      "length": 9,
+      "value": "\"OPTIONS\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 319,
+      "length": 5,
+      "value": "\"GET\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 344,
+      "length": 6,
+      "value": "\"HEAD\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 370,
+      "length": 6,
+      "value": "\"POST\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 396,
+      "length": 5,
+      "value": "\"PUT\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 421,
+      "length": 7,
+      "value": "\"PATCH\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 448,
+      "length": 8,
+      "value": "\"DELETE\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 476,
+      "length": 7,
+      "value": "\"TRACE\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 503,
+      "length": 9,
+      "value": "\"CONNECT\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 555,
+      "length": 3,
+      "value": "200"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 561,
+      "length": 3,
+      "value": "300"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 675,
+      "length": 13,
+      "value": "\"placementId\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "StringLiteral",
+      "offset": 1405,
+      "length": 23,
+      "value": "\"yyyy-MM-dd'T'HH:mm:ss\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1480,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13768,
+      "length": 3,
+      "value": "200"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/ApiService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13774,
+      "length": 3,
+      "value": "300"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Services\/WKScriptHandler.swift",
+      "kind": "StringLiteral",
+      "offset": 300,
+      "length": 15,
+      "value": "\"InBrainSurveys_SDK_Swift.WKScriptHandler\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/ViewControllers\/WebViewController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 225,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/ViewControllers\/WebViewController.swift",
+      "kind": "StringLiteral",
+      "offset": 234,
+      "length": 17,
+      "value": "\"InBrainSurveys_SDK_Swift.WebViewController\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 649,
+      "length": 2,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 652,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 664,
+      "length": 2,
+      "value": "27"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 667,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 714,
+      "length": 2,
+      "value": "88"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 717,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "FloatLiteral",
+      "offset": 729,
+      "length": 4,
+      "value": "0.07"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 800,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1081,
+      "length": 1,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "FloatLiteral",
+      "offset": 1114,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "FloatLiteral",
+      "offset": 1144,
+      "length": 3,
+      "value": "0.0"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1320,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1324,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1336,
+      "length": 3,
+      "value": "166"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1340,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1351,
+      "length": 2,
+      "value": "63"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1354,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1366,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1423,
+      "length": 3,
+      "value": "237"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1427,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1439,
+      "length": 2,
+      "value": "43"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1442,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1453,
+      "length": 3,
+      "value": "128"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1457,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1469,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1526,
+      "length": 3,
+      "value": "167"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1530,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1542,
+      "length": 2,
+      "value": "62"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1545,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1556,
+      "length": 3,
+      "value": "176"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1560,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1572,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1629,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1633,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1645,
+      "length": 3,
+      "value": "166"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1649,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1660,
+      "length": 2,
+      "value": "63"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1663,
+      "length": 3,
+      "value": "255"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1675,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "Array",
+      "offset": 1758,
+      "length": 24,
+      "value": "[0.05, 0.35, 0.65, 0.95]"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "FloatLiteral",
+      "offset": 1828,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "FloatLiteral",
+      "offset": 1836,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "FloatLiteral",
+      "offset": 1884,
+      "length": 3,
+      "value": "0.5"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1892,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "FloatLiteral",
+      "offset": 1993,
+      "length": 4,
+      "value": "0.45"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "FloatLiteral",
+      "offset": 2002,
+      "length": 3,
+      "value": "0.7"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2050,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "FloatLiteral",
+      "offset": 2056,
+      "length": 3,
+      "value": "0.1"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "StringLiteral",
+      "offset": 2275,
+      "length": 24,
+      "value": "\"loading_indicator_logo\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Views\/InBrainActivityIndicator\/InBrainActivityIndicator.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2401,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Utils\/LanguageValidator.swift",
+      "kind": "StringLiteral",
+      "offset": 857,
+      "length": 19,
+      "value": "\"[a-z]{2}-[a-z]{2}\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/Utils\/LanguageValidator.swift",
+      "kind": "StringLiteral",
+      "offset": 908,
+      "length": 17,
+      "value": "\"SELF MATCHES %@\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainReward.swift",
+      "kind": "StringLiteral",
+      "offset": 220,
+      "length": 15,
+      "value": "\"transactionId\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainReward.swift",
+      "kind": "StringLiteral",
+      "offset": 286,
+      "length": 17,
+      "value": "\"transactionType\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainReward.swift",
+      "kind": "StringLiteral",
+      "offset": 220,
+      "length": 15,
+      "value": "\"transactionId\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainReward.swift",
+      "kind": "StringLiteral",
+      "offset": 286,
+      "length": 17,
+      "value": "\"transactionType\""
+    },
+    {
+      "filePath": "\/Volumes\/JOB\/Current\/inBrain\/InBrainSurveys_SDKs\/InBrainSurveys_internal\/InBrainSurveys_SDK_Swift\/InBrainSurveys_SDK_Swift\/DataModels\/InBrainReward.swift",
+      "kind": "StringLiteral",
+      "offset": 332,
+      "length": 13,
+      "value": "\"InBrainSurveys_SDK_Swift.InBrainReward\""
+    }
+  ]
+}
