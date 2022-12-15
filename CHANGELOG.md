@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.0.1](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.0.1) - 2022-12-15
+
+### Added
+- Swift Package Manager (SPM) support;
+- Small improvements.
+
+### Removed
+- Bitcode.
+---
+
 ## [2.0.0](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.0.0) - 2022-10-27
 
 ### Added
