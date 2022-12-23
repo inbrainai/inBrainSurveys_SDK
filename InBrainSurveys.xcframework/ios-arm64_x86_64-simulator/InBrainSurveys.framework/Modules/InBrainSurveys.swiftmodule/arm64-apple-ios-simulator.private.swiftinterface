@@ -49,8 +49,8 @@ import _StringProcessing
   @objc final public func setNavigationBarTitle(_ title: Swift.String)
   @objc final public func setNavigationBarConfig(_ config: InBrainSurveys.InBrainNavBarConfig)
   @objc final public func setStatusBarConfig(_ config: InBrainSurveys.InBrainStatusBarConfig)
-  @objc final public func setInBrainValuesFor(sessionID: Swift.String?, dataOptions: [[Swift.String : Any]]?)
-  @objc final public func setLanguage(_ language: Swift.String) throws
+  @objc final public func setSessionID(_ sessionID: Swift.String?)
+  @objc final public func setDataOptions(_ dataOptions: [[Swift.String : Any]]?)
   @objc final public func checkForAvailableSurveys(completion: @escaping ((_ hasSurveys: Swift.Bool, _ error: Swift.Error?) -> (Swift.Void)))
   @objc final public func showSurveys(from viewController: UIKit.UIViewController? = nil)
   @objc final public func getRewards(success: @escaping ([InBrainSurveys.InBrainReward]) -> (), failed: @escaping InBrainSurveys.ErrorCallback)
@@ -61,6 +61,10 @@ import _StringProcessing
   @objc final public func getNativeSurveys(filter: InBrainSurveys.InBrainSurveyFilter? = nil, success: @escaping ([InBrainSurveys.InBrainNativeSurvey]) -> (), failed: @escaping InBrainSurveys.ErrorCallback)
   @objc final public func showNativeSurvey(_ survey: InBrainSurveys.InBrainNativeSurvey, from viewController: UIKit.UIViewController? = nil)
   @objc final public func showNativeSurveyWith(id surveyId: Swift.String, searchId: Swift.String, from viewController: UIKit.UIViewController? = nil)
+  @available(*, deprecated, message: "The function is deprecate and will be removed soon!")
+  @objc final public func setLanguage(_ language: Swift.String) throws
+  @available(*, deprecated, message: "Please, use setSessionID(_:) and setDataOptions(_:)")
+  @objc final public func setInBrainValuesFor(sessionID: Swift.String?, dataOptions: [[Swift.String : Any]]?)
   @available(*, deprecated, renamed: "getNativeSurveys(filter:)")
   @objc final public func getNativeSurveys(placementId: Swift.String? = nil)
   @available(*, deprecated, renamed: "getNativeSurveys(filter:success:failed:)")
@@ -134,13 +138,28 @@ extension InBrainSurveys.InBrainSurveyCategory : Swift.CustomStringConvertible {
   @objc public init(backgroundColor: UIKit.UIColor? = nil, buttonsColor: UIKit.UIColor? = nil, titleColor: UIKit.UIColor? = nil, isTranslucent: Swift.Bool = false, hasShadow: Swift.Bool = false)
   @objc deinit
 }
-@objc public enum SurveyProfileMatch : Swift.Int, Swift.Decodable {
+@available(*, deprecated, message: "Deprecated and will be removed soon!.")
+@objc public enum SurveyProfileMatch : Swift.Int {
   case newSurvey = 0
   case poorMatch
   case fairMatch
   case goodMatch
   case greatMatch
   case excellentMatch
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum SurveyConversionLevel : Swift.Int, Swift.Decodable {
+  case newSurvey = 0
+  case veryPoorConversion
+  case poorConversion
+  case fairConversion
+  case goodConversion
+  case veryGoodConversion
+  case excellentConversion
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -158,9 +177,13 @@ extension InBrainSurveys.InBrainSurveyCategory : Swift.CustomStringConvertible {
   @objc final public let rank: Swift.Int
   @objc final public let time: Swift.Int
   @objc final public let value: Swift.Double
-  @objc final public let profileMatch: InBrainSurveys.SurveyProfileMatch
+  @objc final public let conversionLevel: InBrainSurveys.SurveyConversionLevel
   @objc final public let currencySale: Swift.Bool
   @objc final public let multiplier: Swift.Double
+  @available(*, deprecated, message: "Parameter is deprecated and will be removed soon!.")
+  @objc public var profileMatch: InBrainSurveys.SurveyProfileMatch {
+    @objc get
+  }
   @objc override dynamic public var description: Swift.String {
     @objc get
   }
@@ -217,6 +240,12 @@ public typealias ErrorCallback = (Swift.Error) -> ()
 extension InBrainSurveys.InBrainSurveyCategory : Swift.Equatable {}
 extension InBrainSurveys.InBrainSurveyCategory : Swift.Hashable {}
 extension InBrainSurveys.InBrainSurveyCategory : Swift.RawRepresentable {}
+@available(*, deprecated, message: "Deprecated and will be removed soon!.")
 extension InBrainSurveys.SurveyProfileMatch : Swift.Equatable {}
+@available(*, deprecated, message: "Deprecated and will be removed soon!.")
 extension InBrainSurveys.SurveyProfileMatch : Swift.Hashable {}
+@available(*, deprecated, message: "Deprecated and will be removed soon!.")
 extension InBrainSurveys.SurveyProfileMatch : Swift.RawRepresentable {}
+extension InBrainSurveys.SurveyConversionLevel : Swift.Equatable {}
+extension InBrainSurveys.SurveyConversionLevel : Swift.Hashable {}
+extension InBrainSurveys.SurveyConversionLevel : Swift.RawRepresentable {}

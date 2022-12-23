@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.1.0](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.1.0) - 2022-12-23
+
+### Added
+-  `conversionLevel` property to `InBrainNativeSurvey` and corresponding `SurveyConversionLevel` enum.
+
+### Changed
+- `setLanguage(_:)` function deprecated;
+- `setInBrainValuesFor(sessionID:, dataOptions:)` function deprecated in in favour of `setSessionID(_:)` and `setDataOptions(_:)` functions;
+- `profileMatch` property of `InBrainNativeSurvey` and corresponding `SurveyProfileMatch` enum deprecated.
+
+---
+
 ## [2.0.1](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.0.1) - 2022-12-15
 
 ### Added
@@ -19,7 +31,7 @@ and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - `InBrainSurveyCategory` - enum, represents all the supported categories;
-- `categories` (`categoryIds` for Obj-C) property to `NativeSurvey`;
+- `categories` (`categoryIds` for Obj-C) property to `InBrainNativeSurvey`;
 - `InBrainSurveyFilter` - filter for fetching Native Surveys;
 - Ability to fetch Native Surveys, filtered by categories.
 

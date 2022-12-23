@@ -302,13 +302,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 /// Customize Status Bar before calling <code>showSurveys()</code>
 /// In order to customize status bar - needs to set <code>View controller-based status bar appearance</code> to <code>YES</code>
 - (void)setStatusBarConfig:(InBrainStatusBarConfig * _Nonnull)config;
-/// Set values before calling <code>showSurveys()</code>
-- (void)setInBrainValuesForSessionID:(NSString * _Nullable)sessionID dataOptions:(NSArray<NSDictionary<NSString *, id> *> * _Nullable)dataOptions;
-/// Set language to be used. If not set - device language will be used.
-/// Language should be in <code>xx-xx</code> format.
-/// \param language Available languages are “de-de”, “en-au”, “en-ca”, “en-gb”, “en-in”, “en-us”, “es-es”, “es-mx”, “es-us”, “fr-ca”, fr-fr”, “fr-br”
+/// Set the value before calling <code>showSurveys()</code>
+/// \param sessionID Value to track each user session. This value is provided via S2S Callbacks as SessionId.
 ///
-- (BOOL)setLanguage:(NSString * _Nonnull)language error:(NSError * _Nullable * _Nullable)error;
+- (void)setSessionID:(NSString * _Nullable)sessionID;
+/// Set values before calling <code>showSurveys()</code>
+- (void)setDataOptions:(NSArray<NSDictionary<NSString *, id> *> * _Nullable)dataOptions;
 /// Check are surveys available.
 - (void)checkForAvailableSurveysWithCompletion:(void (^ _Nonnull)(BOOL, NSError * _Nullable))completion;
 /// All the configs should be done <code>BEFORE</code> calling <code>showSurveys()</code>.
@@ -379,6 +378,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 /// \param viewController ViewController to present InBrain from. If no controller specified - InBrain will be presented from inBrainDelegate (if subclass of UIViewController) OR from UIApplication’s keyWindow.
 ///
 - (void)showNativeSurveyWithId:(NSString * _Nonnull)surveyId searchId:(NSString * _Nonnull)searchId from:(UIViewController * _Nullable)viewController;
+- (BOOL)setLanguage:(NSString * _Nonnull)language error:(NSError * _Nullable * _Nullable)error SWIFT_DEPRECATED_MSG("The function is deprecate and will be removed soon!");
+- (void)setInBrainValuesForSessionID:(NSString * _Nullable)sessionID dataOptions:(NSArray<NSDictionary<NSString *, id> *> * _Nullable)dataOptions SWIFT_DEPRECATED_MSG("Please, use setSessionID(_:) and setDataOptions(_:)");
 - (void)getNativeSurveysWithPlacementId:(NSString * _Nullable)placementId SWIFT_DEPRECATED_MSG("", "getNativeSurveysWithFilter:");
 - (void)getNativeSurveysWithPlacementID:(NSString * _Nullable)placementID success:(void (^ _Nonnull)(NSArray<InBrainNativeSurvey *> * _Nonnull))success failed:(void (^ _Nonnull)(NSError * _Nonnull))failed SWIFT_DEPRECATED_MSG("", "getNativeSurveysWithFilter:success:failed:");
 - (void)setInBrainWithApiClientID:(NSString * _Nonnull)apiClientID apiSecret:(NSString * _Nonnull)apiSecret isS2S:(BOOL)isS2S userID:(NSString * _Nullable)userID language:(NSString * _Nonnull)language SWIFT_UNAVAILABLE_MSG("Please, use separate setLanguage(from:) function");
@@ -433,6 +434,7 @@ SWIFT_PROTOCOL("_TtP14InBrainSurveys15InBrainDelegate_")
 - (void)surveysClosed SWIFT_UNAVAILABLE_MSG("'surveysClosed' has been renamed to 'surveysClosedByWebView:completedSurvey:'");
 @end
 
+enum SurveyConversionLevel : NSInteger;
 enum SurveyProfileMatch : NSInteger;
 
 SWIFT_CLASS("_TtC14InBrainSurveys19InBrainNativeSurvey")
@@ -443,9 +445,10 @@ SWIFT_CLASS("_TtC14InBrainSurveys19InBrainNativeSurvey")
 @property (nonatomic, readonly) NSInteger rank;
 @property (nonatomic, readonly) NSInteger time;
 @property (nonatomic, readonly) double value;
-@property (nonatomic, readonly) enum SurveyProfileMatch profileMatch;
+@property (nonatomic, readonly) enum SurveyConversionLevel conversionLevel;
 @property (nonatomic, readonly) BOOL currencySale;
 @property (nonatomic, readonly) double multiplier;
+@property (nonatomic, readonly) enum SurveyProfileMatch profileMatch SWIFT_DEPRECATED_MSG("Parameter is deprecated and will be removed soon!.");
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -599,7 +602,17 @@ SWIFT_PROTOCOL("_TtP14InBrainSurveys20NativeSurveyDelegate_")
 - (void)failedToReceiveNativeSurveysWithError:(NSError * _Nonnull)error placementId:(NSString * _Nullable)placementId SWIFT_UNAVAILABLE_MSG("'failedToReceiveNativeSurveys' has been renamed to 'failedToReceiveNativeSurveysWithError:filter:'");
 @end
 
-/// Indicates how the survey match user’s profile
+/// Indicates how the  survey has been performing platform-wide at inBrain
+typedef SWIFT_ENUM(NSInteger, SurveyConversionLevel, open) {
+  SurveyConversionLevelNewSurvey = 0,
+  SurveyConversionLevelVeryPoorConversion = 1,
+  SurveyConversionLevelPoorConversion = 2,
+  SurveyConversionLevelFairConversion = 3,
+  SurveyConversionLevelGoodConversion = 4,
+  SurveyConversionLevelVeryGoodConversion = 5,
+  SurveyConversionLevelExcellentConversion = 6,
+};
+
 typedef SWIFT_ENUM(NSInteger, SurveyProfileMatch, open) {
   SurveyProfileMatchNewSurvey = 0,
   SurveyProfileMatchPoorMatch = 1,
@@ -923,13 +936,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 /// Customize Status Bar before calling <code>showSurveys()</code>
 /// In order to customize status bar - needs to set <code>View controller-based status bar appearance</code> to <code>YES</code>
 - (void)setStatusBarConfig:(InBrainStatusBarConfig * _Nonnull)config;
-/// Set values before calling <code>showSurveys()</code>
-- (void)setInBrainValuesForSessionID:(NSString * _Nullable)sessionID dataOptions:(NSArray<NSDictionary<NSString *, id> *> * _Nullable)dataOptions;
-/// Set language to be used. If not set - device language will be used.
-/// Language should be in <code>xx-xx</code> format.
-/// \param language Available languages are “de-de”, “en-au”, “en-ca”, “en-gb”, “en-in”, “en-us”, “es-es”, “es-mx”, “es-us”, “fr-ca”, fr-fr”, “fr-br”
+/// Set the value before calling <code>showSurveys()</code>
+/// \param sessionID Value to track each user session. This value is provided via S2S Callbacks as SessionId.
 ///
-- (BOOL)setLanguage:(NSString * _Nonnull)language error:(NSError * _Nullable * _Nullable)error;
+- (void)setSessionID:(NSString * _Nullable)sessionID;
+/// Set values before calling <code>showSurveys()</code>
+- (void)setDataOptions:(NSArray<NSDictionary<NSString *, id> *> * _Nullable)dataOptions;
 /// Check are surveys available.
 - (void)checkForAvailableSurveysWithCompletion:(void (^ _Nonnull)(BOOL, NSError * _Nullable))completion;
 /// All the configs should be done <code>BEFORE</code> calling <code>showSurveys()</code>.
@@ -1000,6 +1012,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 /// \param viewController ViewController to present InBrain from. If no controller specified - InBrain will be presented from inBrainDelegate (if subclass of UIViewController) OR from UIApplication’s keyWindow.
 ///
 - (void)showNativeSurveyWithId:(NSString * _Nonnull)surveyId searchId:(NSString * _Nonnull)searchId from:(UIViewController * _Nullable)viewController;
+- (BOOL)setLanguage:(NSString * _Nonnull)language error:(NSError * _Nullable * _Nullable)error SWIFT_DEPRECATED_MSG("The function is deprecate and will be removed soon!");
+- (void)setInBrainValuesForSessionID:(NSString * _Nullable)sessionID dataOptions:(NSArray<NSDictionary<NSString *, id> *> * _Nullable)dataOptions SWIFT_DEPRECATED_MSG("Please, use setSessionID(_:) and setDataOptions(_:)");
 - (void)getNativeSurveysWithPlacementId:(NSString * _Nullable)placementId SWIFT_DEPRECATED_MSG("", "getNativeSurveysWithFilter:");
 - (void)getNativeSurveysWithPlacementID:(NSString * _Nullable)placementID success:(void (^ _Nonnull)(NSArray<InBrainNativeSurvey *> * _Nonnull))success failed:(void (^ _Nonnull)(NSError * _Nonnull))failed SWIFT_DEPRECATED_MSG("", "getNativeSurveysWithFilter:success:failed:");
 - (void)setInBrainWithApiClientID:(NSString * _Nonnull)apiClientID apiSecret:(NSString * _Nonnull)apiSecret isS2S:(BOOL)isS2S userID:(NSString * _Nullable)userID language:(NSString * _Nonnull)language SWIFT_UNAVAILABLE_MSG("Please, use separate setLanguage(from:) function");
@@ -1054,6 +1068,7 @@ SWIFT_PROTOCOL("_TtP14InBrainSurveys15InBrainDelegate_")
 - (void)surveysClosed SWIFT_UNAVAILABLE_MSG("'surveysClosed' has been renamed to 'surveysClosedByWebView:completedSurvey:'");
 @end
 
+enum SurveyConversionLevel : NSInteger;
 enum SurveyProfileMatch : NSInteger;
 
 SWIFT_CLASS("_TtC14InBrainSurveys19InBrainNativeSurvey")
@@ -1064,9 +1079,10 @@ SWIFT_CLASS("_TtC14InBrainSurveys19InBrainNativeSurvey")
 @property (nonatomic, readonly) NSInteger rank;
 @property (nonatomic, readonly) NSInteger time;
 @property (nonatomic, readonly) double value;
-@property (nonatomic, readonly) enum SurveyProfileMatch profileMatch;
+@property (nonatomic, readonly) enum SurveyConversionLevel conversionLevel;
 @property (nonatomic, readonly) BOOL currencySale;
 @property (nonatomic, readonly) double multiplier;
+@property (nonatomic, readonly) enum SurveyProfileMatch profileMatch SWIFT_DEPRECATED_MSG("Parameter is deprecated and will be removed soon!.");
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1220,7 +1236,17 @@ SWIFT_PROTOCOL("_TtP14InBrainSurveys20NativeSurveyDelegate_")
 - (void)failedToReceiveNativeSurveysWithError:(NSError * _Nonnull)error placementId:(NSString * _Nullable)placementId SWIFT_UNAVAILABLE_MSG("'failedToReceiveNativeSurveys' has been renamed to 'failedToReceiveNativeSurveysWithError:filter:'");
 @end
 
-/// Indicates how the survey match user’s profile
+/// Indicates how the  survey has been performing platform-wide at inBrain
+typedef SWIFT_ENUM(NSInteger, SurveyConversionLevel, open) {
+  SurveyConversionLevelNewSurvey = 0,
+  SurveyConversionLevelVeryPoorConversion = 1,
+  SurveyConversionLevelPoorConversion = 2,
+  SurveyConversionLevelFairConversion = 3,
+  SurveyConversionLevelGoodConversion = 4,
+  SurveyConversionLevelVeryGoodConversion = 5,
+  SurveyConversionLevelExcellentConversion = 6,
+};
+
 typedef SWIFT_ENUM(NSInteger, SurveyProfileMatch, open) {
   SurveyProfileMatchNewSurvey = 0,
   SurveyProfileMatchPoorMatch = 1,

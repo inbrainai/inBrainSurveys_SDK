@@ -96,14 +96,9 @@ private extension OptionsViewController {
         //If no userId set - `identifierForVendor` will be used.
         inBrain.set(userID: "demo@demo.demo")
 
-        //If no language set - device language will be used.
-        //Supported languages may be found at SDK docs
-        try? inBrain.setLanguage("en-us")
-
-        //Additional data to skip apropriate questions during profiler
-        let data: [[String : Any]] = [["gender": "male"], ["age" : 34]]
-        inBrain.setInBrainValuesFor(sessionID: "testing33_Session", dataOptions: data)
-                
+        // Value to track each user session. This value is provided via S2S Callbacks as SessionId.
+        inBrain.setSessionID("testing33_Session")
+        
         //Customize Navigation Bar
         //Example to match InBrain V2 theme (Native Surveys)
         //Please, note: color values should be in sRGB (Device RGB) profile
