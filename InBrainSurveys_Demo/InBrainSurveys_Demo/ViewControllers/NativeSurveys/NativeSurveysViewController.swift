@@ -43,10 +43,10 @@ class NativeSurveysViewController: UIViewController, LoadableView {
         collectionView?.alpha = 0
         
         inBrain.nativeSurveysDelegate = self
-
-        let filter = InBrainSurveyFilter(placementId: nil,
-                                         categories: [.automotive, .business],
-                                         excludedCategories: [.childrenAndParenting])
+        
+        let filter = InBrainSurveyFilter(placementId: "76f52733-62e0-4b0d-bb62-72ebf1b42edf",
+                                         categories: [.business],
+                                         excludedCategories: nil)
         inBrain.getNativeSurveys(filter: filter)
     }
     
@@ -54,6 +54,7 @@ class NativeSurveysViewController: UIViewController, LoadableView {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
+
 }
 
 //MARK: - UICollectionViewDelegate, UICollectionViewDataSource
@@ -131,7 +132,7 @@ extension NativeSurveysViewController: NativeSurveyCellDelegate {
         
         /*
             Another option to show selected survey - is to use method
-            inBrain.showNativeSurveyWith(id: survey.id, searchId: survey.searchId, from: self)
+            inBrain.showNativeSurveyWith(id: searchId: from: )
          
             Both options are valid and works the same `underhood`. Pls, use option you prefer
         */

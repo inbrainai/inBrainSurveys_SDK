@@ -9,6 +9,16 @@
 import UIKit
 import InBrainSurveys
 
+//Test app, qa env
+//private let exampleClient = "9c367c28-c8a4-498d-bf22-1f3682fc73aa"
+//private let exampleSecret = "90MB8WyMZyYykgs0TaR21SqCcCZz3YTTXio9FoN5o5NJ6+svp3Q2tO8pvM9CjbskCaLAog0msmVTcIigKPQw4A=="
+//private let userId = "test53@me.com"
+
+////Test app, prod env
+private let exampleClient = "35c6e720-4f76-4d25-9e18-e718678e27ae"
+private let exampleSecret = "UnrB/pju7cH1dvTKL72blwZuhVrdsyZaS16qHOrjGdDVf2NWm+V7vmR8c3gMGnApmG/OUNkc1LLzgzO7K7T9DA=="
+private let userId = "test4@test.com"
+
 class OptionsViewController: UIViewController, LoadableView {
     @IBOutlet weak var pointsLabel: UILabel?
     
@@ -74,7 +84,7 @@ extension OptionsViewController: InBrainDelegate {
         inBrain.confirmRewards(txIdArray: ids)
     }
     
-    func surveysClosed(byWebView: Bool, completedSurvey: Bool) {
+    func surveysClosed(byWebView: Bool, completedSurvey: Bool, rewards: [InBrainSurveyReward]?) {
         print("Surveys closed")
     }
 }
@@ -84,8 +94,8 @@ extension OptionsViewController: InBrainDelegate {
 private extension OptionsViewController {
      func setupInBrain() {
         //--- Required config ---
-        inBrain.setInBrain(apiClientID: "Your client ID",
-                           apiSecret: "Your client secret",
+        inBrain.setInBrain(apiClientID: exampleClient,
+                           apiSecret: exampleSecret,
                            isS2S: false)
         
         //Required if isS2S: false
@@ -94,7 +104,7 @@ private extension OptionsViewController {
         //--- Optional config ---
         
         //If no userId set - `identifierForVendor` will be used.
-        inBrain.set(userID: "demo@demo.demo")
+        inBrain.set(userID: userID)
 
         // Value to track each user session. This value is provided via S2S Callbacks as SessionId.
         inBrain.setSessionID("testing33_Session")

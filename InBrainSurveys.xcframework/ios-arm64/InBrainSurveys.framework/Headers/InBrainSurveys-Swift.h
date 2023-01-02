@@ -285,7 +285,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 /// </ul>
 - (void)setInBrainWithApiClientID:(NSString * _Nonnull)apiClientID apiSecret:(NSString * _Nonnull)apiSecret isS2S:(BOOL)isS2S;
 /// Config inBrain before <code>showSurveys</code> function call.
-/// \param userID If userID not set (or empty) - <code>identifierForVendor</code> will be used;
+/// \param userID If userID not set (or empty) - <code>identifierForVendor</code> will be used.
 ///
 - (void)setInBrainWithApiClientID:(NSString * _Nonnull)apiClientID apiSecret:(NSString * _Nonnull)apiSecret isS2S:(BOOL)isS2S userID:(NSString * _Nullable)userID;
 /// Set userID to identify the user by the server.
@@ -312,7 +312,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 - (void)checkForAvailableSurveysWithCompletion:(void (^ _Nonnull)(BOOL, NSError * _Nullable))completion;
 /// All the configs should be done <code>BEFORE</code> calling <code>showSurveys()</code>.
 /// If you are using <em>NativeSurveys</em> (regardless of filters) - please, take care about refreshing them after some survey(s) completed. Additional details may be found at <em>getNativeSurveys</em> function description.
-/// \param viewController ViewController to present InBrain from. If no controller specified - InBrain will be presented from inBrainDelegate (if subclass of UIViewController) OR from UIApplication’s keyWindow.
+/// \param viewController ViewController to present InBrain from. If no controller specified - InBrain will be presented from inBrainDelegate (if subclass of UIViewController) OR from UIApplication’s keyWindow
 ///
 - (void)showSurveysFrom:(UIViewController * _Nullable)viewController;
 /// Request InBrainRewards from the server. Process the rewards within your app
@@ -347,7 +347,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 ///     If you are using SurveyWall as well - please take care about refreshing NativeSurveys after some survey(s) completed.
 ///   </li>
 /// </ul>
-/// Use <em>surveysClosed(byWebView: Bool, completedSurvey: Bool)</em> method of <em>InBrainDelegate</em> to detect InBbrainWebView dismissal.
+/// Use <em>surveysClosed(byWebView: Bool, completedSurvey: Bool, rewards: [InBrainSurveyReward]?)</em> method of <em>InBrainDelegate</em> to detect InBbrainWebView dismissal.
 - (void)getNativeSurveysWithFilter:(InBrainSurveyFilter * _Nullable)filter;
 /// Get native surveys for the user. Result will be delivered to <code>success</code> or <code>failed</code> callback.
 /// After survey completed - it becames invalid and cannot be opened again. Please, take care about refreshing surveys with appropriate filter(s).
@@ -362,20 +362,20 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 ///     If you are using SurveyWall as well - please take care about refreshing NativeSurveys after some survey(s) completed.
 ///   </li>
 /// </ul>
-/// Use <em>surveysClosed(byWebView: Bool, completedSurvey: Bool)</em> method of <em>InBrainDelegate</em> to detect InBbrainWebView dismissal.
+/// Use <em>surveysClosed(byWebView: Bool, completedSurvey: Bool, rewards: [InBrainSurveyReward]?)</em> method of <em>InBrainDelegate</em> to detect InBbrainWebView dismissal.
 - (void)getNativeSurveysWithFilter:(InBrainSurveyFilter * _Nullable)filter success:(void (^ _Nonnull)(NSArray<InBrainNativeSurvey *> * _Nonnull))success failed:(void (^ _Nonnull)(NSError * _Nonnull))failed;
 /// All the configs should be done <code>BEFORE</code> calling <code>showSurveys()</code>.
 /// After survey completed - it becames invalid and cannot be opened again. Please, ensure all the NativeSurveys updated after <em>InBrainWebView</em> closed. Additional details may be found at <em>getNativeSurveys</em> function description
 /// \param survey Native survey to be opened
 ///
-/// \param viewController ViewController to present InBrain from. If no controller specified - InBrain will be presented from inBrainDelegate (if subclass of UIViewController) OR from UIApplication’s keyWindow.
+/// \param viewController ViewController to present InBrain from. If no controller specified - InBrain will be presented from inBrainDelegate (if subclass of UIViewController) OR from UIApplication’s keyWindow
 ///
 - (void)showNativeSurvey:(InBrainNativeSurvey * _Nonnull)survey from:(UIViewController * _Nullable)viewController;
 /// All the configs should be done <code>BEFORE</code> calling <code>showSurveys()</code>.
 /// After survey completed - it becames invalid and cannot be opened again. Please, ensure all the NativeSurveys updated after <em>InBrainWebView</em> closed. Additional details may be found at <em>getNativeSurveys</em> function description
-/// \param searchId Survey’s <code>searchId</code>;
+/// \param searchId Survey’s <code>searchId</code>
 ///
-/// \param viewController ViewController to present InBrain from. If no controller specified - InBrain will be presented from inBrainDelegate (if subclass of UIViewController) OR from UIApplication’s keyWindow.
+/// \param viewController ViewController to present InBrain from. If no controller specified - InBrain will be presented from inBrainDelegate (if subclass of UIViewController) OR from UIApplication’s keyWindow
 ///
 - (void)showNativeSurveyWithId:(NSString * _Nonnull)surveyId searchId:(NSString * _Nonnull)searchId from:(UIViewController * _Nullable)viewController;
 - (BOOL)setLanguage:(NSString * _Nonnull)language error:(NSError * _Nullable * _Nullable)error SWIFT_DEPRECATED_MSG("The function is deprecate and will be removed soon!");
@@ -408,6 +408,7 @@ SWIFT_CLASS("_TtC14InBrainSurveys19InBrainCurrencySale")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
+@class InBrainSurveyReward;
 
 /// Allows your app to handle events from InBrain service
 /// *
@@ -422,15 +423,16 @@ SWIFT_PROTOCOL("_TtP14InBrainSurveys15InBrainDelegate_")
 - (void)didFailToReceiveRewardsWithError:(NSError * _Nonnull)error;
 /// Called upon dismissal of inBrainWebView.
 /// important:
-/// If you are using NativeSurveys - please, ensure the surveys reloaded after some survey(s) completed.
-/// \param byWebView <em>true</em> means closed by WebView’s command; <em>false</em> - closed by user;
+/// If you are using Native Surveys - please, ensure the surveys reloaded after some survey(s) completed.
+/// \param byWebView <em>true</em> means closed by WebView’s command; <em>false</em> - closed by user
 ///
-/// \param completedSurvey <em>true</em> means some survey(s) completed (succeded or disqualified).
+/// \param completedSurvey <em>true</em> means some survey(s) completed (succeded or disqualified)
 ///
-- (void)surveysClosedByWebView:(BOOL)byWebView completedSurvey:(BOOL)completedSurvey;
-/// Called upon dismissal of inBrainWebView from within the webview
+/// \param rewards <em>NOTE:</em> At the moment only <em>first</em> Native Survey reward is delivered. That means if the user complete a Native Survey, proceed to Survey Wall and complete one more survey - only first reward will be delivered. In case of Survey Wall usage only - no rewards will be delivered.
+///
+- (void)surveysClosedByWebView:(BOOL)byWebView completedSurvey:(BOOL)completedSurvey rewards:(NSArray<InBrainSurveyReward *> * _Nullable)rewards;
+- (void)surveysClosedByWebView:(BOOL)byWebView completedSurvey:(BOOL)completedSurvey SWIFT_DEPRECATED_MSG("", "surveysClosedByWebView:completedSurvey:rewards:");
 - (void)surveysClosedFromPage SWIFT_UNAVAILABLE_MSG("'surveysClosedFromPage' has been renamed to 'surveysClosedByWebView:completedSurvey:'");
-/// Called upon dismissal of inBrainWebView
 - (void)surveysClosed SWIFT_UNAVAILABLE_MSG("'surveysClosed' has been renamed to 'surveysClosedByWebView:completedSurvey:'");
 @end
 
@@ -561,6 +563,20 @@ SWIFT_CLASS("_TtC14InBrainSurveys19InBrainSurveyFilter")
 @end
 
 
+enum SurveyOutcomeType : NSInteger;
+
+SWIFT_CLASS("_TtC14InBrainSurveys19InBrainSurveyReward")
+@interface InBrainSurveyReward : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull surveyId;
+@property (nonatomic, readonly, copy) NSString * _Nullable placementId;
+@property (nonatomic, readonly, copy) NSArray<NSNumber *> * _Nullable categoryIds;
+@property (nonatomic, readonly) double userReward;
+@property (nonatomic, readonly) enum SurveyOutcomeType outcomeType;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 /// Allows your app to handle NativeSurveys events from InBrain service
 /// *
@@ -611,6 +627,11 @@ typedef SWIFT_ENUM(NSInteger, SurveyConversionLevel, open) {
   SurveyConversionLevelGoodConversion = 4,
   SurveyConversionLevelVeryGoodConversion = 5,
   SurveyConversionLevelExcellentConversion = 6,
+};
+
+typedef SWIFT_ENUM(NSInteger, SurveyOutcomeType, open) {
+  SurveyOutcomeTypeCompleted = 0,
+  SurveyOutcomeTypeTerminated = 1,
 };
 
 typedef SWIFT_ENUM(NSInteger, SurveyProfileMatch, open) {

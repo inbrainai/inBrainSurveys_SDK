@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.2.0](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.2.0) - 2023-01-02
+
+### Added
+-  `surveysClosed(byWebView: Bool, completedSurvey: Bool, rewards: [InBrainSurveyReward]?)` function to `InBrainDelegate`;
+- `InBrainSurveyReward` class, which represents information about completed survey and earned reward.
+
+### Changed
+- `surveysClosed(byWebView: Bool, completedSurvey: Bool` function deprecated.
+---
+
 ## [2.1.0](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.1.0) - 2022-12-23
 
 ### Added

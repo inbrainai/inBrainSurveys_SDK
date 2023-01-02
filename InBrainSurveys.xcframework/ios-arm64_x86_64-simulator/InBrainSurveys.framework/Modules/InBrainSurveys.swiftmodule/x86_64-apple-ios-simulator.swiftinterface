@@ -13,6 +13,8 @@ import _StringProcessing
 @objc public protocol InBrainDelegate {
   @objc optional func didReceiveInBrainRewards(rewardsArray: [InBrainSurveys.InBrainReward])
   @objc optional func didFailToReceiveRewards(error: Swift.Error)
+  @objc optional func surveysClosed(byWebView: Swift.Bool, completedSurvey: Swift.Bool, rewards: [InBrainSurveys.InBrainSurveyReward]?)
+  @available(*, deprecated, renamed: "surveysClosed(byWebView:completedSurvey:rewards:)")
   @objc optional func surveysClosed(byWebView: Swift.Bool, completedSurvey: Swift.Bool)
   @available(*, unavailable, renamed: "surveysClosed(byWebView:completedSurvey:)")
   @objc optional func surveysClosedFromPage()
@@ -138,34 +140,6 @@ extension InBrainSurveys.InBrainSurveyCategory : Swift.CustomStringConvertible {
   @objc public init(backgroundColor: UIKit.UIColor? = nil, buttonsColor: UIKit.UIColor? = nil, titleColor: UIKit.UIColor? = nil, isTranslucent: Swift.Bool = false, hasShadow: Swift.Bool = false)
   @objc deinit
 }
-@available(*, deprecated, message: "Deprecated and will be removed soon!.")
-@objc public enum SurveyProfileMatch : Swift.Int {
-  case newSurvey = 0
-  case poorMatch
-  case fairMatch
-  case goodMatch
-  case greatMatch
-  case excellentMatch
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
-@objc public enum SurveyConversionLevel : Swift.Int, Swift.Decodable {
-  case newSurvey = 0
-  case veryPoorConversion
-  case poorConversion
-  case fairConversion
-  case goodConversion
-  case veryGoodConversion
-  case excellentConversion
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
-}
 @objc public class InBrainNativeSurvey : ObjectiveC.NSObject, Swift.Decodable {
   @objc final public let id: Swift.String
   @objc final public let searchId: Swift.String
@@ -226,6 +200,69 @@ extension InBrainSurveys.InBrainSurveyCategory : Swift.CustomStringConvertible {
   @objc deinit
 }
 public typealias ErrorCallback = (Swift.Error) -> ()
+@objc public enum SurveyConversionLevel : Swift.Int, Swift.Decodable {
+  case newSurvey = 0
+  case veryPoorConversion
+  case poorConversion
+  case fairConversion
+  case goodConversion
+  case veryGoodConversion
+  case excellentConversion
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension InBrainSurveys.SurveyConversionLevel : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+@objc public enum SurveyOutcomeType : Swift.Int, Swift.Decodable {
+  case completed = 0
+  case terminated
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension InBrainSurveys.SurveyOutcomeType : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+@objc final public class InBrainSurveyReward : ObjectiveC.NSObject, Swift.Decodable {
+  @objc final public let surveyId: Swift.String
+  @objc final public let placementId: Swift.String?
+  final public let categories: [InBrainSurveys.InBrainSurveyCategory]?
+  @available(swift, obsoleted: 0.1)
+  @objc final public var categoryIds: [Swift.Int]? {
+    @objc get
+  }
+  @objc final public let userReward: Swift.Double
+  @objc final public let outcomeType: InBrainSurveys.SurveyOutcomeType
+  @objc override final public var description: Swift.String {
+    @objc get
+  }
+  public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@available(*, deprecated, message: "Deprecated and will be removed soon!.")
+@objc public enum SurveyProfileMatch : Swift.Int {
+  case newSurvey = 0
+  case poorMatch
+  case fairMatch
+  case goodMatch
+  case greatMatch
+  case excellentMatch
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @objc final public class InBrainReward : ObjectiveC.NSObject, Swift.Decodable {
   @objc final public let transactionId: Swift.Int
   @objc final public let amount: Swift.Float
@@ -240,12 +277,15 @@ public typealias ErrorCallback = (Swift.Error) -> ()
 extension InBrainSurveys.InBrainSurveyCategory : Swift.Equatable {}
 extension InBrainSurveys.InBrainSurveyCategory : Swift.Hashable {}
 extension InBrainSurveys.InBrainSurveyCategory : Swift.RawRepresentable {}
+extension InBrainSurveys.SurveyConversionLevel : Swift.Equatable {}
+extension InBrainSurveys.SurveyConversionLevel : Swift.Hashable {}
+extension InBrainSurveys.SurveyConversionLevel : Swift.RawRepresentable {}
+extension InBrainSurveys.SurveyOutcomeType : Swift.Equatable {}
+extension InBrainSurveys.SurveyOutcomeType : Swift.Hashable {}
+extension InBrainSurveys.SurveyOutcomeType : Swift.RawRepresentable {}
 @available(*, deprecated, message: "Deprecated and will be removed soon!.")
 extension InBrainSurveys.SurveyProfileMatch : Swift.Equatable {}
 @available(*, deprecated, message: "Deprecated and will be removed soon!.")
 extension InBrainSurveys.SurveyProfileMatch : Swift.Hashable {}
 @available(*, deprecated, message: "Deprecated and will be removed soon!.")
 extension InBrainSurveys.SurveyProfileMatch : Swift.RawRepresentable {}
-extension InBrainSurveys.SurveyConversionLevel : Swift.Equatable {}
-extension InBrainSurveys.SurveyConversionLevel : Swift.Hashable {}
-extension InBrainSurveys.SurveyConversionLevel : Swift.RawRepresentable {}
