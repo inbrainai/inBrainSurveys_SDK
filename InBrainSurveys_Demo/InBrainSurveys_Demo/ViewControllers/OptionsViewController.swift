@@ -20,6 +20,7 @@ private let exampleSecret = "UnrB/pju7cH1dvTKL72blwZuhVrdsyZaS16qHOrjGdDVf2NWm+V
 private let userId = "test4@test.com"
 
 class OptionsViewController: UIViewController, LoadableView {
+    @IBOutlet weak var currencySaleLabel: UILabel?
     @IBOutlet weak var pointsLabel: UILabel?
     
     private let inBrain: InBrain = InBrain.shared
@@ -30,6 +31,7 @@ class OptionsViewController: UIViewController, LoadableView {
 
         setupInBrain()
         updatePoints()
+        checkForCurrencySale()
     }
         
     override func viewWillAppear(_ animated: Bool) {
@@ -92,7 +94,7 @@ extension OptionsViewController: InBrainDelegate {
 //MARK: - Private
 
 private extension OptionsViewController {
-     func setupInBrain() {
+    func setupInBrain() {
         //--- Required config ---
         inBrain.setInBrain(apiClientID: exampleClient,
                            apiSecret: exampleSecret,
@@ -104,7 +106,7 @@ private extension OptionsViewController {
         //--- Optional config ---
         
         //If no userId set - `identifierForVendor` will be used.
-        inBrain.set(userID: userID)
+        inBrain.set(userID: userId)
 
         // Value to track each user session. This value is provided via S2S Callbacks as SessionId.
         inBrain.setSessionID("testing33_Session")
@@ -115,7 +117,7 @@ private extension OptionsViewController {
         
         //Default parameters are used for this example. If you would like to use default appearance - you can skip this step.
 
-        let config = InBrainNavBarConfig(backgroundColor: UIColor(hex: "00a5ed"), buttonsColor: .white,
+        let config = InBrainNavBarConfig(backgroundColor: .mainColor, buttonsColor: .white,
                                          titleColor: .white, isTranslucent: false, hasShadow: false)
         inBrain.setNavigationBarConfig(config)
         
@@ -131,4 +133,31 @@ private extension OptionsViewController {
         pointsLabel?.text = String(format: "Total Points: %.0f", totalPoints)
     }
 
+    func checkForCurrencySale() {
+        inBrain.getCurrencySale(success: { [weak self] sale in self?.showCurrencySale(sale) },
+                                failed: { MessagePresenter.shared.show(error: $0) })
+    }
+
+    func showCurrencySale(_ sale: InBrainCurrencySale?) {
+        guard let sale else { return }
+
+        // Rounding to 1 digit after comma
+        let multiplier = "\((sale.multiplier * 10).rounded() / 10)x"
+
+        let font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        let attributedString = NSMutableAttributedString(string: "  \(multiplier) Earnings ",
+                                                         attributes: [.font: font])
+
+        let range = (attributedString.string as NSString).range(of: multiplier)
+        if range.location != NSNotFound {
+            let biggerFont = UIFont.systemFont(ofSize: 14, weight: .bold)
+            attributedString.addAttributes([.font: biggerFont], range: range)
+        }
+
+        currencySaleLabel?.attributedText = attributedString
+
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.currencySaleLabel?.alpha = 1
+        }
+    }
 }

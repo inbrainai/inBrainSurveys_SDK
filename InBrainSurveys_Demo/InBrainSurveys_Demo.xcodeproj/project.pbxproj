@@ -18,6 +18,7 @@
 		67F7C8C425270FDC0051F6A1 /* NativeSurveyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67F7C8C225270FDC0051F6A1 /* NativeSurveyCollectionViewCell.xib */; };
 		67F7C8CD25276C6B0051F6A1 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7C8CC25276C6B0051F6A1 /* UIColor+Hex.swift */; };
 		67F7C8D425276CAA0051F6A1 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F7C8D325276CAA0051F6A1 /* UIView+Shadow.swift */; };
+		8FA82C932992C693009047F2 /* EFAutoScrollLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FA82C922992C693009047F2 /* EFAutoScrollLabel.swift */; };
 		D964EA7C2264BDB800C683CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D964EA7B2264BDB800C683CE /* AppDelegate.swift */; };
 		D964EA7E2264BDB800C683CE /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D964EA7D2264BDB800C683CE /* OptionsViewController.swift */; };
 		D964EA812264BDB800C683CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D964EA7F2264BDB800C683CE /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		67F7C8C225270FDC0051F6A1 /* NativeSurveyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeSurveyCollectionViewCell.xib; sourceTree = "<group>"; };
 		67F7C8CC25276C6B0051F6A1 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		67F7C8D325276CAA0051F6A1 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		8FA82C922992C693009047F2 /* EFAutoScrollLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFAutoScrollLabel.swift; sourceTree = "<group>"; };
 		D964EA792264BDB800C683CE /* InBrainSurveys_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InBrainSurveys_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D964EA7B2264BDB800C683CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D964EA7D2264BDB800C683CE /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		67907683252D95EA00BBFCDE /* 3rdParty */ = {
 			isa = PBXGroup;
 			children = (
+				8FA82C922992C693009047F2 /* EFAutoScrollLabel.swift */,
 				6790767A252D95CF00BBFCDE /* JDropDownAlert.swift */,
 			);
 			path = 3rdParty;
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FA82C932992C693009047F2 /* EFAutoScrollLabel.swift in Sources */,
 				67907675252D950700BBFCDE /* MessagePresenter.swift in Sources */,
 				67F7C8B3252709040051F6A1 /* NativeSurveysViewController.swift in Sources */,
 				D964EA7E2264BDB800C683CE /* OptionsViewController.swift in Sources */,

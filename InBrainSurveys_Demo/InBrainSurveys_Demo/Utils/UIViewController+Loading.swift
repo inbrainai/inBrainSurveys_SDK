@@ -32,7 +32,7 @@ extension LoadableView where Self: UIViewController {
             activity = UIActivityIndicatorView(style: .whiteLarge)
         }
         
-        activity.color = UIColor(hex: "00A5ED")
+        activity.color = .mainColor
         activity.hidesWhenStopped = true
         activity.startAnimating()
         activity.tag = activityTag

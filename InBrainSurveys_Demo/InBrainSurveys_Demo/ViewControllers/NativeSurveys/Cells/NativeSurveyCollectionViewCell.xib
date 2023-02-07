@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,13 +19,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yc-Ci-xaH">
-                        <rect key="frame" x="56.5" y="39" width="71" height="23"/>
+                        <rect key="frame" x="56.5" y="30" width="71" height="23"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                         <color key="textColor" red="0.0" green="0.6470588235294118" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jXb-Jb-b4u">
-                        <rect key="frame" x="37.5" y="64" width="109" height="10"/>
+                        <rect key="frame" x="37.5" y="55" width="109" height="10"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star_filled" translatesAutoresizingMaskIntoConstraints="NO" id="hi9-vz-VQo">
                                 <rect key="frame" x="0.0" y="0.5" width="9" height="9"/>
@@ -96,11 +96,18 @@
                             <constraint firstItem="uA2-eS-pgI" firstAttribute="leading" secondItem="3Qr-Qs-KKV" secondAttribute="trailing" constant="4" id="xX0-p1-kZt"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qI-0A-9mJ" customClass="EFAutoScrollLabel" customModule="InBrainSurveys_Demo" customModuleProvider="target">
+                        <rect key="frame" x="2.5" y="73" width="179" height="16"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="5Ix-S0-WaK"/>
+                        </constraints>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="muL-uU-X5j">
-                        <rect key="frame" x="12" y="90" width="160" height="47"/>
+                        <rect key="frame" x="12" y="105" width="160" height="32"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHo-AV-zIn">
-                                <rect key="frame" x="0.0" y="0.0" width="160" height="47"/>
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="32"/>
                                 <color key="backgroundColor" red="0.0" green="0.64705882349999999" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" systemColor="systemRedColor"/>
@@ -114,7 +121,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.6470588235294118" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="47" id="0Xp-bf-7EH"/>
+                            <constraint firstAttribute="height" constant="32" id="0Xp-bf-7EH"/>
                             <constraint firstItem="AHo-AV-zIn" firstAttribute="top" secondItem="muL-uU-X5j" secondAttribute="top" id="7aZ-yo-kcs"/>
                             <constraint firstItem="AHo-AV-zIn" firstAttribute="centerX" secondItem="muL-uU-X5j" secondAttribute="centerX" id="CWH-1J-Aa6"/>
                             <constraint firstItem="AHo-AV-zIn" firstAttribute="leading" secondItem="muL-uU-X5j" secondAttribute="leading" id="I19-gF-9SU"/>
@@ -126,10 +133,13 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="3qI-0A-9mJ" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="2eh-zA-jN8"/>
                 <constraint firstItem="muL-uU-X5j" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="5KU-3S-7Jf"/>
+                <constraint firstItem="3qI-0A-9mJ" firstAttribute="top" secondItem="jXb-Jb-b4u" secondAttribute="bottom" constant="8" id="BGR-Nt-vhq"/>
                 <constraint firstItem="5yc-Ci-xaH" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="FJb-Mh-Uye"/>
+                <constraint firstItem="5yc-Ci-xaH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="30" id="JC1-IB-510"/>
+                <constraint firstItem="3qI-0A-9mJ" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.975" id="OhI-ZU-Enu"/>
                 <constraint firstItem="jXb-Jb-b4u" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Vjb-Fv-gP7"/>
-                <constraint firstItem="muL-uU-X5j" firstAttribute="top" secondItem="jXb-Jb-b4u" secondAttribute="bottom" constant="16" id="abR-UU-N8i"/>
                 <constraint firstItem="muL-uU-X5j" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="bq7-Ti-UGN"/>
                 <constraint firstItem="jXb-Jb-b4u" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="srV-fe-zhP"/>
                 <constraint firstItem="jXb-Jb-b4u" firstAttribute="top" secondItem="5yc-Ci-xaH" secondAttribute="bottom" constant="2" id="tcg-Jy-Wfg"/>
@@ -137,6 +147,7 @@
             </constraints>
             <size key="customSize" width="252" height="146"/>
             <connections>
+                <outlet property="categoryLabel" destination="3qI-0A-9mJ" id="Uuw-Uv-xOi"/>
                 <outlet property="durationLabel" destination="uA2-eS-pgI" id="21N-pS-ZTy"/>
                 <outlet property="rewardLabel" destination="5yc-Ci-xaH" id="vzf-NQ-cxf"/>
                 <outlet property="startButton" destination="AHo-AV-zIn" id="4Ob-11-GWg"/>

@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.2.1](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.2.1) - 2023-02-07
+
+### Fixed
+- Performance and stability improvements and fixes.
+
 ## [2.2.0](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.2.0) - 2023-01-02
 
 ### Added
@@ -308,5 +313,5 @@ and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Show surveys if `inBrainDelegate` not a UIViewController's subclass;
-- Performance and stability imporvements and fixes.
+- Performance and stability improvements and fixes.
 

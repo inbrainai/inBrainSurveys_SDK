@@ -9,6 +9,8 @@
 import UIKit
 
 extension UIColor {
+    class var mainColor: UIColor { UIColor(named: "AzureColor") ?? .clear }
+    
     convenience init(hex: String, alpha: CGFloat = 1.0) {
         let scanner = Scanner(string: hex)
 
