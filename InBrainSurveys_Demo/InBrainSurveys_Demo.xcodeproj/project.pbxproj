@@ -45,7 +45,6 @@
 		6790767A252D95CF00BBFCDE /* JDropDownAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDropDownAlert.swift; sourceTree = "<group>"; };
 		6790768C252DDF1B00BBFCDE /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
 		67DC83C22671ECE800C9B026 /* InBrainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InBrainNavigationController.swift; sourceTree = "<group>"; };
-		67EE93DE25357E5B00CB7323 /* InBrainSurveys_SDK_Swift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = InBrainSurveys_SDK_Swift.xcframework; path = ../InBrainSurveys_SDK_Swift.xcframework; sourceTree = "<group>"; };
 		67F7C8B2252709040051F6A1 /* NativeSurveysViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeSurveysViewController.swift; sourceTree = "<group>"; };
 		67F7C8C125270FDC0051F6A1 /* NativeSurveyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeSurveyCollectionViewCell.swift; sourceTree = "<group>"; };
 		67F7C8C225270FDC0051F6A1 /* NativeSurveyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NativeSurveyCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -173,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				672A9414290A69F200CCA2BB /* InBrainSurveys.xcframework */,
-				67EE93DE25357E5B00CB7323 /* InBrainSurveys_SDK_Swift.xcframework */,
 				D964EAA42264BF3100C683CE /* WebKit.framework */,
 				D964EAA22264BF2800C683CE /* UIKit.framework */,
 			);
