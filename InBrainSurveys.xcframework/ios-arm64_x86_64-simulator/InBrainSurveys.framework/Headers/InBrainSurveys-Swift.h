@@ -296,6 +296,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 /// \param userID The string value that uniquely identifies each user within your application
 ///
 - (void)setWithUserID:(NSString * _Nullable)userID;
+/// Set title before calling <code>showSurveys()</code>
 - (void)setNavigationBarTitle:(NSString * _Nullable)title;
 /// Customize Navigation Bar to match your application style
 - (void)setNavigationBarConfig:(InBrainNavBarConfig * _Nonnull)config;
@@ -951,6 +952,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) InBrain * _N
 /// \param userID The string value that uniquely identifies each user within your application
 ///
 - (void)setWithUserID:(NSString * _Nullable)userID;
+/// Set title before calling <code>showSurveys()</code>
 - (void)setNavigationBarTitle:(NSString * _Nullable)title;
 /// Customize Navigation Bar to match your application style
 - (void)setNavigationBarConfig:(InBrainNavBarConfig * _Nonnull)config;
