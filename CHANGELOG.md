@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.2.3](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.2.3) - 2023-05-01
+
+### Changed
+- removed `checkForAvailableSurveys` country check from SDK, now all the logic handled by back-end. 
+
 ## [2.2.2](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.2.2) - 2023-04-17
 
 ### Fixed
