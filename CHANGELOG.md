@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.4.0](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.4.0) - 2024-01-23
+
+### Added
+- Support of Panelist (Dynamic) Currency Sales - the SDK return the active sale with the higher multiplier across active Publisher and Panelist sales;
+- arm64 arch for simulators (podspec won't exclude arm64 for iPhone simulators anymore).
+
 ## [2.3.0](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.3.0) - 2023-10-10
 
 ### Added
