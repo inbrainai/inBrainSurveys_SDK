@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "InBrainSurveys"
-  s.version      = "2.4.2"
+  s.version      = "2.4.3"
   s.summary      = "Monetization surveys for apps, powered by inBrain.ai."
   s.description  = "In-App monetization via surveys, powered by inBrain.ai."
 

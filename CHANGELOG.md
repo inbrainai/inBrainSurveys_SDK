@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.4.3](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.4.3) - 2024-09-17
+
+### Added
+- Support of the new "offers" feature
+
 ## [2.4.2](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.4.2) - 2024-08-28
 
 ### Fixed
