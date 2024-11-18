@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
 // swift-module-flags: -target x86_64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name InBrainSurveys
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AppKit
 import DeveloperToolsSupport
 import Foundation
@@ -41,6 +42,16 @@ import _SwiftConcurrencyShims
   @objc @available(*, unavailable, renamed: "failedToReceiveNativeSurveys(error:filter:)")
   func failedToReceiveNativeSurveys(error: any Swift.Error, placementId: Swift.String?)
 }
+@objc public enum InBrainWallOption : Swift.Int {
+  case surveys
+  case offers
+  case all
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class InBrain : ObjectiveC.NSObject {
   @objc public static let shared: InBrainSurveys.InBrain
   @objc weak final public var inBrainDelegate: (any InBrainSurveys.InBrainDelegate)?
@@ -59,14 +70,20 @@ import _SwiftConcurrencyShims
   @objc final public func setSessionID(_ sessionID: Swift.String?)
   @objc final public func setDataOptions(_ dataOptions: [[Swift.String : Any]]?)
   @objc final public func checkForAvailableSurveys(completion: @escaping ((_ hasSurveys: Swift.Bool, _ error: (any Swift.Error)?) -> (Swift.Void)))
-  @objc final public func showSurveys(from viewController: UIKit.UIViewController? = nil)
+  @objc final public func openWall(with option: InBrainSurveys.InBrainWallOption = .all, from viewController: UIKit.UIViewController? = nil)
   @objc final public func getRewards(success: @escaping ([InBrainSurveys.InBrainReward]) -> (), failed: @escaping InBrainSurveys.ErrorCallback)
   @objc final public func getRewards()
   @objc final public func confirmRewards(txIdArray: [Swift.Int])
   @objc final public func getCurrencySale(success: @escaping (InBrainSurveys.InBrainCurrencySale?) -> (), failed: @escaping InBrainSurveys.ErrorCallback)
   @objc final public func getNativeSurveys(filter: InBrainSurveys.InBrainSurveyFilter? = nil)
   @objc final public func getNativeSurveys(filter: InBrainSurveys.InBrainSurveyFilter? = nil, success: @escaping ([InBrainSurveys.InBrainNativeSurvey]) -> (), failed: @escaping InBrainSurveys.ErrorCallback)
+  @objc final public func showNativeSurvey(_ survey: InBrainSurveys.InBrainNativeSurvey, offersEnabled: Swift.Bool, from viewController: UIKit.UIViewController? = nil)
+  @objc final public func showNativeSurveyWith(id surveyId: Swift.String, searchId: Swift.String, offersEnabled: Swift.Bool, from viewController: UIKit.UIViewController? = nil)
+  @available(*, deprecated, message: "Please, use openWall(with:)")
+  @objc final public func showSurveys(from viewController: UIKit.UIViewController? = nil)
+  @available(*, deprecated, message: "Please, use showNativeSurvey(survey:offersEnabled:from:)")
   @objc final public func showNativeSurvey(_ survey: InBrainSurveys.InBrainNativeSurvey, from viewController: UIKit.UIViewController? = nil)
+  @available(*, deprecated, message: "Please, use showNativeSurveyWith(id:searchId:offersEnabled:from:)")
   @objc final public func showNativeSurveyWith(id surveyId: Swift.String, searchId: Swift.String, from viewController: UIKit.UIViewController? = nil)
   @available(*, deprecated, message: "The function is deprecate and will be removed soon!")
   @objc final public func setLanguage(_ language: Swift.String) throws
@@ -302,6 +319,7 @@ extension InBrainSurveys.SurveyOutcomeType : Swift.CustomStringConvertible {
   case greatMatch
   case excellentMatch
   public init?(rawValue: Swift.Int)
+  @available(*, deprecated, message: "Deprecated and will be removed soon!.")
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -318,6 +336,9 @@ extension InBrainSurveys.SurveyOutcomeType : Swift.CustomStringConvertible {
   public init(from decoder: any Swift.Decoder) throws
   @objc deinit
 }
+extension InBrainSurveys.InBrainWallOption : Swift.Equatable {}
+extension InBrainSurveys.InBrainWallOption : Swift.Hashable {}
+extension InBrainSurveys.InBrainWallOption : Swift.RawRepresentable {}
 extension InBrainSurveys.InBrainSurveyCategory : Swift.Equatable {}
 extension InBrainSurveys.InBrainSurveyCategory : Swift.Hashable {}
 extension InBrainSurveys.InBrainSurveyCategory : Swift.RawRepresentable {}

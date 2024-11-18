@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.5.0]
+
+### Added
+- Added the ability to enable the possible options for the wall;
+- `InBrainWallOption` - enum, represents possible options;
+- `openWall(with option: InBrainWallOption = .all, from viewController: UIViewController? = nil)` function to `InBrain`;
+- `showNativeSurvey(_ survey: InBrainNativeSurvey, offersEnabled: Bool, from viewController: UIViewController? = nil)` function to `InBrain`;
+- `showNativeSurveyWith(id surveyId: String, searchId: String, offersEnabled: Bool, from viewController: UIViewController? = nil)` function to `InBrain`.
+
+### Changed
+- `showSurveys(from viewController: UIViewController? = nil)` function deprecated;
+- `showNativeSurvey(_ survey: InBrainNativeSurvey, from viewController: UIViewController? = nil)` function deprecated;
+- `showNativeSurveyWith(id surveyId: String, searchId: String, from viewController: UIViewController? = nil)` function deprecated.
+
 ## [2.4.3](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.4.3) - 2024-09-17
 
 ### Added
@@ -56,7 +70,7 @@ and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 - `InBrainSurveyReward` class, which represents information about completed survey and earned reward.
 
 ### Changed
-- `surveysClosed(byWebView: Bool, completedSurvey: Bool` function deprecated.
+- `surveysClosed(byWebView: Bool, completedSurvey: Bool)` function deprecated.
 ---
 
 ## [2.1.0](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.1.0) - 2022-12-23
