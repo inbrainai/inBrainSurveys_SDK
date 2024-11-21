@@ -645,9 +645,9 @@ SWIFT_CLASS("_TtC14InBrainSurveys19InBrainSurveyReward")
 @end
 
 typedef SWIFT_ENUM(NSInteger, InBrainWallOption, open) {
-  InBrainWallOptionSurveys = 0,
-  InBrainWallOptionOffers = 1,
-  InBrainWallOptionAll = 2,
+  InBrainWallOptionAll = 0,
+  InBrainWallOptionSurveys = 1,
+  InBrainWallOptionOffers = 2,
 };
 
 
@@ -1376,9 +1376,9 @@ SWIFT_CLASS("_TtC14InBrainSurveys19InBrainSurveyReward")
 @end
 
 typedef SWIFT_ENUM(NSInteger, InBrainWallOption, open) {
-  InBrainWallOptionSurveys = 0,
-  InBrainWallOptionOffers = 1,
-  InBrainWallOptionAll = 2,
+  InBrainWallOptionAll = 0,
+  InBrainWallOptionSurveys = 1,
+  InBrainWallOptionOffers = 2,
 };
 
 

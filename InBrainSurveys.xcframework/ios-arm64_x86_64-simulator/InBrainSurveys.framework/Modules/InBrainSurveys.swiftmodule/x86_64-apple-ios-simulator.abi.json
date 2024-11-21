@@ -412,6 +412,47 @@
         "children": [
           {
             "kind": "Var",
+            "name": "all",
+            "printedName": "all",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(InBrainSurveys.InBrainWallOption.Type) -> InBrainSurveys.InBrainWallOption",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "InBrainWallOption",
+                    "printedName": "InBrainSurveys.InBrainWallOption",
+                    "usr": "c:@M@InBrainSurveys@E@InBrainWallOption"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "InBrainSurveys.InBrainWallOption.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "InBrainWallOption",
+                        "printedName": "InBrainSurveys.InBrainWallOption",
+                        "usr": "c:@M@InBrainSurveys@E@InBrainWallOption"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@InBrainSurveys@E@InBrainWallOption@InBrainWallOptionAll",
+            "mangledName": "$s14InBrainSurveys0aB10WallOptionO3allyA2CmF",
+            "moduleName": "InBrainSurveys",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
             "name": "surveys",
             "printedName": "surveys",
             "children": [
@@ -449,7 +490,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 0
+            "fixedbinaryorder": 1
           },
           {
             "kind": "Var",
@@ -486,47 +527,6 @@
             "declKind": "EnumElement",
             "usr": "c:@M@InBrainSurveys@E@InBrainWallOption@InBrainWallOptionOffers",
             "mangledName": "$s14InBrainSurveys0aB10WallOptionO6offersyA2CmF",
-            "moduleName": "InBrainSurveys",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 1
-          },
-          {
-            "kind": "Var",
-            "name": "all",
-            "printedName": "all",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(InBrainSurveys.InBrainWallOption.Type) -> InBrainSurveys.InBrainWallOption",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "InBrainWallOption",
-                    "printedName": "InBrainSurveys.InBrainWallOption",
-                    "usr": "c:@M@InBrainSurveys@E@InBrainWallOption"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "InBrainSurveys.InBrainWallOption.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "InBrainWallOption",
-                        "printedName": "InBrainSurveys.InBrainWallOption",
-                        "usr": "c:@M@InBrainSurveys@E@InBrainWallOption"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@InBrainSurveys@E@InBrainWallOption@InBrainWallOptionAll",
-            "mangledName": "$s14InBrainSurveys0aB10WallOptionO3allyA2CmF",
             "moduleName": "InBrainSurveys",
             "declAttributes": [
               "ObjC"
@@ -22045,15 +22045,15 @@
     {
       "filePath": "\/Users\/olehhrechyn\/Repositories\/inBrain-SDK-iOS-Swift\/InBrainSurveys\/InBrainSurveys_SDK\/DataModels\/InBrainWallOption.swift",
       "kind": "IntegerLiteral",
-      "offset": 244,
-      "length": 6,
+      "offset": 240,
+      "length": 7,
       "value": "1"
     },
     {
       "filePath": "\/Users\/olehhrechyn\/Repositories\/inBrain-SDK-iOS-Swift\/InBrainSurveys\/InBrainSurveys_SDK\/DataModels\/InBrainWallOption.swift",
       "kind": "IntegerLiteral",
-      "offset": 260,
-      "length": 3,
+      "offset": 257,
+      "length": 6,
       "value": "2"
     },
     {

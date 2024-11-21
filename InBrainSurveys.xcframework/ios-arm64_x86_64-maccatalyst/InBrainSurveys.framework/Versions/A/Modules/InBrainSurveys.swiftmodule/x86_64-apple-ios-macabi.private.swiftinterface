@@ -43,9 +43,9 @@ import _SwiftConcurrencyShims
   func failedToReceiveNativeSurveys(error: any Swift.Error, placementId: Swift.String?)
 }
 @objc public enum InBrainWallOption : Swift.Int {
+  case all
   case surveys
   case offers
-  case all
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {

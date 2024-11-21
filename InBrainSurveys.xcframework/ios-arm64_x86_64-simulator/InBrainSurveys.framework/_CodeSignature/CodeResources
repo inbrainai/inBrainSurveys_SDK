@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/InBrainSurveys-Swift.h</key>
 		<data>
-		F9uq258uoGoswubTzUORyMYBWe4=
+		v3zmMETgYtlfVRwJc07HXFK8mG0=
 		</data>
 		<key>Headers/InBrainSurveys.h</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/InBrainSurveys.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		tWB9B3dfvZHANgZCbk8PeIwLEmw=
+		HMvRV46sVL2At/HCWW+sic13hDA=
 		</data>
 		<key>Modules/InBrainSurveys.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		0jwEqYMvxyxFIdWnzKPcurmlor4=
+		GspVFm1L1zfOQLPCG65G7+38hG4=
 		</data>
 		<key>Modules/InBrainSurveys.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,19 +34,19 @@
 		</data>
 		<key>Modules/InBrainSurveys.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		0jwEqYMvxyxFIdWnzKPcurmlor4=
+		GspVFm1L1zfOQLPCG65G7+38hG4=
 		</data>
 		<key>Modules/InBrainSurveys.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		49FFj097Y5p7g222Nn28//rqKaQ=
+		7trvJHwoe0FzSZnkR4+Avbd1V2Y=
 		</data>
 		<key>Modules/InBrainSurveys.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		tWB9B3dfvZHANgZCbk8PeIwLEmw=
+		HMvRV46sVL2At/HCWW+sic13hDA=
 		</data>
 		<key>Modules/InBrainSurveys.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		UsAQHsXFoGZJFHRayBMPB0xVa5o=
+		+9AeuwrFRC00hS5VlUn0x3Rm5WU=
 		</data>
 		<key>Modules/InBrainSurveys.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Modules/InBrainSurveys.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		UsAQHsXFoGZJFHRayBMPB0xVa5o=
+		+9AeuwrFRC00hS5VlUn0x3Rm5WU=
 		</data>
 		<key>Modules/InBrainSurveys.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		4bddCDWdUWd7lLtlVAd3D040n+w=
+		EgucbQl7PJ076Yf3lwlK+JUn854=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -78,7 +78,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zeMGG+jVEMjpNgFisDoVcG20q+s8w5+s8B5/YenNs3Y=
+			bKUxROVVrgz3RLfj5fXATQtyx3x2Iwcn6paPFmT+M6E=
 			</data>
 		</dict>
 		<key>Headers/InBrainSurveys.h</key>
@@ -92,14 +92,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pK8p7o9jm31MlbTXmE9XyUxLVDzxCF5hCzY3o/evjUg=
+			Refdzlm2drW/Bkyh466wTtSEuc6uSn65xJvS0tyBXSs=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0s65zEexOAnIZiLiCS0/OrBoFRw0UDeaAeihZSpb5iI=
+			Pwu5tRDv4Dd6RaIhM5zev4nezIyHt7e6SzKtfRtOlOo=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -113,28 +113,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0s65zEexOAnIZiLiCS0/OrBoFRw0UDeaAeihZSpb5iI=
+			Pwu5tRDv4Dd6RaIhM5zev4nezIyHt7e6SzKtfRtOlOo=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RR6DDofm81ZweeOtPs8pLcKAEK2uTV86ccVwNliMwTQ=
+			JMWpnMJZDO01U9s+j7BGyK6L7YtTRALoyFPitB4ezBw=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pK8p7o9jm31MlbTXmE9XyUxLVDzxCF5hCzY3o/evjUg=
+			Refdzlm2drW/Bkyh466wTtSEuc6uSn65xJvS0tyBXSs=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			10B1kRC9z3Geyikimu8ln7Ae+PBRRrPHYOk+ZubeK6U=
+			fX0iTX66P0jr+YCalx60Rud8LZVSoaRUnOFLLR0qvyY=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -148,14 +148,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			10B1kRC9z3Geyikimu8ln7Ae+PBRRrPHYOk+ZubeK6U=
+			fX0iTX66P0jr+YCalx60Rud8LZVSoaRUnOFLLR0qvyY=
 			</data>
 		</dict>
 		<key>Modules/InBrainSurveys.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8YHX3YPcKSO9WSoR9g2lJWBZxD5bDZLQRJ1Xiji2dUc=
+			/8fXbp4jxqJgVungvXf/2AoXa5wQI2vN6RBs55m1sMs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
