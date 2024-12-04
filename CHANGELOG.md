@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
-## [2.5.0]
+## [2.5.0](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.5.0) - 2024-12-04
 
 ### Added
 - Added the ability to enable the possible options for the wall;
