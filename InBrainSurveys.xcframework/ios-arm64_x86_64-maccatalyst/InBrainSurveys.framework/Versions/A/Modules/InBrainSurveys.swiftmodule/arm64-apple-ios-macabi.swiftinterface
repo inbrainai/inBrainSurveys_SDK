@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
 // swift-module-flags: -target arm64-apple-ios13.1-macabi -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name InBrainSurveys
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AppKit
@@ -70,7 +70,7 @@ import _SwiftConcurrencyShims
   @objc final public func setSessionID(_ sessionID: Swift.String?)
   @objc final public func setDataOptions(_ dataOptions: [[Swift.String : Any]]?)
   @objc final public func checkForAvailableSurveys(completion: @escaping ((_ hasSurveys: Swift.Bool, _ error: (any Swift.Error)?) -> (Swift.Void)))
-  @objc final public func openWall(with option: InBrainSurveys.InBrainWallOption = .all, from viewController: UIKit.UIViewController? = nil)
+  @objc final public func openWall(with option: InBrainSurveys.InBrainWallOption = .surveys, from viewController: UIKit.UIViewController? = nil)
   @objc final public func getRewards(success: @escaping ([InBrainSurveys.InBrainReward]) -> (), failed: @escaping InBrainSurveys.ErrorCallback)
   @objc final public func getRewards()
   @objc final public func confirmRewards(txIdArray: [Swift.Int])

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and `InBrainSurveys` adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.5.1](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.5.1) - 2025-24-03
+
+### Changed
+- Default option for `openWall(with option: InBrainWallOption = .surveys, from viewController: UIViewController? = nil)` is `surveys`;
+- Disable the `offers` for `showNativeSurvey(_ survey: InBrainNativeSurvey, from viewController: UIViewController? = nil)` function;
+- Disable the `offers` for `showNativeSurveyWith(id surveyId: String, searchId: String, from viewController: UIViewController? = nil)` function.
+
 ## [2.5.0](https://github.com/inbrainai/inBrainSurveys_SDK/releases/tag/2.5.0) - 2024-12-04
 
 ### Added
